@@ -1,7 +1,56 @@
 ---
+import Card from '@components/Card.astro';
 import Layout from '@layouts/Layout.astro';
+
+import { Image } from 'astro:assets';
+
+import bottomImage from '@assets/images/title/bottom.png';
+import leftImage from '@assets/images/title/left.png';
+import rightImage from '@assets/images/title/right.png';
+import topImage from '@assets/images/title/top.png';
+
+type Ballad = {
+  title: string;
+};
+
+const ballads: Ballad[] = [
+  { title: 'Pierwiosnek' },
+  { title: 'Romantyczność' },
+  { title: 'Świteź' },
+  { title: 'Świtezianka' },
+  { title: 'Rybka' },
+  { title: 'Powrót taty' },
+  { title: 'Kurhanek Maryli' },
+  { title: 'Do przyjaciół' },
+  { title: 'To lubię' },
+  { title: 'Rękawiczka' },
+  { title: 'Pani Twardowska' },
+  { title: 'Tukaj albo próby przyjaźni' },
+  { title: 'Lilije' },
+  { title: 'Dudarz' },
+];
 ---
 
-<Layout title=" Ballady i romanse | Adam Mickiewicz">
-  <h1 class="text-center text-4xl font-bold mt-12 mb-20">Ballady i romanse - Adam Mickiewicz</h1>
+<Layout title="Ballady i romanse | Adam Mickiewicz">
+  <header class="relative w-max mx-auto h-[460px] mb-12">
+    <Image src={topImage} alt="" class="absolute top-0 left-1/2 -translate-x-1/2" />
+    <Image src={bottomImage} alt="" class="absolute bottom-0 left-1/2 -translate-x-1/2" />
+    <Image src={leftImage} alt="" class="absolute left-[-160px] h-full" />
+    <Image src={rightImage} alt="" class="absolute right-[-160px] h-full" />
+    <h1 class="font-cursive text-center text-8xl relative top-1/2 -translate-y-1/2">
+      Ballady i Romanse
+    </h1>
+    <h2 class="font-cursive text-center text-4xl relative top-1/2 -translate-y-1/2">
+      Adam Mickiewicz
+    </h2>
+  </header>
+  <ul class="flex gap-4 flex-row flex-wrap justify-center mx-16">
+    {
+      ballads.map((ballad) => (
+        <li>
+          <Card title={ballad.title} />
+        </li>
+      ))
+    }
+  </ul>
 </Layout>

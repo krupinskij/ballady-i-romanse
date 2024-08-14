@@ -1,0 +1,12 @@
+@import '@fontsource/great-vibes';
+@import '@fontsource-variable/montserrat';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: 'Montserrat Variable', sans-serif;
+  }
+}
