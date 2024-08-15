@@ -1,0 +1,58 @@
+{
+  "id": "romantycznosc",
+  "title": "Romantyczność",
+  "motto": {
+    "text": "Methinks I see...\n— Where?...\n— In my mind's eye",
+    "author": "W. Shakespeare",
+    "translation": "Zdaje mi się, że widzę... Gdzie?\nPrzed oczyma duszy mojej."
+  },
+  "contents": [
+    {
+      "text": "Słuchaj, dzieweczko!\n— Ona nie słucha. —\nTo dzień biały! to miasteczko!\nPrzy tobie niema żywego ducha:\nCo tam wkoło siebie chwytasz?\nKogo wołasz, z kim się witasz?\n— Ona nie słucha. —"
+    },
+    {
+      "text": "To jak martwa opoka\nNie zwróci w stronę oka,\nTo strzela wkoło oczyma,\nTo się łzami zaleje,\nCoś niby chwyta, coś niby trzyma,\nRozpłacze się i zaśmieje."
+    },
+    {
+      "text": "— »Tyżeś to w nocy? to ty, Jasieńku!\nAch! i po śmierci kocha!\nTutaj, tutaj, pomaleńku,\nCzasem usłyszy macocha!..."
+    },
+    { "text": "— »Niech sobie słyszy... już niema ciebie,\nJuż po twoim pogrzebie!" },
+    {
+      "text": "»Ty już umarłeś? Ach! ja się boję!...\nCzego się boję mego Jasieńka?\nAch, to on! lica twoje, oczki twoje!\nTwoja biała sukienka!"
+    },
+    {
+      "text": "»I sam ty biały jak chusta,\nZimny... jakie zimne dłonie!\nTutaj połóż, tu na łonie,\nPrzyciśnij mnie, do ust usta..."
+    },
+    {
+      "text": "»Ach, jak tam zimno musi być w grobie!\nUmarłeś, tak, dwa lata!\nWeź mię, ja umrę przy tobie,\nNie lubię świata."
+    },
+    {
+      "text": "»Źle mnie w złych ludzi tłumie:\nPłaczę, a oni szydzą:\nMówię, nikt nie rozumie;\nWidzę, oni nie widzą!"
+    },
+    {
+      "text": "»Śród dnia przyjdź kiedy... to może we śnie?\nNie, nie... trzymam ciebie w ręku.\nGdzie znikasz, gdzie, mój Jasieńku?\nJeszcze wcześnie, jeszcze wcześnie!"
+    },
+    {
+      "text": "»Mój Boże! kur się odzywa,\nZorza błyska w okienku.\nGdzie znikłeś! ach! stój, Jasieńku!\nJa nieszczęśliwa!« —"
+    },
+    {
+      "text": "Tak się dziewczyna z kochankiem pieści,\nBieży za nim, krzyczy, pada;\nNa ten upadek, na głos boleści,\nSkupia się ludzi gromada."
+    },
+    {
+      "text": "»Mówcie pacierze! — krzyczy prostota —\nTu jego dusza być musi,\nJasio być musi przy swej Karusi,\nOn ją kochał za żywota!«"
+    },
+    { "text": "I ja to słyszę, i ja tak wierzę,\nPłaczę, i mówię pacierze." },
+    {
+      "text": "— »Słuchaj, dzieweczko! — krzyknie śród zgiełku\nStarzec, i na lud zawoła:\nUfajcie memu oku i szkiełku,\nNic tu nie widzę dokoła."
+    },
+    {
+      "text": "»Duchy karczemnej tworem gawiedzi,\nW głupstwa wywarzone kuźni;\nDziewczyna duby smalone bredzi,\nA gmin rozumowi bluźni«."
+    },
+    {
+      "text": "— »Dziewczyna czuje, — odpowiadam skromnie,\nA gawiedź wierzy głęboko:\nCzucie i wiara silniej mówi do mnie,\nNiż mędrca szkiełko i oko."
+    },
+    {
+      "text": "»Martwe znasz prawdy, nieznane dla ludu,\nWidzisz świat w proszku, w każdej gwiazd iskierce;\nNie znasz prawd żywych, nie obaczysz cudu!\nMiej serce i patrzaj w serce!«"
+    }
+  ]
+}

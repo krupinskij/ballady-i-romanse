@@ -10,24 +10,25 @@ import rightImage from '@assets/images/title/right.png';
 import topImage from '@assets/images/title/top.png';
 
 type Ballad = {
+  id: string;
   title: string;
 };
 
 const ballads: Ballad[] = [
-  { title: 'Pierwiosnek' },
-  { title: 'Romantyczność' },
-  { title: 'Świteź' },
-  { title: 'Świtezianka' },
-  { title: 'Rybka' },
-  { title: 'Powrót taty' },
-  { title: 'Kurhanek Maryli' },
-  { title: 'Do przyjaciół' },
-  { title: 'To lubię' },
-  { title: 'Rękawiczka' },
-  { title: 'Pani Twardowska' },
-  { title: 'Tukaj albo próby przyjaźni' },
-  { title: 'Lilije' },
-  { title: 'Dudarz' },
+  { id: 'pierwiosnek', title: 'Pierwiosnek' },
+  { id: 'romantycznosc', title: 'Romantyczność' },
+  { id: 'switez', title: 'Świteź' },
+  { id: 'switezianka', title: 'Świtezianka' },
+  { id: 'rybka', title: 'Rybka' },
+  { id: 'powrot-taty', title: 'Powrót taty' },
+  { id: 'kurhanek-maryli', title: 'Kurhanek Maryli' },
+  { id: 'do-przyjaciol', title: 'Do przyjaciół' },
+  { id: 'to-lubie', title: 'To lubię' },
+  { id: 'rekawiczka', title: 'Rękawiczka' },
+  { id: 'pani-twardowska', title: 'Pani Twardowska' },
+  { id: 'tukaj-albo-proby-przyjazni', title: 'Tukaj albo próby przyjaźni' },
+  { id: 'lilije', title: 'Lilije' },
+  { id: 'dudarz', title: 'Dudarz' },
 ];
 ---
 
@@ -44,11 +45,11 @@ const ballads: Ballad[] = [
       Adam Mickiewicz
     </h2>
   </header>
-  <ul class="flex gap-4 flex-row flex-wrap justify-center mx-16">
+  <ul class="flex gap-4 flex-row flex-wrap justify-center mx-16 mb-12">
     {
       ballads.map((ballad) => (
         <li>
-          <Card title={ballad.title} />
+          <Card title={ballad.title} href={`/${ballad.id}`} />
         </li>
       ))
     }

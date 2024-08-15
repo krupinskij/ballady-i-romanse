@@ -1,0 +1,40 @@
+---
+import type { Ballad } from '@model';
+import Layout from '@layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const ballads: Ballad[] = await Astro.glob('/src/assets/ballads/*.json');
+
+  return ballads.map((ballad) => ({
+    params: { id: ballad.id },
+    props: ballad,
+  }));
+}
+
+const { title, notes, motto, contents } = Astro.props;
+---
+
+<Layout title={`${title} | Ballady i Romanse`}>
+  <h1 class="font-cursive text-center text-6xl mb-12">{title}</h1>
+  {notes && notes.map((note) => <span class="block text-center">{note}</span>)}
+
+  <article class="w-max mx-auto">
+    {
+      motto && (
+        <section>
+          <pre class="text-right">{motto.text}</pre>
+          <pre class="text-right">{motto.author}</pre>
+          {motto.translation && <pre class="text-right">{motto.translation}</pre>}
+        </section>
+      )
+    }
+    {
+      contents.map((content) => (
+        <section class="mb-8">
+          {content.character && <h2 class="font-bold">{content.character}</h2>}
+          <pre>{content.text}</pre>
+        </section>
+      ))
+    }
+  </article>
+</Layout>
