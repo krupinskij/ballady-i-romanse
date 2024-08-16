@@ -45,13 +45,15 @@ const ballads: Ballad[] = [
       Adam Mickiewicz
     </h2>
   </header>
-  <ul class="flex gap-4 flex-row flex-wrap justify-center mx-16 mb-12">
-    {
-      ballads.map((ballad) => (
-        <li>
-          <Card title={ballad.title} href={`/${ballad.id}`} />
-        </li>
-      ))
-    }
-  </ul>
+  <main>
+    <ul class="flex gap-4 flex-row flex-wrap justify-center mx-16 mb-12">
+      {
+        ballads.map((ballad) => (
+          <li>
+            <Card title={ballad.title} href={`/${ballad.id}`} />
+          </li>
+        ))
+      }
+    </ul>
+  </main>
 </Layout>

@@ -1,7 +1,7 @@
 {
   "id": "rybka",
   "title": "Rybka",
-  "notes": "(Ze śpiewu gminnego)",
+  "notes": ["(Ze śpiewu gminnego)"],
   "contents": [
     {
       "text": "Od dworu, z pod lasa, z wioski,\nSmutna wybiega dziewica,\nRozpuściła na wiatr włoski\nI łzami skropiła lica."
