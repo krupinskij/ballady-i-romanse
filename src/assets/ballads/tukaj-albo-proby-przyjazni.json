@@ -1,6 +1,14 @@
 {
   "id": "tukaj-albo-proby-przyjazni",
   "title": "Tutaj albo próby przyjaźni",
+  "prev": {
+    "id": "pani-twardowska",
+    "title": "Pani Twardowska"
+  },
+  "next": {
+    "id": "lilije",
+    "title": "Lilije"
+  },
   "notes": ["(We czterech częściach)"],
   "contents": [
     {

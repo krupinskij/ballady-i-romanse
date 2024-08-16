@@ -1,6 +1,14 @@
 {
   "id": "switezianka",
   "title": "Świtezianka",
+  "prev": {
+    "id": "switez",
+    "title": "Świteź"
+  },
+  "next": {
+    "id": "rybka",
+    "title": "Rybka"
+  },
   "contents": [
     {
       "text": "Jakiż to chłopiec piękny i młody?\nJaka to obok dziewica?\nBrzegami sinej Świtezi wody\nIdą przy świetle księżyca."

@@ -1,6 +1,14 @@
 {
   "id": "lilije",
   "title": "Lilije",
+  "prev": {
+    "id": "tukaj-albo-proby-przyjazni",
+    "title": "Tutaj albo próby przyjaźni"
+  },
+  "next": {
+    "id": "dudarz",
+    "title": "Dudarz"
+  },
   "notes": ["(Z pieśni gminnej)"],
   "contents": [
     {

@@ -1,6 +1,14 @@
 {
   "id": "do-przyjaciol",
   "title": "Do przyjaciół",
+  "prev": {
+    "id": "kurhanek-maryli",
+    "title": "Kurhanek Maryli"
+  },
+  "next": {
+    "id": "to-lubie",
+    "title": "To lubię"
+  },
   "notes": ["(Posyłając im balladę »To lubię«)"],
   "contents": [
     {

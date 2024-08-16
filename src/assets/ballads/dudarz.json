@@ -1,6 +1,10 @@
 {
   "id": "dudarz",
   "title": "Dudarz",
+  "prev": {
+    "id": "lilije",
+    "title": "Lilije"
+  },
   "notes": ["(Myśl z pieśni gminnej)"],
   "contents": [
     {

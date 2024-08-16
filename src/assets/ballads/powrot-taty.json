@@ -1,6 +1,14 @@
 {
   "id": "powrot-taty",
   "title": "Powrót taty",
+  "prev": {
+    "id": "rybka",
+    "title": "Rybka"
+  },
+  "next": {
+    "id": "kurhanek-maryli",
+    "title": "Kurhanek Maryli"
+  },
   "contents": [
     {
       "text": "»Pójdźcie, o dziatki, pójdźcie wszystkie razem\nZa miasto, pod słup, na wzgórek;\nTam przed cudownym klęknijcie obrazem,\nPobożnie zmówcie paciorek."

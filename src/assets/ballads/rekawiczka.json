@@ -1,6 +1,14 @@
 {
   "id": "rekawiczka",
   "title": "Rękawiczka",
+  "prev": {
+    "id": "to-lubie",
+    "title": "To lubię"
+  },
+  "next": {
+    "id": "pani-twardowska",
+    "title": "Pani Twardowska"
+  },
   "contents": [
     {
       "text": "Chcąc być widzem dzikich bojów,\nJuż u zwierzyńca podwojów\nKról zasiada.\nPrzy nim książęta i panowie Rada,\nA gdzie wzniosły krążył ganek,\nRycerze obok kochanek."

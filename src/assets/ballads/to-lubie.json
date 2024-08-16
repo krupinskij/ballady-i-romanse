@@ -1,6 +1,14 @@
 {
   "id": "to-lubie",
   "title": "To lubię",
+  "prev": {
+    "id": "do-przyjaciol",
+    "title": "Do przyjaciół"
+  },
+  "next": {
+    "id": "rekawiczka",
+    "title": "Rękawiczka"
+  },
   "contents": [
     {
       "text": "Spojrzyj, Marylo, gdzie się kończą gaje:\nW prawo łóz gęsty zarostek,\nW lewo się piękna dolina podaje,\nPrzodem rzeczułka i mostek."

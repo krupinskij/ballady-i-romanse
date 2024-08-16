@@ -1,6 +1,10 @@
 {
   "id": "pierwiosnek",
   "title": "Pierwiosnek",
+  "next": {
+    "id": "romantycznosc",
+    "title": "Romantyczność"
+  },
   "notes": ["(Primula veris)"],
   "contents": [
     {

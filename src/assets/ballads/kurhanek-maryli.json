@@ -1,6 +1,14 @@
 {
   "id": "kurhanek-maryli",
   "title": "Kurhanek Maryli",
+  "prev": {
+    "id": "powrot-taty",
+    "title": "Powrót taty"
+  },
+  "next": {
+    "id": "do-przyjaciol",
+    "title": "Do przyjaciół"
+  },
   "notes": ["(Myśl ze śpiewu litewskiego)", "Cudzy Człowiek, Dziewczyna, Jaś, Matka, Przyjaciółka"],
   "contents": [
     {

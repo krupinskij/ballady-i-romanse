@@ -1,6 +1,14 @@
 {
   "id": "rybka",
   "title": "Rybka",
+  "prev": {
+    "id": "switezianka",
+    "title": "Świtezianka"
+  },
+  "next": {
+    "id": "powrot-taty",
+    "title": "Powrót taty"
+  },
   "notes": ["(Ze śpiewu gminnego)"],
   "contents": [
     {

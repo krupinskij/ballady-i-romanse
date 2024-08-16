@@ -11,7 +11,7 @@ export async function getStaticPaths() {
   }));
 }
 
-const { title, notes, motto, contents } = Astro.props;
+const { title, prev, next, notes, motto, contents } = Astro.props;
 ---
 
 <Layout title={`${title} | Ballady i Romanse`}>
@@ -19,6 +19,30 @@ const { title, notes, motto, contents } = Astro.props;
     <h1 class="font-cursive text-center text-8xl leading-tight">
       {title}
     </h1>
+    <div class="fixed top-0 w-full px-4 bg-white grid grid-cols-3 py-2">
+      <span class="w-full">
+        {
+          prev && (
+            <a href={`/${prev.id}`} class="text-base text-left w-full inline-block hover:underline">
+              ⬅ {prev.title}
+            </a>
+          )
+        }
+      </span>
+      <a href="/" class="text-base text-center hover:underline">Strona główna ⌂</a>
+      <span>
+        {
+          next && (
+            <a
+              href={`/${next.id}`}
+              class="text-base text-right w-full inline-block hover:underline"
+            >
+              {next.title} ➡
+            </a>
+          )
+        }
+      </span>
+    </div>
     {notes && notes.map((note) => <span class="block text-center text-xs">{note}</span>)}
   </header>
   <main>

@@ -1,6 +1,14 @@
 {
   "id": "pani-twardowska",
   "title": "Pani Twardowska",
+  "prev": {
+    "id": "rekawiczka",
+    "title": "Rękawiczka"
+  },
+  "next": {
+    "id": "tukaj-albo-proby-przyjazni",
+    "title": "Tutaj albo próby przyjaźni"
+  },
   "contents": [
     {
       "text": "Jedzą, piją, lulki palą,\nTańce, hulanka, swawola;\nLedwie karczmy nie rozwalą,\nCha, cha! chi, chi! hejża! hola!"

@@ -1,6 +1,14 @@
 {
   "id": "romantycznosc",
   "title": "Romantyczność",
+  "prev": {
+    "id": "pierwiosnek",
+    "title": "Pierwiosnek"
+  },
+  "next": {
+    "id": "switez",
+    "title": "Świteź"
+  },
   "motto": {
     "text": "Methinks I see...\n— Where?...\n— In my mind's eye",
     "author": "W. Shakespeare",

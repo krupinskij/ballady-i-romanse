@@ -9,9 +9,14 @@ type Content = {
   text: string;
 };
 
-export type Ballad = {
+type BalladInfo = {
   id: string;
   title: string;
+};
+
+export type Ballad = BalladInfo & {
+  prev?: BalladInfo;
+  next?: BalladInfo;
   notes?: string[];
   motto?: Motto;
   contents: Content[];

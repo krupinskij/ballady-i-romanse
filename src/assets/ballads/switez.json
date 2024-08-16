@@ -1,6 +1,14 @@
 {
   "id": "switez",
   "title": "Świteź",
+  "prev": {
+    "id": "romantycznosc",
+    "title": "Romantyczność"
+  },
+  "next": {
+    "id": "switezianka",
+    "title": "Świtezianka"
+  },
   "notes": ["(Do Michała Wereszczaki)"],
   "contents": [
     {
