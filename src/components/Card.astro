@@ -7,9 +7,24 @@ interface Props {
 const { title, href } = Astro.props;
 ---
 
-<a
-  href={href}
-  class="border-8 border-double border-gray-500 w-72 h-32 flex justify-center items-center"
->
-  <div class="text-2xl text-center">{title}</div>
+<a href={href}>
+  <div>{title}</div>
 </a>
+
+<style>
+  a {
+    border: 6px double gray;
+    width: 288px;
+    height: 128px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  a > div {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+  }
+</style>

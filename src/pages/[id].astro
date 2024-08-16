@@ -15,57 +15,110 @@ const { title, prev, next, notes, motto, contents } = Astro.props;
 ---
 
 <Layout title={`${title} | Ballady i Romanse`}>
-  <header class="mb-8">
-    <h1 class="font-cursive text-center text-8xl leading-tight">
+  <header>
+    <h1 class="font-cursive font-size-8xl">
       {title}
     </h1>
-    <div class="fixed top-0 w-full px-4 bg-white grid grid-cols-3 py-2">
-      <span class="w-full">
+    <nav>
+      <span>
         {
           prev && (
-            <a href={`/${prev.id}`} class="text-base text-left w-full inline-block hover:underline">
+            <a href={`/${prev.id}`} class="font-size-base" style={{ textAlign: 'left' }}>
               ⬅ {prev.title}
             </a>
           )
         }
       </span>
-      <a href="/" class="text-base text-center hover:underline">Strona główna ⌂</a>
+      <a href="/" class="font-size-base" style={{ textAlign: 'center' }}>Strona główna ⌂</a>
       <span>
         {
           next && (
-            <a
-              href={`/${next.id}`}
-              class="text-base text-right w-full inline-block hover:underline"
-            >
+            <a href={`/${next.id}`} class="font-size-base" style={{ textAlign: 'right' }}>
               {next.title} ➡
             </a>
           )
         }
       </span>
-    </div>
-    {notes && notes.map((note) => <span class="block text-center text-xs">{note}</span>)}
+    </nav>
+    {notes && notes.map((note) => <span class="note font-size-xs">{note}</span>)}
   </header>
   <main>
-    <article class="w-max mx-auto">
+    <article>
       {
         motto && (
-          <section class="mb-4">
-            <pre class="text-right font-default text-sm">{motto.text}</pre>
-            <pre class="text-right font-default text-sm mb-2">{motto.author}</pre>
-            {motto.translation && (
-              <pre class="text-right font-default text-sm">{motto.translation}</pre>
-            )}
+          <section class="motto">
+            <pre class="font-default font-size-sm">{motto.text}</pre>
+            <pre class="font-default font-size-sm mb-2" style={{ marginBottom: '8px' }}>
+              {motto.author}
+            </pre>
+            {motto.translation && <pre class="font-default font-size-sm">{motto.translation}</pre>}
           </section>
         )
       }
       {
         contents.map((content) => (
-          <section class="mb-8">
-            {content.character && <h2 class="font-medium text-base">{content.character}:</h2>}
-            <pre class="font-default text-base">{content.text}</pre>
+          <section class="content">
+            {content.character && <h2 class="font-size-base">{content.character}:</h2>}
+            <pre class="font-default font-size-base">{content.text}</pre>
           </section>
         ))
       }
     </article>
   </main>
 </Layout>
+
+<style>
+  header {
+    margin-bottom: 32px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    font-weight: 500;
+  }
+
+  nav {
+    position: fixed;
+    inset: 0 0 auto 0;
+    padding: 8px 16px;
+
+    background-color: var(--bg-color-default);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  nav a {
+    display: inline-block;
+    width: 100%;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  .note {
+    display: block;
+    text-align: center;
+  }
+
+  article {
+    width: max-content;
+    margin-inline: auto;
+  }
+
+  article section.motto {
+    margin-bottom: 16px;
+  }
+
+  .motto pre {
+    text-align: right;
+  }
+
+  article section.content {
+    margin-bottom: 32px;
+  }
+</style>

@@ -1,12 +1,72 @@
 @import '@fontsource/italianno';
 @import '@fontsource-variable/montserrat';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+  --text-color-default: #000;
 
-@layer base {
-  * {
-    font-family: 'Montserrat Variable', sans-serif;
-  }
+  --bg-color-default: #fff;
+}
+
+* {
+  font-family: 'Montserrat Variable', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding-top: 48px;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color-default);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  margin: 0;
+}
+
+.font-default {
+  font-family: 'Montserrat Variable', 'sans-serif';
+}
+
+.font-cursive {
+  font-family: 'Italianno', 'sans-serif';
+}
+
+.font-size-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-size-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.font-size-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.font-size-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.font-size-8xl {
+  font-size: 6rem;
+  line-height: 1;
 }

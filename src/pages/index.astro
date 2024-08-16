@@ -33,20 +33,16 @@ const ballads: Ballad[] = [
 ---
 
 <Layout title="Ballady i romanse | Adam Mickiewicz">
-  <header class="relative w-max mx-auto h-[460px] mb-12">
-    <Image src={topImage} alt="" class="absolute top-0 left-1/2 -translate-x-1/2" />
-    <Image src={bottomImage} alt="" class="absolute bottom-0 left-1/2 -translate-x-1/2" />
-    <Image src={leftImage} alt="" class="absolute left-[-160px] h-full" />
-    <Image src={rightImage} alt="" class="absolute right-[-160px] h-full" />
-    <h1 class="font-cursive text-center text-8xl relative top-1/2 -translate-y-1/2">
-      Ballady i Romanse
-    </h1>
-    <h2 class="font-cursive text-center text-4xl relative top-1/2 -translate-y-1/2">
-      Adam Mickiewicz
-    </h2>
+  <header>
+    <Image src={topImage} alt="" class="image image-top" />
+    <Image src={bottomImage} alt="" class="image image-bottom" />
+    <Image src={leftImage} alt="" class="image image-left" />
+    <Image src={rightImage} alt="" class="image image-right" />
+    <h1 class="font-cursive font-size-8xl">Ballady i Romanse</h1>
+    <h2 class="font-cursive font-size-4xl">Adam Mickiewicz</h2>
   </header>
   <main>
-    <ul class="flex gap-4 flex-row flex-wrap justify-center mx-16 mb-12">
+    <ul>
       {
         ballads.map((ballad) => (
           <li>
@@ -57,3 +53,60 @@ const ballads: Ballad[] = [
     </ul>
   </main>
 </Layout>
+
+<style>
+  header {
+    position: relative;
+    width: max-content;
+    height: 460px;
+    margin-inline: auto;
+    margin-bottom: 48px;
+  }
+
+  .image {
+    position: absolute;
+    --offset: 160px;
+  }
+
+  .image-top {
+    top: 0;
+    left: 50%;
+    translate: -50% 0;
+  }
+
+  .image-bottom {
+    bottom: 0;
+    left: 50%;
+    translate: -50% 0;
+  }
+
+  .image-left {
+    left: calc(-1 * var(--offset));
+    height: 100%;
+  }
+
+  .image-right {
+    right: calc(-1 * var(--offset));
+    height: 100%;
+  }
+
+  h1,
+  h2 {
+    position: relative;
+    top: 50%;
+    translate: 0 -50%;
+
+    text-align: center;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+
+    margin-inline: 64px;
+    margin-bottom: 48px;
+  }
+</style>
