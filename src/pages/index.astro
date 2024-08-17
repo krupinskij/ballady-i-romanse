@@ -34,10 +34,10 @@ const ballads: Ballad[] = [
 
 <Layout title="Ballady i romanse | Adam Mickiewicz">
   <header>
-    <Image src={topImage} alt="" class="image image-top" />
-    <Image src={bottomImage} alt="" class="image image-bottom" />
-    <Image src={leftImage} alt="" class="image image-left" />
-    <Image src={rightImage} alt="" class="image image-right" />
+    <Image src={topImage} alt="" role="presentation" class="image image-top" />
+    <Image src={bottomImage} alt="" role="presentation" class="image image-bottom" />
+    <Image src={leftImage} alt="" role="presentation" class="image image-left" />
+    <Image src={rightImage} alt="" role="presentation" class="image image-right" />
     <h1>Ballady i Romanse</h1>
     <h2>Adam Mickiewicz</h2>
   </header>
@@ -81,12 +81,10 @@ const ballads: Ballad[] = [
 
     &.image-left {
       left: calc(-1 * var(--offset));
-      height: 100%;
     }
 
     &.image-right {
       right: calc(-1 * var(--offset));
-      height: 100%;
     }
   }
 
