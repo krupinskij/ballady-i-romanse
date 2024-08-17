@@ -11,20 +11,19 @@ const { title, href } = Astro.props;
   <div>{title}</div>
 </a>
 
-<style>
+<style lang="scss">
   a {
-    border: 6px double gray;
+    border: 6px double var(--border-color-default);
     width: 288px;
     height: 128px;
 
     display: flex;
     justify-content: center;
     align-items: center;
-  }
 
-  a > div {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    text-align: center;
+    & > div {
+      font: var(--font-lg);
+      text-align: center;
+    }
   }
 </style>

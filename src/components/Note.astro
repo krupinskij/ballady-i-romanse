@@ -1,0 +1,18 @@
+---
+type Props = {
+  note: string;
+};
+
+const { note } = Astro.props;
+---
+
+<span>{note}</span>
+
+<style>
+  span {
+    display: block;
+    text-align: center;
+
+    font: var(--font-xs);
+  }
+</style>

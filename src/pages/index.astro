@@ -38,8 +38,8 @@ const ballads: Ballad[] = [
     <Image src={bottomImage} alt="" class="image image-bottom" />
     <Image src={leftImage} alt="" class="image image-left" />
     <Image src={rightImage} alt="" class="image image-right" />
-    <h1 class="font-cursive font-size-8xl">Ballady i Romanse</h1>
-    <h2 class="font-cursive font-size-4xl">Adam Mickiewicz</h2>
+    <h1>Ballady i Romanse</h1>
+    <h2>Adam Mickiewicz</h2>
   </header>
   <main>
     <ul>
@@ -54,7 +54,7 @@ const ballads: Ballad[] = [
   </main>
 </Layout>
 
-<style>
+<style lang="scss">
   header {
     position: relative;
     width: max-content;
@@ -66,28 +66,36 @@ const ballads: Ballad[] = [
   .image {
     position: absolute;
     --offset: 160px;
+
+    &.image-top {
+      top: 0;
+      left: 50%;
+      translate: -50% 0;
+    }
+
+    &.image-bottom {
+      bottom: 0;
+      left: 50%;
+      translate: -50% 0;
+    }
+
+    &.image-left {
+      left: calc(-1 * var(--offset));
+      height: 100%;
+    }
+
+    &.image-right {
+      right: calc(-1 * var(--offset));
+      height: 100%;
+    }
   }
 
-  .image-top {
-    top: 0;
-    left: 50%;
-    translate: -50% 0;
+  h1 {
+    font: var(--font-xxl);
   }
 
-  .image-bottom {
-    bottom: 0;
-    left: 50%;
-    translate: -50% 0;
-  }
-
-  .image-left {
-    left: calc(-1 * var(--offset));
-    height: 100%;
-  }
-
-  .image-right {
-    right: calc(-1 * var(--offset));
-    height: 100%;
+  h2 {
+    font: var(--font-xl);
   }
 
   h1,
@@ -96,6 +104,7 @@ const ballads: Ballad[] = [
     top: 50%;
     translate: 0 -50%;
 
+    font-family: var(--font-cursive);
     text-align: center;
   }
 

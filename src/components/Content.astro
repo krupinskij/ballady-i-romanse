@@ -1,0 +1,27 @@
+---
+import { type Content } from '@model';
+
+type Props = Content;
+
+const { character, text } = Astro.props;
+---
+
+<section>
+  {character && <h2>{character}:</h2>}
+  <pre>{text}</pre>
+</section>
+
+<style>
+  section {
+    margin-bottom: 32px;
+  }
+
+  h2 {
+    font: var(--font-md);
+  }
+
+  pre {
+    font: var(--font-md);
+    font-family: var(--font-default);
+  }
+</style>

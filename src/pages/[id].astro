@@ -1,6 +1,9 @@
 ---
 import type { Ballad } from '@model';
 import Layout from '@layouts/Layout.astro';
+import Motto from '@components/Motto.astro';
+import Note from '@components/Note.astro';
+import Content from '@components/Content.astro';
 
 export async function getStaticPaths() {
   const ballads: Ballad[] = await Astro.glob('/src/assets/ballads/*.json');
@@ -16,63 +19,46 @@ const { title, prev, next, notes, motto, contents } = Astro.props;
 
 <Layout title={`${title} | Ballady i Romanse`}>
   <header>
-    <h1 class="font-cursive font-size-8xl">
-      {title}
-    </h1>
+    <h1>{title}</h1>
     <nav>
       <span>
         {
           prev && (
-            <a href={`/${prev.id}`} class="font-size-base" style={{ textAlign: 'left' }}>
+            <a href={`/${prev.id}`} style={{ textAlign: 'left' }}>
               ⬅ {prev.title}
             </a>
           )
         }
       </span>
-      <a href="/" class="font-size-base" style={{ textAlign: 'center' }}>Strona główna ⌂</a>
+      <a href="/" style={{ textAlign: 'center' }}>Strona główna</a>
       <span>
         {
           next && (
-            <a href={`/${next.id}`} class="font-size-base" style={{ textAlign: 'right' }}>
+            <a href={`/${next.id}`} style={{ textAlign: 'right' }}>
               {next.title} ➡
             </a>
           )
         }
       </span>
     </nav>
-    {notes && notes.map((note) => <span class="note font-size-xs">{note}</span>)}
+    {notes && notes.map((note) => <Note note={note} />)}
   </header>
   <main>
     <article>
-      {
-        motto && (
-          <section class="motto">
-            <pre class="font-default font-size-sm">{motto.text}</pre>
-            <pre class="font-default font-size-sm mb-2" style={{ marginBottom: '8px' }}>
-              {motto.author}
-            </pre>
-            {motto.translation && <pre class="font-default font-size-sm">{motto.translation}</pre>}
-          </section>
-        )
-      }
-      {
-        contents.map((content) => (
-          <section class="content">
-            {content.character && <h2 class="font-size-base">{content.character}:</h2>}
-            <pre class="font-default font-size-base">{content.text}</pre>
-          </section>
-        ))
-      }
+      {motto && <Motto {...motto} />}
+      {contents.map((content) => <Content {...content} />)}
     </article>
   </main>
 </Layout>
 
-<style>
+<style lang="scss">
   header {
     margin-bottom: 32px;
   }
 
   h1 {
+    font: var(--font-xxl);
+    font-family: var(--font-cursive);
     text-align: center;
   }
 
@@ -89,36 +75,21 @@ const { title, prev, next, notes, motto, contents } = Astro.props;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-  }
 
-  nav a {
-    display: inline-block;
-    width: 100%;
-  }
+    & a {
+      display: inline-block;
+      width: 100%;
 
-  nav a:hover {
-    text-decoration: underline;
-  }
+      font: var(--font-md);
 
-  .note {
-    display: block;
-    text-align: center;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   article {
     width: max-content;
     margin-inline: auto;
-  }
-
-  article section.motto {
-    margin-bottom: 16px;
-  }
-
-  .motto pre {
-    text-align: right;
-  }
-
-  article section.content {
-    margin-bottom: 32px;
   }
 </style>

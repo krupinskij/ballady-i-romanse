@@ -1,10 +1,10 @@
-type Motto = {
+export type Motto = {
   text: string;
   author: string;
   translation?: string;
 };
 
-type Content = {
+export type Content = {
   character?: string;
   text: string;
 };
