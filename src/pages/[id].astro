@@ -25,17 +25,17 @@ const { title, prev, next, notes, motto, contents } = Astro.props;
         {
           prev && (
             <a href={`/${prev.id}`} style={{ textAlign: 'left' }}>
-              ⬅ {prev.title}
+              ⬅<span> {prev.title}</span>
             </a>
           )
         }
       </span>
-      <a href="/" style={{ textAlign: 'center' }}>Strona główna</a>
+      <a href="/" style={{ textAlign: 'center' }}>⌂ <span>Strona główna</span></a>
       <span>
         {
           next && (
             <a href={`/${next.id}`} style={{ textAlign: 'right' }}>
-              {next.title} ➡
+              <span>{next.title} </span>➡
             </a>
           )
         }
@@ -81,9 +81,17 @@ const { title, prev, next, notes, motto, contents } = Astro.props;
       width: 100%;
 
       font: var(--font-md);
+      text-wrap: nowrap;
 
       &:hover {
         text-decoration: underline;
+      }
+
+      & > span {
+        display: none;
+        @media (min-width: 640px) {
+          display: inline;
+        }
       }
     }
   }

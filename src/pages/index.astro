@@ -58,33 +58,47 @@ const ballads: Ballad[] = [
   header {
     position: relative;
     width: max-content;
-    height: 460px;
+    height: calc(460px * var(--scale, 1));
     margin-inline: auto;
     margin-bottom: 48px;
+
+    --scale: 0.7;
+    @media (min-width: 800px) {
+      --scale: 1;
+    }
   }
 
   .image {
     position: absolute;
-    --offset: 160px;
+    scale: var(--scale, 1);
+    --offset: clamp(100px, 15vw, 160px);
 
     &.image-top {
       top: 0;
       left: 50%;
       translate: -50% 0;
+      transform-origin: 50% 0;
+      z-index: 1;
     }
 
     &.image-bottom {
       bottom: 0;
       left: 50%;
       translate: -50% 0;
+      transform-origin: 50% 100%;
+      z-index: 1;
     }
 
     &.image-left {
       left: calc(-1 * var(--offset));
+      transform-origin: 0 0;
+      z-index: 0;
     }
 
     &.image-right {
       right: calc(-1 * var(--offset));
+      transform-origin: 100% 0;
+      z-index: 0;
     }
   }
 
@@ -113,7 +127,7 @@ const ballads: Ballad[] = [
     justify-content: center;
     gap: 16px;
 
-    margin-inline: 64px;
+    margin-inline: min(5vw, 64px);
     margin-bottom: 48px;
   }
 </style>

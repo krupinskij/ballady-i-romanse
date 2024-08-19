@@ -14,12 +14,16 @@ const { title, href } = Astro.props;
 <style lang="scss">
   a {
     border: 6px double var(--border-color-default);
-    width: 288px;
-    height: 128px;
+    height: clamp(80px, 15vw, 128px);
+    aspect-ratio: 2/1;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:hover {
+      text-decoration: underline;
+    }
 
     & > div {
       font: var(--font-lg);
