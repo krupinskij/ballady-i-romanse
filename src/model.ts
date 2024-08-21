@@ -9,15 +9,19 @@ export type Content = {
   text: string;
 };
 
-type BalladInfo = {
-  id: string;
+type Note = {
+  text: string;
+};
+
+export type BalladInfo = {
+  key: string;
   title: string;
 };
 
 export type Ballad = BalladInfo & {
   prev?: BalladInfo;
   next?: BalladInfo;
-  notes?: string[];
+  notes?: Note[];
   motto?: Motto;
   contents: Content[];
 };

@@ -10,26 +10,11 @@ import rightImage from '@assets/images/title/right.png';
 import topImage from '@assets/images/title/top.png';
 
 type Ballad = {
-  id: string;
+  key: string;
   title: string;
 };
 
-const ballads: Ballad[] = [
-  { id: 'pierwiosnek', title: 'Pierwiosnek' },
-  { id: 'romantycznosc', title: 'Romantyczność' },
-  { id: 'switez', title: 'Świteź' },
-  { id: 'switezianka', title: 'Świtezianka' },
-  { id: 'rybka', title: 'Rybka' },
-  { id: 'powrot-taty', title: 'Powrót taty' },
-  { id: 'kurhanek-maryli', title: 'Kurhanek Maryli' },
-  { id: 'do-przyjaciol', title: 'Do przyjaciół' },
-  { id: 'to-lubie', title: 'To lubię' },
-  { id: 'rekawiczka', title: 'Rękawiczka' },
-  { id: 'pani-twardowska', title: 'Pani Twardowska' },
-  { id: 'tukaj-albo-proby-przyjazni', title: 'Tukaj albo próby przyjaźni' },
-  { id: 'lilije', title: 'Lilije' },
-  { id: 'dudarz', title: 'Dudarz' },
-];
+const ballads: Ballad[] = await (await fetch('http://localhost:4321/api/ballads/list.json')).json();
 ---
 
 <Layout title="Ballady i romanse | Adam Mickiewicz">
@@ -46,7 +31,7 @@ const ballads: Ballad[] = [
       {
         ballads.map((ballad) => (
           <li>
-            <Card title={ballad.title} href={`/${ballad.id}`} />
+            <Card title={ballad.title} href={`/${ballad.key}`} />
           </li>
         ))
       }

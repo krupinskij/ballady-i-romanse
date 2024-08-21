@@ -7,6 +7,7 @@
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
       "@model": ["src/model"]
-    }
+    },
+    "types": ["@cloudflare/workers-types/2023-07-01"]
   }
 }

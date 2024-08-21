@@ -1,20 +1,40 @@
 ---
-import type { Ballad } from '@model';
+import type { Ballad, BalladInfo } from '@model';
 import Layout from '@layouts/Layout.astro';
 import Motto from '@components/Motto.astro';
 import Note from '@components/Note.astro';
 import Content from '@components/Content.astro';
 
+const { key } = Astro.params;
+
+const ballad: Ballad = await (await fetch(`http://localhost:4321/api/ballads/${key}.json`)).json();
+const { title, prev, next, notes, motto, contents } = ballad;
+
 export async function getStaticPaths() {
-  const ballads: Ballad[] = await Astro.glob('/src/assets/ballads/*.json');
+  const ballads: BalladInfo[] = [
+    { key: 'pierwiosnek', title: 'Pierwiosnek' },
+    { key: 'romantycznosc', title: 'Romantyczność' },
+    { key: 'switez', title: 'Świteź' },
+    { key: 'switezianka', title: 'Świtezianka' },
+    { key: 'rybka', title: 'Rybka' },
+    { key: 'powrot-taty', title: 'Powrót taty' },
+    { key: 'kurhanek-maryli', title: 'Kurhanek Maryli' },
+    { key: 'do-przyjaciol', title: 'Do przyjaciół' },
+    { key: 'to-lubie', title: 'To lubię' },
+    { key: 'rekawiczka', title: 'Rękawiczka' },
+    { key: 'pani-twardowska', title: 'Pani Twardowska' },
+    { key: 'tukaj-albo-proby-przyjazni', title: 'Tukaj albo próby przyjaźni' },
+    { key: 'lilije', title: 'Lilije' },
+    { key: 'dudarz', title: 'Dudarz' },
+  ];
+  // const ballads: BalladInfo[] = await (
+  //   await fetch('http://localhost:4321/api/ballads/list.json')
+  // ).json();
 
   return ballads.map((ballad) => ({
-    params: { id: ballad.id },
-    props: ballad,
+    params: { key: ballad.key },
   }));
 }
-
-const { title, prev, next, notes, motto, contents } = Astro.props;
 ---
 
 <Layout title={`${title} | Ballady i Romanse`}>
@@ -24,7 +44,7 @@ const { title, prev, next, notes, motto, contents } = Astro.props;
       <span>
         {
           prev && (
-            <a href={`/${prev.id}`} style={{ textAlign: 'left' }}>
+            <a href={`/${prev.key}`} style={{ textAlign: 'left' }}>
               ⬅<span> {prev.title}</span>
             </a>
           )
@@ -34,14 +54,14 @@ const { title, prev, next, notes, motto, contents } = Astro.props;
       <span>
         {
           next && (
-            <a href={`/${next.id}`} style={{ textAlign: 'right' }}>
+            <a href={`/${next.key}`} style={{ textAlign: 'right' }}>
               <span>{next.title} </span>➡
             </a>
           )
         }
       </span>
     </nav>
-    {notes && notes.map((note) => <Note note={note} />)}
+    {notes && notes.map(({ text }) => <Note note={text} />)}
   </header>
   <main>
     <article>
@@ -49,6 +69,9 @@ const { title, prev, next, notes, motto, contents } = Astro.props;
       {contents.map((content) => <Content {...content} />)}
     </article>
   </main>
+  <pre>
+    {JSON.stringify(ballad, null, 2)}
+  </pre>
 </Layout>
 
 <style lang="scss">
