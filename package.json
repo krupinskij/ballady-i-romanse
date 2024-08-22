@@ -18,7 +18,8 @@
     "@fontsource/italianno": "^5.0.20",
     "astro": "^4.13.2",
     "sass": "^1.77.8",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240815.0",

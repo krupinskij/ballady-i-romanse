@@ -1,56 +1,63 @@
-import type { Ballad } from '@model';
+import { ballads } from '@model';
+import {
+  balladDTOSchema,
+  balladInfoMapper,
+  balladMapper,
+  contentMapper,
+  mottoDTOSchema,
+  mottoMapper,
+  noteMapper,
+} from '@schema';
 import type { APIRoute } from 'astro';
+import { z } from 'zod';
 
 export const GET: APIRoute = async ({ locals, params }) => {
   const key = params.key;
   const db = locals.runtime.env.DB;
 
-  const ballad = await db.prepare('SELECT * FROM ballads WHERE key = ?').bind(key).first();
+  const balladDTO = balladDTOSchema
+    .nullable()
+    .parse(await db.prepare('SELECT * FROM ballads WHERE key = ?').bind(key).first());
 
-  if (!ballad) {
+  if (!balladDTO) {
     return new Response(JSON.stringify({ title: 'dupa' }));
   }
 
-  const prevBallad = await db
-    .prepare('SELECT * FROM ballads WHERE id = ?')
-    .bind(ballad.prev_id)
-    .first();
-  const nextBallad = await db
-    .prepare('SELECT * FROM ballads WHERE id = ?')
-    .bind(ballad.next_id)
-    .first();
+  const ballad = balladMapper.parse(balladDTO);
 
-  ballad.prev = prevBallad;
-  ballad.next = nextBallad;
+  const prevBalladDTO = balladDTOSchema
+    .nullable()
+    .parse(await db.prepare('SELECT * FROM ballads WHERE id = ?').bind(balladDTO.prev_id).first());
+  const nextBalladDTO = balladDTOSchema
+    .nullable()
+    .parse(await db.prepare('SELECT * FROM ballads WHERE id = ?').bind(balladDTO.next_id).first());
+
+  ballad.prev = balladInfoMapper.nullable().parse(prevBalladDTO);
+  ballad.next = balladInfoMapper.nullable().parse(nextBalladDTO);
 
   const { results: contents } = await db
     .prepare('SELECT *, c_text as text FROM contents WHERE ballad_id = ? ORDER BY c_order')
-    .bind(ballad.id)
+    .bind(balladDTO.id)
     .all();
 
-  ballad.contents = contents;
+  ballad.contents = z.array(contentMapper).parse(contents);
 
   const { results: notes } = await db
     .prepare('SELECT *, n_text as text FROM notes WHERE ballad_id = ? ORDER BY n_order')
-    .bind(ballad.id)
+    .bind(balladDTO.id)
     .all();
 
-  ballad.notes = notes;
+  ballad.notes = z.array(noteMapper).parse(notes);
 
-  const motto = await db
-    .prepare('SELECT * FROM mottos WHERE ballad_id = ?')
-    .bind(ballad.id)
-    .first();
+  const motto = mottoDTOSchema
+    .nullable()
+    .parse(await db.prepare('SELECT * FROM mottos WHERE ballad_id = ?').bind(balladDTO.id).first());
 
-  ballad.motto = motto;
+  ballad.motto = mottoMapper.nullable().parse(motto);
 
   return new Response(JSON.stringify(ballad));
 };
 
 export async function getStaticPaths() {
-  const ballads: Ballad[] = await (
-    await fetch('http://localhost:4321/api/ballads/list.json')
-  ).json();
-
-  return ballads.map((ballad) => ({ params: { key: ballad.key } }));
+  return ballads.map((ballad) => ({ params: { key: ballad } }));
 }

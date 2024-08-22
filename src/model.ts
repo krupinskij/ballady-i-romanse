@@ -1,27 +1,42 @@
-export type Motto = {
-  text: string;
-  author: string;
-  translation?: string;
-};
+import type {
+  balladDTOSchema,
+  balladInfoSchema,
+  balladSchema,
+  contentDTOSchema,
+  contentSchema,
+  mottoDTOSchema,
+  mottoSchema,
+  noteDTOSchema,
+  noteSchema,
+} from '@schema';
+import { z } from 'zod';
 
-export type Content = {
-  character?: string;
-  text: string;
-};
+export type ContentDTO = z.infer<typeof contentDTOSchema>;
+export type Content = z.infer<typeof contentSchema>;
 
-type Note = {
-  text: string;
-};
+export type MottoDTO = z.infer<typeof mottoDTOSchema>;
+export type Motto = z.infer<typeof mottoSchema>;
 
-export type BalladInfo = {
-  key: string;
-  title: string;
-};
+export type NoteDTO = z.infer<typeof noteDTOSchema>;
+export type Note = z.infer<typeof noteSchema>;
 
-export type Ballad = BalladInfo & {
-  prev?: BalladInfo;
-  next?: BalladInfo;
-  notes?: Note[];
-  motto?: Motto;
-  contents: Content[];
-};
+export type BalladDTO = z.infer<typeof balladDTOSchema>;
+export type BalladInfo = z.infer<typeof balladInfoSchema>;
+export type Ballad = z.infer<typeof balladSchema>;
+
+export const ballads = [
+  'pierwiosnek',
+  'romantycznosc',
+  'switez',
+  'switezianka',
+  'rybka',
+  'powrot-taty',
+  'kurhanek-maryli',
+  'do-przyjaciol',
+  'to-lubie',
+  'rekawiczka',
+  'pani-twardowska',
+  'tukaj-albo-proby-przyjazni',
+  'lilije',
+  'dudarz',
+];

@@ -1,5 +1,5 @@
 ---
-import type { Ballad, BalladInfo } from '@model';
+import { ballads, type Ballad } from '@model';
 import Layout from '@layouts/Layout.astro';
 import Motto from '@components/Motto.astro';
 import Note from '@components/Note.astro';
@@ -11,29 +11,7 @@ const ballad: Ballad = await (await fetch(`http://localhost:4321/api/ballads/${k
 const { title, prev, next, notes, motto, contents } = ballad;
 
 export async function getStaticPaths() {
-  const ballads: BalladInfo[] = [
-    { key: 'pierwiosnek', title: 'Pierwiosnek' },
-    { key: 'romantycznosc', title: 'Romantyczność' },
-    { key: 'switez', title: 'Świteź' },
-    { key: 'switezianka', title: 'Świtezianka' },
-    { key: 'rybka', title: 'Rybka' },
-    { key: 'powrot-taty', title: 'Powrót taty' },
-    { key: 'kurhanek-maryli', title: 'Kurhanek Maryli' },
-    { key: 'do-przyjaciol', title: 'Do przyjaciół' },
-    { key: 'to-lubie', title: 'To lubię' },
-    { key: 'rekawiczka', title: 'Rękawiczka' },
-    { key: 'pani-twardowska', title: 'Pani Twardowska' },
-    { key: 'tukaj-albo-proby-przyjazni', title: 'Tukaj albo próby przyjaźni' },
-    { key: 'lilije', title: 'Lilije' },
-    { key: 'dudarz', title: 'Dudarz' },
-  ];
-  // const ballads: BalladInfo[] = await (
-  //   await fetch('http://localhost:4321/api/ballads/list.json')
-  // ).json();
-
-  return ballads.map((ballad) => ({
-    params: { key: ballad.key },
-  }));
+  return ballads.map((ballad) => ({ params: { key: ballad } }));
 }
 ---
 
@@ -69,9 +47,6 @@ export async function getStaticPaths() {
       {contents.map((content) => <Content {...content} />)}
     </article>
   </main>
-  <pre>
-    {JSON.stringify(ballad, null, 2)}
-  </pre>
 </Layout>
 
 <style lang="scss">

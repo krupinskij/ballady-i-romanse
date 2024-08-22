@@ -6,7 +6,9 @@
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@model": ["src/model"]
+      "@model": ["src/model"],
+      "@schema": ["src/schema"],
+      "@styles/*": ["src/styles/*"]
     },
     "types": ["@cloudflare/workers-types/2023-07-01"]
   }

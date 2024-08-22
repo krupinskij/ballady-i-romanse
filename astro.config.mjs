@@ -5,8 +5,8 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   output: 'hybrid',
   adapter: cloudflare({
-    platformProxy: {
-      enabled: true,
-    },
+    // platformProxy: {
+    //   enabled: true,
+    // },
   }),
 });
