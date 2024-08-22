@@ -4,10 +4,10 @@ import Layout from '@layouts/Layout.astro';
 import Motto from '@components/Motto.astro';
 import Note from '@components/Note.astro';
 import Content from '@components/Content.astro';
+import { GET } from './api/ballads/[key].json';
 
-const { key } = Astro.params;
-
-const ballad: Ballad = await (await fetch(`http://localhost:4321/api/ballads/${key}.json`)).json();
+const response = await GET(Astro);
+const ballad = await response.json<Ballad>();
 const { title, prev, next, notes, motto, contents } = ballad;
 
 export async function getStaticPaths() {

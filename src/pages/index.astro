@@ -9,12 +9,11 @@ import leftImage from '@assets/images/title/left.png';
 import rightImage from '@assets/images/title/right.png';
 import topImage from '@assets/images/title/top.png';
 
-type Ballad = {
-  key: string;
-  title: string;
-};
+import { GET } from './api/ballads/list.json';
+import type { Ballad } from '@model';
 
-const ballads: Ballad[] = await (await fetch('http://localhost:4321/api/ballads/list.json')).json();
+const response = await GET(Astro);
+const ballads = await response.json<Ballad[]>();
 ---
 
 <Layout title="Ballady i romanse | Adam Mickiewicz">
