@@ -27,20 +27,3 @@ export const readTomlFile = (path: string): Ballad => {
 
   return result;
 };
-
-export const keys = [
-  'pierwiosnek',
-  'romantycznosc',
-  'switez',
-  'switezianka',
-  'rybka',
-  'powrot-taty',
-  'kurhanek-maryli',
-  'do-przyjaciol',
-  'to-lubie',
-  'rekawiczka',
-  'pani-twardowska',
-  'tukaj-albo-proby-przyjazni',
-  'lilije',
-  'dudarz',
-];

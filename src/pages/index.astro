@@ -12,6 +12,8 @@ import topImage from '@assets/images/title/top.png';
 import { GET } from './api/ballads/list.json';
 import type { Ballad } from '@model';
 
+export const prerender = true;
+
 const response = await GET(Astro);
 const ballads = await response.json<Ballad[]>();
 ---

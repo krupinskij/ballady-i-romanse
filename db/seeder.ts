@@ -1,8 +1,9 @@
 import { eq } from 'drizzle-orm';
 
-import db from './database';
-import { keys, readTomlFile } from './helpers';
-import { ballads, contents, mottos, notes } from './schema';
+import { ballads, contents, db, mottos, notes } from '@db';
+import { keys } from '@model';
+
+import { readTomlFile } from './helpers';
 
 const balladsOriginData = keys.map((key) => readTomlFile(`./db/data/${key}.toml`));
 

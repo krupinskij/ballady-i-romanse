@@ -17,3 +17,20 @@ export type Ballad = DB.Ballad & {
   notes: Note[];
   contents: Content[];
 };
+
+export const keys = [
+  'pierwiosnek',
+  'romantycznosc',
+  'switez',
+  'switezianka',
+  'rybka',
+  'powrot-taty',
+  'kurhanek-maryli',
+  'do-przyjaciol',
+  'to-lubie',
+  'rekawiczka',
+  'pani-twardowska',
+  'tukaj-albo-proby-przyjazni',
+  'lilije',
+  'dudarz',
+];

@@ -1,11 +1,12 @@
 ---
-import { type Ballad } from '@model';
+import { keys, type Ballad } from '@model';
 import Layout from '@layouts/Layout.astro';
 import Motto from '@components/Motto.astro';
 import Note from '@components/Note.astro';
 import Content from '@components/Content.astro';
 import { GET } from './api/ballads/[key].json';
-import { keys } from '@db';
+
+export const prerender = true;
 
 const response = await GET(Astro);
 const ballad = await response.json<Ballad>();

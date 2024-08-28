@@ -1,8 +1,8 @@
 import type { APIRoute } from 'astro';
 import { aliasedTable, eq } from 'drizzle-orm';
 
-import { ballads, contents, db, keys, mottos, notes } from '@db';
-import type { Ballad, DB } from '@model';
+import { ballads, contents, db, mottos, notes } from '@db';
+import { keys, type Ballad, type DB } from '@model';
 
 type QueryResult = {
   ballads: DB.Ballad;
