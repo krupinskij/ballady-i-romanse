@@ -1,0 +1,164 @@
+key = "kurhanek-maryli"
+title = "Kurhanek Maryli"
+order = 6
+
+notes = ["(Myśl ze śpiewu litewskiego)", "Cudzy Człowiek, Dziewczyna, Jaś, Matka, Przyjaciółka"]
+
+[[contents]]
+character = "Cudzy człowiek"
+text = '''
+Tam u Niemnowej odnogi,
+Tam u zielonej rozłogi,
+Co to za piękny kurhanek?
+Spodem uwieńczon jak w wianek,
+W maliny, ciernie i głogi;
+Boki ma strojne murawą,
+Głowę ukwieconą w kwiaty.
+A na niej czeremchy drzewo
+A od niej idą trzy drogi:
+Jedna droga na prawo,
+Druga droga do chaty,
+Trzecia droga na lewo.
+Ja tędy płynę z wiciną,
+Pytam się ciebie, dziewczyno,
+Co to za piękny kurhanek?'''
+
+[[contents]]
+character = "Dziewczyna"
+text = '''
+W całej wsi pytaj się, bracie,
+A cała wieś powie tobie:
+Maryla żyła w tej chacie,
+A teraz leży w tym grobie.
+Na prawej stronie te śladki
+Ubite nogą pastuszka;
+To jest drożyna jej matki,
+A stąd przychodzi jej drużka.'''
+
+[[contents]]
+text = '''
+Lecz oto błysnął poranek,
+Przyjdą oni na kurhanek;
+Ukryj się tu za stos łomu,
+Sam ich posłuchasz niedoli,
+Własne twe oczy zobaczą.
+Patrz w prawo... idzie kochanek.
+Patrz, matka idzie z domu,
+Patrz w lewo, przyjaciółka.
+Wszyscy idą powoli,
+I niosą ziółka,
+I płaczą.'''
+
+[[contents]]
+character = "Jaś"
+text = '''
+Marylo! o tej porze
+Jeszcześmy się nie widzieli,
+Jeszcześmy się nie ścisnęli.
+Marylo! zaszło zorze!
+Tu czeka twój kochanek:
+Czy ty przespałaś ranek?
+Czy na mnie zagniewana?
+Ach! Marylo kochana,
+Gdzież się ty dotąd kryjesz?
+Nie, nie przespałaś ranka,
+Nie gniewasz się na Janka:
+Lecz nie żyjesz, nie żyjesz!
+Więzi cię ten kurhanek,
+Nie ujrzysz już kochanka,
+Nie ujrzy cię kochanek!
+Dawniej, kiedy spać szedłem, tem słodziłem chwile,
+Że skoro się obudzę, obaczę Marylę,
+I dawniej spałem mile!
+Teraz, tutaj spać będę, od ludzi daleki,
+Może ją we śnie ujrzę, gdy zamknę powieki;
+Może zamknę na wieki!'''
+
+[[contents]]
+text = '''
+Byłem ja gospodarny, gdy byłem szczęśliwy;
+Chwalili mnie sąsiedzi,
+Chwalił mię ojciec siwy:
+Teraz się ojciec biedzi;
+A ja ni ludziom, ni Bogu!
+Niech ziarno w polu przepadnie,
+Niech ginie siano ze stogu,
+Niech sąsiad kopy rozkradnie,
+Niech trzodę wyduszą wilki!
+Niemasz, niemasz Marylki!
+Daje mi ojciec chaty,
+Daje mi sprzęt bogaty,
+Bym wziął w dom gospodynię;
+Namawiali mię swaty,
+Niemasz, niemasz Maryli!
+Swaty nie namówili:
+Nie mogę, nie, nie mogę!
+Wiem, ojcze, co uczynię:
+Pójdę w daleką drogę,
+Więcej mnie nie znajdziecie
+Choćbyście i szukali,
+Nie będę już na świecie,
+Przystanę do Moskali,
+Żeby mię wraz zabili.
+Niemasz, niemasz Maryli!'''
+
+[[contents]]
+character = "Matka"
+text = '''
+Czemuż nie wstałam zrana?
+Już w polu pełno ludzi.
+Niemasz cię, niemasz, kochana
+Marylo, któż mię obudzi?
+Płakałam przez noc całą,
+Zasnęłam, kiedy dniało.
+Mój Szymon gdzieś już w polu,
+Wyprzedził on świtania;'''
+
+[[contents]]
+text = '''
+Nie budził mię, mojego litując się bolu,
+Poszedł z kosą bez śniadania;
+Koś ty dzień cały, koś sobie,
+Ja tutaj leżę na grobie.
+Czegóż mam iść do domu?
+Kto nas na obiad zawoła?
+Kto z nami siądzie do stoła?
+Niemasz, ach! niemasz komu!
+Pókiśmy mieli ciebie,
+W domu było jak w niebie.
+U nas i wieczorynki,
+Z całej wsi chłopcy, dziewki,
+Najweselsze zażynki,
+Najhuczniejsze dosiewki.
+Niemasz cię! w domu pustynie!
+Każdy kto idzie, minie.
+Zawiasy rdzewieją w sieni,
+Mchem się dziedziniec zieleni:
+Bóg nas opuścił, ludzie opuścili,
+Niemasz, niemasz Maryli!'''
+
+[[contents]]
+character = "Przyjaciółka"
+text = '''
+Tutaj bywało z ranku
+Nad wodą sobie stoim,
+Ja o twoim kochanku,
+Ty mnie mówisz o moim.
+Już więcej z sobą nie będziem mówili,
+Niemasz, niemasz Maryli!
+Któż mi zwierzy się szczerze,
+Komuż się ja powierzę?
+Ach, gdy z tobą, kochanie,
+Smutku i szczęścia nie dzielę,
+Smutek smutkiem zostanie,
+Weselem nie jest wesele.'''
+
+[[contents]]
+text = "***"
+
+[[contents]]
+text = '''
+Słyszy to cudzy człowiek,
+Wzdycha i łzy mu płyną,
+Westchnął, otarł łzy z powiek,
+I dalej poszedł z wiciną.'''

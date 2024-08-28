@@ -7,7 +7,11 @@ export default {
   trailingComma: 'es5',
   importOrder: ['<THIRD_PARTY_MODULES>', '^(components|context|hooks|model|utilities)/?', '^[./]'],
   importOrderSeparation: true,
-  plugins: ['prettier-plugin-astro', '@trivago/prettier-plugin-sort-imports'],
+  plugins: [
+    'prettier-plugin-astro',
+    '@trivago/prettier-plugin-sort-imports',
+    'prettier-plugin-toml',
+  ],
   overrides: [
     {
       files: '*.astro',
