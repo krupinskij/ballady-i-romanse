@@ -1,17 +1,18 @@
 ---
-import { ballads, type Ballad } from '@model';
+import { type Ballad } from '@model';
 import Layout from '@layouts/Layout.astro';
 import Motto from '@components/Motto.astro';
 import Note from '@components/Note.astro';
 import Content from '@components/Content.astro';
 import { GET } from './api/ballads/[key].json';
+import { keys } from '@db';
 
 const response = await GET(Astro);
 const ballad = await response.json<Ballad>();
-const { title, prev, next, notes, motto, contents } = ballad;
+const { title, prevBallad, nextBallad, notes, motto, contents } = ballad;
 
 export async function getStaticPaths() {
-  return ballads.map((ballad) => ({ params: { key: ballad } }));
+  return keys.map((key) => ({ params: { key } }));
 }
 ---
 
@@ -21,9 +22,9 @@ export async function getStaticPaths() {
     <nav>
       <span>
         {
-          prev && (
-            <a href={`/${prev.key}`} style={{ textAlign: 'left' }}>
-              ⬅<span> {prev.title}</span>
+          prevBallad && (
+            <a href={`/${prevBallad.key}`} style={{ textAlign: 'left' }}>
+              ⬅<span> {prevBallad.title}</span>
             </a>
           )
         }
@@ -31,9 +32,9 @@ export async function getStaticPaths() {
       <a href="/" style={{ textAlign: 'center' }}>⌂ <span>Strona główna</span></a>
       <span>
         {
-          next && (
-            <a href={`/${next.key}`} style={{ textAlign: 'right' }}>
-              <span>{next.title} </span>➡
+          nextBallad && (
+            <a href={`/${nextBallad.key}`} style={{ textAlign: 'right' }}>
+              <span>{nextBallad.title} </span>➡
             </a>
           )
         }

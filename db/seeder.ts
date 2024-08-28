@@ -1,26 +1,8 @@
 import { eq } from 'drizzle-orm';
-import { drizzle } from 'drizzle-orm/libsql';
 
 import db from './database';
-import { readTomlFile } from './helpers';
+import { keys, readTomlFile } from './helpers';
 import { ballads, contents, mottos, notes } from './schema';
-
-export const keys = [
-  'pierwiosnek',
-  'romantycznosc',
-  'switez',
-  'switezianka',
-  'rybka',
-  'powrot-taty',
-  'kurhanek-maryli',
-  'do-przyjaciol',
-  'to-lubie',
-  'rekawiczka',
-  'pani-twardowska',
-  'tukaj-albo-proby-przyjazni',
-  'lilije',
-  'dudarz',
-];
 
 const balladsOriginData = keys.map((key) => readTomlFile(`./db/data/${key}.toml`));
 
@@ -42,22 +24,6 @@ const balladsDbData = await db
 
 balladsDbData.sort((b1, b2) => b1.order - b2.order);
 
-// balladsDbData.map(async (ballad, i, all) => {
-//   if (i > 0) {
-//     await db
-//       .update(ballads)
-//       .set({ prevId: all[i - 1].id })
-//       .where(eq(ballads.id, ballad.id));
-//   }
-
-//   if (i < all.length - 1) {
-//     await db
-//       .update(ballads)
-//       .set({ nextId: all[i + 1].id })
-//       .where(eq(ballads.id, ballad.id));
-//   }
-// });
-
 for (let i = 0; i < balladsDbData.length; i++) {
   const ballad = balladsDbData[i];
   if (i > 0) {
@@ -78,9 +44,9 @@ for (let i = 0; i < balladsDbData.length; i++) {
 console.log('Seed ballads complete!');
 
 await db.insert(contents).values(
-  balladsOriginData.flatMap((ballad, bOrder) =>
+  balladsOriginData.flatMap((ballad) =>
     ballad.contents.map((content, order) => ({
-      balladId: balladsDbData[bOrder].id,
+      balladId: balladsDbData[ballad.order].id,
       order,
       character: content.character,
       text: content.text,
@@ -92,9 +58,9 @@ console.log('Seed contents complete!');
 
 await db.insert(notes).values(
   balladsOriginData.flatMap(
-    (ballad, bOrder) =>
+    (ballad) =>
       ballad.notes?.map((note, order) => ({
-        balladId: balladsDbData[bOrder].id,
+        balladId: balladsDbData[ballad.order].id,
         order,
         text: note,
       })) || []
@@ -106,8 +72,8 @@ console.log('Seed notes complete!');
 await db.insert(mottos).values(
   balladsOriginData
     .filter((ballad) => !!ballad.motto)
-    .map((ballad, bOrder) => ({
-      balladId: balladsDbData[bOrder].id,
+    .map((ballad) => ({
+      balladId: balladsDbData[ballad.order].id,
       text: ballad.motto!.text,
       author: ballad.motto!.author,
       translation: ballad.motto!.translation,

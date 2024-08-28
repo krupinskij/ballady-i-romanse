@@ -1,11 +1,12 @@
-/// <reference path="../.astro/types.d.ts" />
-
-type Env = {
-  DB: D1Database;
-};
+/// <reference path="astro/client.d.ts" />
 
 type Runtime = import('@astrojs/cloudflare').Runtime<Env>;
 
-declare namespace App {
-  interface Locals extends Runtime {}
+interface ImportMetaEnv {
+  readonly DATABASE_URL: string;
+  readonly DATABASE_TOKEN: string;
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
 }

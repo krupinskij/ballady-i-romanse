@@ -5,7 +5,11 @@ export default {
   singleQuote: true,
   tabWidth: 2,
   trailingComma: 'es5',
-  importOrder: ['<THIRD_PARTY_MODULES>', '^(components|context|hooks|model|utilities)/?', '^[./]'],
+  importOrder: [
+    '<THIRD_PARTY_MODULES>',
+    '^(@assets|@components|@db|@layouts|@model|@schema|@styles)',
+    '^[./]',
+  ],
   importOrderSeparation: true,
   plugins: [
     'prettier-plugin-astro',

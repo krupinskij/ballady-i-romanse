@@ -1,63 +1,59 @@
-import { ballads } from '@model';
-import {
-  balladDTOSchema,
-  balladInfoMapper,
-  balladMapper,
-  contentMapper,
-  mottoDTOSchema,
-  mottoMapper,
-  noteMapper,
-} from '@schema';
 import type { APIRoute } from 'astro';
-import { z } from 'zod';
+import { aliasedTable, eq } from 'drizzle-orm';
 
-export const GET: APIRoute = async ({ locals, params }) => {
+import { ballads, contents, db, keys, mottos, notes } from '@db';
+import type { Ballad, DB } from '@model';
+
+type QueryResult = {
+  ballads: DB.Ballad;
+  prevBallad: DB.Ballad | null;
+  nextBallad: DB.Ballad | null;
+  mottos: DB.Motto | null;
+  notes: DB.Note | null;
+  contents: DB.Content;
+};
+
+const mapQueryResult = (queryResult: QueryResult[]): Ballad => {
+  const firstResult = queryResult[0];
+  const { ballads, prevBallad, nextBallad, mottos } = firstResult;
+  const notesMap =
+    firstResult.notes && new Map(queryResult.map((result) => [result.notes!.order, result.notes!]));
+  const contentsMap = new Map(
+    queryResult.map((result) => [result.contents.order, result.contents])
+  );
+
+  const ballad = {
+    ...ballads,
+    prevBallad,
+    nextBallad,
+    motto: mottos,
+    notes: notesMap ? Array.from(notesMap.values()).sort((n1, n2) => n1.order - n2.order) : [],
+    contents: Array.from(contentsMap.values()).sort((c1, c2) => c1.order - c2.order),
+  };
+
+  return ballad;
+};
+
+export const GET: APIRoute = async ({ params }) => {
   const key = params.key;
-  const db = locals.runtime.env.DB;
 
-  const balladDTO = balladDTOSchema
-    .nullable()
-    .parse(await db.prepare('SELECT * FROM ballads WHERE key = ?').bind(key).first());
+  const prevBallad = aliasedTable(ballads, 'prevBallad');
+  const nextBallad = aliasedTable(ballads, 'nextBallad');
+  const queryResult = await db
+    .select()
+    .from(ballads)
+    .where(eq(ballads.key, key!))
+    .leftJoin(prevBallad, eq(ballads.prevId, prevBallad.id))
+    .leftJoin(nextBallad, eq(ballads.nextId, nextBallad.id))
+    .leftJoin(mottos, eq(ballads.id, mottos.balladId))
+    .leftJoin(notes, eq(ballads.id, notes.balladId))
+    .innerJoin(contents, eq(ballads.id, contents.balladId));
 
-  if (!balladDTO) {
-    return new Response(JSON.stringify({ title: 'dupa' }));
-  }
-
-  const ballad = balladMapper.parse(balladDTO);
-
-  const prevBalladDTO = balladDTOSchema
-    .nullable()
-    .parse(await db.prepare('SELECT * FROM ballads WHERE id = ?').bind(balladDTO.prev_id).first());
-  const nextBalladDTO = balladDTOSchema
-    .nullable()
-    .parse(await db.prepare('SELECT * FROM ballads WHERE id = ?').bind(balladDTO.next_id).first());
-
-  ballad.prev = balladInfoMapper.nullable().parse(prevBalladDTO);
-  ballad.next = balladInfoMapper.nullable().parse(nextBalladDTO);
-
-  const { results: contents } = await db
-    .prepare('SELECT *, c_text as text FROM contents WHERE ballad_id = ? ORDER BY c_order')
-    .bind(balladDTO.id)
-    .all();
-
-  ballad.contents = z.array(contentMapper).parse(contents);
-
-  const { results: notes } = await db
-    .prepare('SELECT *, n_text as text FROM notes WHERE ballad_id = ? ORDER BY n_order')
-    .bind(balladDTO.id)
-    .all();
-
-  ballad.notes = z.array(noteMapper).parse(notes);
-
-  const motto = mottoDTOSchema
-    .nullable()
-    .parse(await db.prepare('SELECT * FROM mottos WHERE ballad_id = ?').bind(balladDTO.id).first());
-
-  ballad.motto = mottoMapper.nullable().parse(motto);
+  const ballad = mapQueryResult(queryResult as any as QueryResult[]);
 
   return new Response(JSON.stringify(ballad));
 };
 
 export async function getStaticPaths() {
-  return ballads.map((ballad) => ({ params: { key: ballad } }));
+  return keys.map((key) => ({ params: { key } }));
 }

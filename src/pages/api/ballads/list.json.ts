@@ -1,10 +1,12 @@
 import type { APIRoute } from 'astro';
 
-export const prerender = false;
-export const GET: APIRoute = async ({ locals }) => {
-  const db = locals.runtime.env.DB;
+import { ballads, db } from '@db';
 
-  const { results } = await db.prepare('SELECT key, title FROM ballads ORDER BY b_order ASC').all();
+export const GET: APIRoute = async () => {
+  const results = await db
+    .select({ key: ballads.key, title: ballads.title })
+    .from(ballads)
+    .orderBy(ballads.order);
 
   return Response.json(results);
 };
