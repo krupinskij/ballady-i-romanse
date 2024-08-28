@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 import { aliasedTable, eq } from 'drizzle-orm';
 
 import { ballads, contents, db, mottos, notes } from '@db';
-import { keys, type Ballad, type DB } from '@model';
+import { type Ballad, type DB } from '@model';
 
 type QueryResult = {
   ballads: DB.Ballad;
@@ -53,7 +53,3 @@ export const GET: APIRoute = async ({ params }) => {
 
   return new Response(JSON.stringify(ballad));
 };
-
-export async function getStaticPaths() {
-  return keys.map((key) => ({ params: { key } }));
-}

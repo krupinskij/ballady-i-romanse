@@ -38,6 +38,6 @@
     "pretty-quick": "^4.0.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.0",
-    "wrangler": "^3.72.1"
+    "wrangler": "^3.72.3"
   }
 }
