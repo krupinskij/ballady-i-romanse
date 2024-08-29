@@ -7,6 +7,7 @@ import { readTomlFile } from './helpers';
 
 const balladsOriginData = keys.map((key) => readTomlFile(`./db/data/${key}.toml`));
 
+await db.delete(annotations);
 await db.delete(mottos);
 await db.delete(notes);
 await db.delete(contents);
