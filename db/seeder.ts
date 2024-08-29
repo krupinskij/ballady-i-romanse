@@ -1,12 +1,13 @@
 import { eq } from 'drizzle-orm';
 
-import { ballads, contents, db, mottos, notes } from '@db';
+import { annotations, ballads, contents, db, mottos, notes } from '@db';
 import { keys } from '@model';
 
 import { readTomlFile } from './helpers';
 
 const balladsOriginData = keys.map((key) => readTomlFile(`./db/data/${key}.toml`));
 
+await db.delete(annotations);
 await db.delete(mottos);
 await db.delete(notes);
 await db.delete(contents);
@@ -19,6 +20,7 @@ const balladsDbData = await db
       key: ballad.key,
       title: ballad.title,
       order: ballad.order,
+      link: ballad.link,
     }))
   )
   .returning({ id: ballads.id, order: ballads.order });
@@ -82,5 +84,18 @@ await db.insert(mottos).values(
 );
 
 console.log('Seed mottos complete!');
+
+await db.insert(annotations).values(
+  balladsOriginData.flatMap(
+    (ballad) =>
+      ballad.annotations?.map((annotation) => ({
+        balladId: balladsDbData[ballad.order].id,
+        key: annotation.key,
+        text: annotation.text,
+      })) || []
+  )
+);
+
+console.log('Seed annotations complete!');
 
 console.log('Seed complete!');

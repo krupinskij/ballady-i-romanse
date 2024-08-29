@@ -1,6 +1,7 @@
 key = "to-lubie"
 title = "To lubię"
 order = 8
+link = "https://pl.wikisource.org/wiki/To_lubię_(Mickiewicz,_1899)"
 
 [[contents]]
 text = '''
@@ -34,7 +35,7 @@ W chróstach coś huczy i ksyka.'''
 text = '''
 Czasami płomyk okaże się blady,
 Czasem grom trzaska po gromie,
-Same się z mogił ruszają pokłady,
+Same się z mogił ruszają {{1:pokłady}},
 I larwy stają widomie.'''
 
 [[contents]]
@@ -246,3 +247,7 @@ Patrzę — aż cały wóz stoi na łące.
 Siadam, powoli strach mija;
 Proszę za dusze, w czyscu bolejące,
 Zmówić trzy Zdrowaś Maryja.'''
+
+[[annotations]]
+text = "Pokłady — zwłoki umarłych, trupy."
+key = 1

@@ -1,0 +1,301 @@
+{
+  "version": "6",
+  "dialect": "sqlite",
+  "id": "50ec360e-0f9a-47e7-9eee-27225fca5900",
+  "prevId": "d771b3b6-6ea1-49cc-a7a7-4e428a3247f7",
+  "tables": {
+    "annotations": {
+      "name": "annotations",
+      "columns": {
+        "ballad_id": {
+          "name": "ballad_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "key": {
+          "name": "key",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "a_text": {
+          "name": "a_text",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "annotations_ballad_id_ballads_id_fk": {
+          "name": "annotations_ballad_id_ballads_id_fk",
+          "tableFrom": "annotations",
+          "tableTo": "ballads",
+          "columnsFrom": ["ballad_id"],
+          "columnsTo": ["id"],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "annotations_ballad_id_key_pk": {
+          "columns": ["ballad_id", "key"],
+          "name": "annotations_ballad_id_key_pk"
+        }
+      },
+      "uniqueConstraints": {}
+    },
+    "ballads": {
+      "name": "ballads",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "key": {
+          "name": "key",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "title": {
+          "name": "title",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "b_order": {
+          "name": "b_order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "link": {
+          "name": "link",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "prev_id": {
+          "name": "prev_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "next_id": {
+          "name": "next_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "ballads_key_unique": {
+          "name": "ballads_key_unique",
+          "columns": ["key"],
+          "isUnique": true
+        },
+        "ballads_b_order_unique": {
+          "name": "ballads_b_order_unique",
+          "columns": ["b_order"],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {
+        "ballads_prev_id_ballads_id_fk": {
+          "name": "ballads_prev_id_ballads_id_fk",
+          "tableFrom": "ballads",
+          "tableTo": "ballads",
+          "columnsFrom": ["prev_id"],
+          "columnsTo": ["id"],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "ballads_next_id_ballads_id_fk": {
+          "name": "ballads_next_id_ballads_id_fk",
+          "tableFrom": "ballads",
+          "tableTo": "ballads",
+          "columnsFrom": ["next_id"],
+          "columnsTo": ["id"],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "contents": {
+      "name": "contents",
+      "columns": {
+        "ballad_id": {
+          "name": "ballad_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "c_order": {
+          "name": "c_order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "character": {
+          "name": "character",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "c_text": {
+          "name": "c_text",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "contents_ballad_id_ballads_id_fk": {
+          "name": "contents_ballad_id_ballads_id_fk",
+          "tableFrom": "contents",
+          "tableTo": "ballads",
+          "columnsFrom": ["ballad_id"],
+          "columnsTo": ["id"],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "contents_ballad_id_c_order_pk": {
+          "columns": ["ballad_id", "c_order"],
+          "name": "contents_ballad_id_c_order_pk"
+        }
+      },
+      "uniqueConstraints": {}
+    },
+    "mottos": {
+      "name": "mottos",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "ballad_id": {
+          "name": "ballad_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "m_text": {
+          "name": "m_text",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "author": {
+          "name": "author",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "translation": {
+          "name": "translation",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "mottos_ballad_id_ballads_id_fk": {
+          "name": "mottos_ballad_id_ballads_id_fk",
+          "tableFrom": "mottos",
+          "tableTo": "ballads",
+          "columnsFrom": ["ballad_id"],
+          "columnsTo": ["id"],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "notes": {
+      "name": "notes",
+      "columns": {
+        "ballad_id": {
+          "name": "ballad_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "n_order": {
+          "name": "n_order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "n_text": {
+          "name": "n_text",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "notes_ballad_id_ballads_id_fk": {
+          "name": "notes_ballad_id_ballads_id_fk",
+          "tableFrom": "notes",
+          "tableTo": "ballads",
+          "columnsFrom": ["ballad_id"],
+          "columnsTo": ["id"],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "notes_ballad_id_n_order_pk": {
+          "columns": ["ballad_id", "n_order"],
+          "name": "notes_ballad_id_n_order_pk"
+        }
+      },
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}

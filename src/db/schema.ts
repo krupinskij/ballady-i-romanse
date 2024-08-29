@@ -11,6 +11,7 @@ export const ballads = sqliteTable('ballads', {
   key: text('key').notNull().unique(),
   title: text('title').notNull(),
   order: integer('b_order').notNull().unique(),
+  link: text('link'),
   prevId: integer('prev_id').references((): AnySQLiteColumn => ballads.id),
   nextId: integer('next_id').references((): AnySQLiteColumn => ballads.id),
 });
@@ -53,3 +54,17 @@ export const mottos = sqliteTable('mottos', {
   author: text('author').notNull(),
   translation: text('translation'),
 });
+
+export const annotations = sqliteTable(
+  'annotations',
+  {
+    balladId: integer('ballad_id')
+      .notNull()
+      .references(() => ballads.id),
+    key: integer('key').notNull(),
+    text: text('a_text').notNull(),
+  },
+  (table) => ({
+    pk: primaryKey({ columns: [table.balladId, table.key] }),
+  })
+);

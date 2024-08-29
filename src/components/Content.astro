@@ -1,5 +1,6 @@
 ---
 import { type Content } from '@model';
+import AnnotationMarker from './AnnotationMarker.astro';
 
 type Props = Content;
 
@@ -8,7 +9,8 @@ const { character, text } = Astro.props;
 
 <section>
   {character && <h2>{character}:</h2>}
-  <pre>{text}</pre>
+
+  <pre><AnnotationMarker text={text} /></pre>
 </section>
 
 <style>

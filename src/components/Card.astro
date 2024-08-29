@@ -1,4 +1,6 @@
 ---
+import AnnotationMarker from './AnnotationMarker.astro';
+
 interface Props {
   title: string;
   href: string;
@@ -8,7 +10,7 @@ const { title, href } = Astro.props;
 ---
 
 <a href={href}>
-  <div>{title}</div>
+  <div><AnnotationMarker text={title} noAnchor /></div>
 </a>
 
 <style lang="scss">

@@ -1,6 +1,7 @@
 key = "do-przyjaciol"
 title = "Do przyjaciół"
 order = 7
+link = "https://pl.wikisource.org/wiki/Do_przyjaciół_(Mickiewicz,_1899)"
 
 notes = ["(Posyłając im balladę »To lubię«)"]
 
@@ -76,7 +77,11 @@ Nie rzekła nawet i lubię.'''
 
 [[contents]]
 text = '''
-Za to więc w Rucie, pod północną chwilę,
+Za to więc w {{1:Rucie}}, pod północną chwilę,
 Kiedy się wszyscy spać kładą,
 Ja na dobranoc żegnając Marylę,
 Taką straszyłem balladą.'''
+
+[[annotations]]
+text = "Ruta — wieś w pobliżu Zaosia."
+key = 1

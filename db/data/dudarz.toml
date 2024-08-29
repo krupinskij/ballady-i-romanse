@@ -1,6 +1,7 @@
 key = "dudarz"
 title = "Dudarz"
 order = 13
+link = "https://pl.wikisource.org/wiki/Dudarz_(Mickiewicz,_1899)"
 
 notes = ["(Myśl z pieśni gminnej)"]
 
@@ -177,7 +178,7 @@ text = '''
 »Jednemu oddajesz wieniec,
 Z róż, liliji i tymianka;
 Kocha cię drugi młodzieniec:
-Ty jednemu oddasz wieniec.'''
+{{1:Ty jednemu oddasz wieniec.}}'''
 
 [[contents]]
 text = '''
@@ -204,7 +205,7 @@ Może on był z tego sioła.'''
 text = '''
 »Kiedym, wędrując przez kraje cudze,
 Królewiec zwiedził przechodem,
-Wtenczas przypłynął z Litwy na strudze
+Wtenczas przypłynął z Litwy na {{2:strudze}}
 Pasterz jakiś, z tych stron rodem.'''
 
 [[contents]]
@@ -339,3 +340,11 @@ Przybiegła zgraja, gdzie starzec siedział:
 »Co to jest?« wszyscy pytają...
 On nic nie wiedział — może i wiedział,
 Ale nie mówił przed zgrają.'''
+
+[[annotations]]
+text = "Te tryolety są wyjęte z poezyj Tomasza Zana."
+key = 1
+
+[[annotations]]
+text = "Struga albo strug — wielka łódź."
+key = 2

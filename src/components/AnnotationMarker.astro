@@ -1,0 +1,104 @@
+---
+import { formatText } from '@utils';
+
+type Props = {
+  text: string;
+  noAnchor?: boolean;
+};
+
+const { text, noAnchor } = Astro.props;
+
+const formattedText = formatText(
+  text,
+  (_, key, text) => `<cite-ref text="${text}" key="${key}" anchor="${!noAnchor}"></cite-ref>`
+);
+---
+
+<Fragment set:html={formattedText} />
+<style is:global>
+  body {
+    counter-reset: annotationRef;
+  }
+</style>
+
+<script>
+  const template = document.createElement('template');
+  template.innerHTML = `<style>
+    #root.anchor #text {
+      text-decoration: underline dotted;
+    }
+    #root.anchor [role="link"] {
+      display: inline;
+    }
+    [role="link"] {
+      display:none;
+      font: var(--font-sm);
+      color: var(--text-color-link);
+      vertical-align: super;
+      text-decoration: none;
+      margin-left: 2px;
+    }
+    [role="link"]::after {
+      counter-increment: annotationRef;
+      content: "[" counter(annotationRef) "]";
+    }
+  </style><span id="root"><span id="text"></span><a id="cite_ref" role="link" href="#"></a></span>`;
+
+  class CiteRef extends HTMLElement {
+    root: ShadowRoot;
+    constructor() {
+      super();
+      this.id = `cite_ref-${this.key}`;
+      this.root = this.attachShadow({ mode: 'open' });
+      const clone = template.content.cloneNode(true);
+      this.root.append(clone);
+    }
+
+    static get observedAttributes() {
+      return ['text', 'key', 'anchor'];
+    }
+
+    get text(): string | null {
+      return this.getAttribute('text');
+    }
+    set text(value: string) {
+      this.setAttribute('text', value);
+    }
+
+    get key(): string | null {
+      return this.getAttribute('key');
+    }
+    set key(value: string) {
+      this.setAttribute('key', value);
+    }
+
+    get anchor(): string | null {
+      return this.getAttribute('anchor');
+    }
+    set anchor(value: string) {
+      this.setAttribute('anchor', value);
+    }
+
+    attributeChangedCallback(attrName: string, _: string, newValue: string) {
+      const root = this.root.getElementById('root')!;
+      if (attrName.toLowerCase() === 'text') {
+        const textElem = this.root.getElementById('text') || document.createElement('span');
+        textElem.id = 'text';
+        textElem.textContent = newValue;
+        root.appendChild(textElem);
+      }
+      if (attrName.toLowerCase() === 'key') {
+        const anchorElem =
+          (this.root.querySelector('[role="link"]') as HTMLAnchorElement) ||
+          document.createElement('a');
+        anchorElem.href = `#cite_note-${newValue}`;
+        root.appendChild(anchorElem);
+      }
+
+      if (attrName.toLowerCase() === 'anchor') {
+        root.classList.toggle('anchor', newValue === 'true');
+      }
+    }
+  }
+  customElements.define('cite-ref', CiteRef);
+</script>

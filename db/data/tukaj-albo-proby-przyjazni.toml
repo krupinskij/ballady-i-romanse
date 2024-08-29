@@ -1,6 +1,7 @@
 key = "tukaj-albo-proby-przyjazni"
 title = "Tutaj albo próby przyjaźni"
 order = 11
+link = "https://pl.wikisource.org/wiki/Tukaj_albo_próby_przyjaźni_(Mickiewicz,_1899)"
 
 notes = ["(We czterech częściach)"]
 
@@ -34,7 +35,7 @@ Ja umieram w kwiecie wieku!
 W ducha i serca prostocie;
 Hojnie nagradzałem cnocie,
 Kościołom niosłem ofiary:
-O pobożności! człowieku!
+{{1:O pobożności! człowieku!}}
 Święta wiaro, święte imię,
 Święte nic! Cnoto, czczy dymie!
 Ja umieram w kwiecie wieku.
@@ -77,12 +78,12 @@ To grubawe mgły roztrąca,
 To się znowu we mgle topi.
 Idą ponad trzęskie kępy,
 Mijają bagna, głębinie,
-Hnilicy ciemnej ostępy,
-Kołdyczewa nurty sinie,
+{{2:Hnilicy}} ciemnej ostępy,
+{{3:Kołdyczewa}} nurty sinie,
 Gdzie puszcza zarosła wkoło,
 Spodem czarna, zwierzchu płowa,
 Żwirami nasute czoło
-Wynosi góra Żarnowa,
+Wynosi góra {{4:Żarnowa}},
 Tam szli. Starzec kląkł na grobie,
 Rozwarł usta, okiem błysnął,
 Podniósł w górę ręce obie,
@@ -222,13 +223,13 @@ Nasz poseł Mefistofelisz,
 Do wymiany traktat poda.
 Ostrzegliśmy o fortelach,
 Strzeż się; potem próżny kweres.
-Dan w Erebie, w szabas rano;
+Dan w {{5:Erebie}}, w szabas rano;
 Własną ręką podpisano:'''
 
 [[contents]]
 text = '''
 Tak ma stać się: Lucyferes,
-A za zgodność: Hadramelach«.'''
+A za zgodność: {{6:Hadramelach}}«.'''
 
 [[contents]]
 text = '''
@@ -292,7 +293,7 @@ Trzeba siły, albo rady;
 Albo podarunkiem skusić,
 Albo strwożyć, albo zmusić.
 Toż samo krótszemi słowy,
-Będzie syllogizm takowy:
+Będzie {{7:syllogizm}} takowy:
 Trojaka do zguby droga —
 Ciekawość, łakomstwo, trwoga.
 Więc kto w tym trojakim względzie
@@ -371,4 +372,36 @@ Ręką wodzi pomaleńku,
 Gdy już u, k, a, j, minął,
 Zrobiło się całkiem Tukaj.
 Dyabeł świsnął, czmychnął, zginął...
-Terazże z nim ładu szukaj!'''
+{{8:Terazże z nim ładu szukaj!}}'''
+
+[[annotations]]
+text = "Za te bluźnierstwa znajdzie czytelnik ukaranie w następnych balladach."
+key = 1
+
+[[annotations]]
+text = "Hnilica — rzeczka w powiecie nowogrodzkim."
+key = 2
+
+[[annotations]]
+text = "Kołdyczew — nazwisko jeziora."
+key = 3
+
+[[annotations]]
+text = "Góra Żarnowa w Zaosiu."
+key = 4
+
+[[annotations]]
+text = "Ereb — świat podziemny, tu znaczy piekło."
+key = 5
+
+[[annotations]]
+text = "Hadramelach albo Adrammelech — jedna z licznych nazw szatana."
+key = 6
+
+[[annotations]]
+text = "Syllogizm jest to nazwa pewnej formy rozumowania, złożonej z trzech zdań."
+key = 7
+
+[[annotations]]
+text = "Mickiewicz nie napisał dalszych dwu części »Tukaja«; zrobił to za niego Antoni Edward Odyniec i pomieścił w zbiorze swoich Poezyj."
+key = 8

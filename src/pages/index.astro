@@ -38,9 +38,16 @@ const ballads = await response.json<Ballad[]>();
       }
     </ul>
   </main>
+  <footer>
+    Projekt powstał w celach edukacyjnych (programistycznych) oraz ku czci Adama Mickiewicza.
+  </footer>
 </Layout>
 
 <style lang="scss">
+  main {
+    margin-bottom: 48px;
+  }
+
   header {
     position: relative;
     width: max-content;
@@ -114,6 +121,11 @@ const ballads = await response.json<Ballad[]>();
     gap: 16px;
 
     margin-inline: min(5vw, 64px);
-    margin-bottom: 48px;
+  }
+
+  footer {
+    text-align: center;
+    font: var(--font-xs);
+    padding: 20px;
   }
 </style>
