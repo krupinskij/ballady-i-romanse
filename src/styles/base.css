@@ -17,7 +17,15 @@
   --font-xxl: clamp(3rem, 10vw, 6rem) / 1 var(--font-default);
 }
 
-* {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p,
+a {
   font-family: var(--font-default);
 }
 

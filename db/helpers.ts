@@ -12,13 +12,20 @@ type Content = {
   text: string;
 };
 
+type Annotation = {
+  key: number;
+  text: string;
+};
+
 export type Ballad = {
   key: string;
   title: string;
   order: number;
+  link: string;
   notes?: string[];
   motto?: Motto;
   contents: Content[];
+  annotations?: Annotation[];
 };
 
 export const readTomlFile = (path: string): Ballad => {

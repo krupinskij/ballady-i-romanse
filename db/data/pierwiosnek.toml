@@ -1,6 +1,7 @@
-"key" = "pierwiosnek"
-"title" = "Pierwiosnek"
-"order" = 0
+key = "pierwiosnek"
+title = "Pierwiosnek"
+order = 0
+link = "https://pl.wikisource.org/wiki/Pierwiosnek_(Mickiewicz)"
 
 notes = ["(Primula veris)"]
 

@@ -5,6 +5,8 @@ import Motto from '@components/Motto.astro';
 import Note from '@components/Note.astro';
 import Content from '@components/Content.astro';
 import { GET } from './api/ballads/[key].json';
+import AnnotationMarker from '@components/AnnotationMarker.astro';
+import { formatText } from '@utils';
 
 export const prerender = true;
 
@@ -17,9 +19,9 @@ export async function getStaticPaths() {
 }
 ---
 
-<Layout title={`${title} | Ballady i Romanse`}>
+<Layout title={`${formatText(title, (_, __, title) => title)} | Ballady i Romanse`}>
   <header>
-    <h1>{title}</h1>
+    <h1><AnnotationMarker text={title} /></h1>
     <nav>
       <span>
         {

@@ -1,6 +1,7 @@
 key = "kurhanek-maryli"
 title = "Kurhanek Maryli"
 order = 6
+link = "https://pl.wikisource.org/wiki/Kurhanek_Maryli_(Mickiewicz,_1899)"
 
 notes = ["(Myśl ze śpiewu litewskiego)", "Cudzy Człowiek, Dziewczyna, Jaś, Matka, Przyjaciółka"]
 
@@ -19,7 +20,7 @@ A od niej idą trzy drogi:
 Jedna droga na prawo,
 Druga droga do chaty,
 Trzecia droga na lewo.
-Ja tędy płynę z wiciną,
+Ja tędy płynę z {{1:wiciną}},
 Pytam się ciebie, dziewczyno,
 Co to za piękny kurhanek?'''
 
@@ -98,7 +99,7 @@ Pójdę w daleką drogę,
 Więcej mnie nie znajdziecie
 Choćbyście i szukali,
 Nie będę już na świecie,
-Przystanę do Moskali,
+{{2:Przystanę do Moskali}},
 Żeby mię wraz zabili.
 Niemasz, niemasz Maryli!'''
 
@@ -162,3 +163,11 @@ Słyszy to cudzy człowiek,
 Wzdycha i łzy mu płyną,
 Westchnął, otarł łzy z powiek,
 I dalej poszedł z wiciną.'''
+
+[[annotations]]
+text = "Wicina jest to rodzaj statku przykrytego do przewożenia zboża."
+key = 1
+
+[[annotations]]
+text = "Przystać do Moskali znaczy na Litwie: wstąpić do wojska."
+key = 2

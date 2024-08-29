@@ -1,6 +1,7 @@
 key = "switez"
 title = "Świteź"
 order = 2
+link = "https://pl.wikisource.org/wiki/%C5%9Awite%C5%BA_(Mickiewicz)"
 
 notes = ["(Do Michała Wereszczaki)"]
 
@@ -93,7 +94,7 @@ text = '''
 Ja ostrzegałem, że w tak wielkiem dziele
 Dobrze, kto z Bogiem poczyna;
 Dano więc na mszę w niejednym kościele,
-I ksiądz przyjechał z Cyryna.'''
+I ksiądz przyjechał z {{1:Cyryna}}.'''
 
 [[contents]]
 text = '''
@@ -174,7 +175,7 @@ Litwy naówczas stolicę.'''
 
 [[contents]]
 text = '''
-»Raz niespodzianie obległ tam Mendoga
+»Raz niespodzianie obległ tam {{2:Mendoga}}
 Potężnem wojskiem car z Rusi;
 Na całą Litwę wielka padła trwoga,
 Że Mendog poddać się musi.'''
@@ -339,3 +340,11 @@ Jezioro do dna pękło nakształt rowu,
 Lecz próżno za nią wzrok goni:
 Wpadła, i falą nakryła się znowu,
 I więcej nie słychać o niéj.'''
+
+[[annotations]]
+text = "Cyryn, wieś kościelna niedaleko Zaosia."
+key = 1
+
+[[annotations]]
+text = "Mendog, albo Mindowe, w. książę litewski, który się koronował na króla w XIII w."
+key = 2

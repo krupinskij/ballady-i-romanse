@@ -8,8 +8,8 @@
       "@db": ["src/db"],
       "@layouts/*": ["src/layouts/*"],
       "@model": ["src/model"],
-      "@schema": ["src/schema"],
-      "@styles/*": ["src/styles/*"]
+      "@styles/*": ["src/styles/*"],
+      "@utils": ["src/utils"]
     },
     "types": ["@cloudflare/workers-types/2023-07-01"]
   }

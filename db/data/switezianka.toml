@@ -1,6 +1,7 @@
 key = "switezianka"
-title = "Świtezianka"
+title = "{{1:Świtezianka}}"
 order = 3
+link = "https://pl.wikisource.org/wiki/%C5%9Awitezianka_(1899)"
 
 [[contents]]
 text = '''
@@ -267,3 +268,7 @@ Ona po srebrnem pląsa jeziorze,
 On pod tym jęczy modrzewiem.
 Kto jest młodzieniec? strzelcem był w borze.
 A kto dziewczyna? ja nie wiem.'''
+
+[[annotations]]
+text = "Jest wieść, że na brzegach Świtezi pokazują się Ondyny czyli Nimfy wodne, które gmin nazywa Świteziankami."
+key = 1

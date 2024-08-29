@@ -1,0 +1,103 @@
+---
+import { formatText } from '@utils';
+
+type Props = {
+  text: string;
+  noAnchor?: boolean;
+};
+
+const { text, noAnchor } = Astro.props;
+
+const formattedText = formatText(
+  text,
+  (_, key, text) =>
+    `<text-annotation text="${text}" key="${key}" anchor="${!noAnchor}"></text-annotation>`
+);
+---
+
+<Fragment set:html={formattedText} />
+<style is:global>
+  body {
+    counter-reset: annotation;
+  }
+</style>
+
+<script>
+  const template = document.createElement('template');
+  template.innerHTML = `<style>
+    #root.anchor #text {
+      text-decoration: underline dotted;
+    }
+    #root.anchor #anchor {
+      display: inline;
+    }
+    #anchor {
+      display:none;
+      font: var(--font-sm);
+      vertical-align: super;
+      text-decoration: none;
+      margin-left: 2px;
+    }
+    #anchor::after {
+      counter-increment: annotation;
+      content: "[" counter(annotation) "]";
+    }
+  </style><span id="root"><span id="text"></span><a id="anchor" href="#"></a></span>`;
+
+  class TextAnnotation extends HTMLElement {
+    root: ShadowRoot;
+    constructor() {
+      super();
+      this.root = this.attachShadow({ mode: 'open' });
+      const clone = template.content.cloneNode(true);
+      this.root.append(clone);
+    }
+
+    static get observedAttributes() {
+      return ['text', 'key', 'anchor'];
+    }
+
+    get text(): string | null {
+      return this.getAttribute('text');
+    }
+    set text(value: string) {
+      this.setAttribute('text', value);
+    }
+
+    get key(): string | null {
+      return this.getAttribute('key');
+    }
+    set key(value: string) {
+      this.setAttribute('key', value);
+    }
+
+    get anchor(): string | null {
+      return this.getAttribute('anchor');
+    }
+    set anchor(value: string) {
+      this.setAttribute('anchor', value);
+    }
+
+    attributeChangedCallback(attrName: string, _: string, newValue: string) {
+      const root = this.root.getElementById('root')!;
+      if (attrName.toLowerCase() === 'text') {
+        const textElem = this.root.getElementById('text') || document.createElement('span');
+        textElem.id = 'text';
+        textElem.textContent = newValue;
+        root.appendChild(textElem);
+      }
+      if (attrName.toLowerCase() === 'key') {
+        const anchorElem =
+          (this.root.getElementById('anchor') as HTMLAnchorElement) || document.createElement('a');
+        anchorElem.id = 'anchor';
+        anchorElem.href = `#${newValue}`;
+        root.appendChild(anchorElem);
+      }
+
+      if (attrName.toLowerCase() === 'anchor') {
+        root.classList.toggle('anchor', newValue === 'true');
+      }
+    }
+  }
+  customElements.define('text-annotation', TextAnnotation);
+</script>

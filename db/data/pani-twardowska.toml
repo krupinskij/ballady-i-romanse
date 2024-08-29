@@ -1,6 +1,7 @@
 key = "pani-twardowska"
 title = "Pani Twardowska"
 order = 10
+link = "https://pl.wikisource.org/wiki/Pani_Twardowska_(Mickiewicz,_1899)"
 
 [[contents]]
 text = '''
@@ -63,7 +64,7 @@ text = '''
 »A, Twardowski... witam, bracie!«
 To mówiąc bieży obcesem:
 »Cóż to, czyliż mię nie znacie?
-Jestem Mefistofelesem.'''
+Jestem {{1:Mefistofelesem}}.'''
 
 [[contents]]
 text = '''
@@ -96,9 +97,9 @@ Kładę areszt na waszeci«.'''
 [[contents]]
 text = '''
 »Twardowski ku drzwiom się kwapił
-Na takie dictum acerbum;
+Na takie {{2:dictum acerbum}};
 Dyabeł za kontusz ułapił:
-»A gdzie jest nobile verbum?«'''
+»A gdzie jest {{3:nobile verbum}}?«'''
 
 [[contents]]
 text = '''
@@ -138,7 +139,7 @@ Bym miał gdzie na popas zostać.'''
 [[contents]]
 text = '''
 »Gmach będzie z ziarnek orzecha,
-Wysoki pod szczyt Krępaku,
+Wysoki pod szczyt {{4:Krępaku}},
 Z bród żydowskich ma być strzecha,
 Pobita nasieniem z maku.'''
 
@@ -218,3 +219,19 @@ Gdy mu Twardowski dokucza,
 Od drzwi, od okien odpycha:
 Czmychnąwszy dziurką od klucza,
 Dotąd, jak czmycha, tak czmycha.'''
+
+[[annotations]]
+text = "Mefistofeles — nazwa szatana, wsławiona przez Goethego w »Fauście«."
+key = 1
+
+[[annotations]]
+text = "Dictum acerbum — przykre, dotkliwe słowo."
+key = 2
+
+[[annotations]]
+text = "Nobile verbum — słowo szlacheckie."
+key = 3
+
+[[annotations]]
+text = "Krępak — jeden ze szczytów tatrzańskich, dawniej poczytywany za najwyższy."
+key = 4
