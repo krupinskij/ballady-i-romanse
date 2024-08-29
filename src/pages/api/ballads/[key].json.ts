@@ -41,15 +41,19 @@ const mapQueryResult = (queryResult: QueryResult[]): Ballad => {
   return ballad;
 };
 
-export const GET: APIRoute = async ({ params }) => {
+export const GET: APIRoute = async ({ params, redirect }) => {
   const key = params.key;
+
+  if (!key) {
+    return redirect('/');
+  }
 
   const prevBallad = aliasedTable(ballads, 'prevBallad');
   const nextBallad = aliasedTable(ballads, 'nextBallad');
   const queryResult = await db
     .select()
     .from(ballads)
-    .where(eq(ballads.key, key!))
+    .where(eq(ballads.key, key))
     .leftJoin(prevBallad, eq(ballads.prevId, prevBallad.id))
     .leftJoin(nextBallad, eq(ballads.nextId, nextBallad.id))
     .leftJoin(mottos, eq(ballads.id, mottos.balladId))
