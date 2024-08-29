@@ -41,6 +41,10 @@ const ballads = await response.json<Ballad[]>();
 </Layout>
 
 <style lang="scss">
+  main {
+    margin-bottom: 48px;
+  }
+
   header {
     position: relative;
     width: max-content;
@@ -114,6 +118,5 @@ const ballads = await response.json<Ballad[]>();
     gap: 16px;
 
     margin-inline: min(5vw, 64px);
-    margin-bottom: 48px;
   }
 </style>

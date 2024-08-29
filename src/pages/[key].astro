@@ -7,12 +7,13 @@ import Content from '@components/Content.astro';
 import { GET } from './api/ballads/[key].json';
 import AnnotationMarker from '@components/AnnotationMarker.astro';
 import { formatText } from '@utils';
+import AnnotationNote from '@components/AnnotationNote.astro';
 
 export const prerender = true;
 
 const response = await GET(Astro);
 const ballad = await response.json<Ballad>();
-const { title, prevBallad, nextBallad, notes, motto, contents } = ballad;
+const { title, prevBallad, nextBallad, notes, motto, contents, annotations } = ballad;
 
 export async function getStaticPaths() {
   return keys.map((key) => ({ params: { key } }));
@@ -49,11 +50,24 @@ export async function getStaticPaths() {
     <article>
       {motto && <Motto {...motto} />}
       {contents.map((content) => <Content {...content} />)}
+      {
+        annotations.length > 0 && (
+          <section class="annotations">
+            {annotations.map((annotation) => (
+              <AnnotationNote {...annotation}>{annotation.text}</AnnotationNote>
+            ))}
+          </section>
+        )
+      }
     </article>
   </main>
 </Layout>
 
 <style lang="scss">
+  main {
+    margin-bottom: 48px;
+  }
+
   header {
     margin-bottom: 32px;
   }
@@ -99,7 +113,12 @@ export async function getStaticPaths() {
   }
 
   article {
-    width: max-content;
+    width: min-content;
     margin-inline: auto;
+  }
+
+  .annotations {
+    margin-top: 60px;
+    counter-reset: annotationNote;
   }
 </style>

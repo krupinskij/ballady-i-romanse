@@ -3,6 +3,7 @@
 
 :root {
   --text-color-default: #000;
+  --text-color-link: #0000ee;
   --bg-color-default: #fff;
   --border-color-default: #808080;
 
@@ -27,6 +28,11 @@ div,
 p,
 a {
   font-family: var(--font-default);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 240px;
 }
 
 body {

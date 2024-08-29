@@ -10,15 +10,14 @@ const { text, noAnchor } = Astro.props;
 
 const formattedText = formatText(
   text,
-  (_, key, text) =>
-    `<text-annotation text="${text}" key="${key}" anchor="${!noAnchor}"></text-annotation>`
+  (_, key, text) => `<cite-ref text="${text}" key="${key}" anchor="${!noAnchor}"></cite-ref>`
 );
 ---
 
 <Fragment set:html={formattedText} />
 <style is:global>
   body {
-    counter-reset: annotation;
+    counter-reset: annotationRef;
   }
 </style>
 
@@ -28,26 +27,28 @@ const formattedText = formatText(
     #root.anchor #text {
       text-decoration: underline dotted;
     }
-    #root.anchor #anchor {
+    #root.anchor [role="link"] {
       display: inline;
     }
-    #anchor {
+    [role="link"] {
       display:none;
       font: var(--font-sm);
+      color: var(--text-color-link);
       vertical-align: super;
       text-decoration: none;
       margin-left: 2px;
     }
-    #anchor::after {
-      counter-increment: annotation;
-      content: "[" counter(annotation) "]";
+    [role="link"]::after {
+      counter-increment: annotationRef;
+      content: "[" counter(annotationRef) "]";
     }
-  </style><span id="root"><span id="text"></span><a id="anchor" href="#"></a></span>`;
+  </style><span id="root"><span id="text"></span><a id="cite_ref" role="link" href="#"></a></span>`;
 
-  class TextAnnotation extends HTMLElement {
+  class CiteRef extends HTMLElement {
     root: ShadowRoot;
     constructor() {
       super();
+      this.id = `cite_ref-${this.key}`;
       this.root = this.attachShadow({ mode: 'open' });
       const clone = template.content.cloneNode(true);
       this.root.append(clone);
@@ -88,9 +89,9 @@ const formattedText = formatText(
       }
       if (attrName.toLowerCase() === 'key') {
         const anchorElem =
-          (this.root.getElementById('anchor') as HTMLAnchorElement) || document.createElement('a');
-        anchorElem.id = 'anchor';
-        anchorElem.href = `#${newValue}`;
+          (this.root.querySelector('[role="link"]') as HTMLAnchorElement) ||
+          document.createElement('a');
+        anchorElem.href = `#cite_note-${newValue}`;
         root.appendChild(anchorElem);
       }
 
@@ -99,5 +100,5 @@ const formattedText = formatText(
       }
     }
   }
-  customElements.define('text-annotation', TextAnnotation);
+  customElements.define('cite-ref', CiteRef);
 </script>

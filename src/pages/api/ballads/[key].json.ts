@@ -1,13 +1,14 @@
 import type { APIRoute } from 'astro';
 import { aliasedTable, eq } from 'drizzle-orm';
 
-import { ballads, contents, db, mottos, notes } from '@db';
+import { annotations, ballads, contents, db, mottos, notes } from '@db';
 import { type Ballad, type DB } from '@model';
 
 type QueryResult = {
   ballads: DB.Ballad;
   prevBallad: DB.Ballad | null;
   nextBallad: DB.Ballad | null;
+  annotations: DB.Annotation | null;
   mottos: DB.Motto | null;
   notes: DB.Note | null;
   contents: DB.Content;
@@ -21,6 +22,9 @@ const mapQueryResult = (queryResult: QueryResult[]): Ballad => {
   const contentsMap = new Map(
     queryResult.map((result) => [result.contents.order, result.contents])
   );
+  const annotationsMap =
+    firstResult.annotations &&
+    new Map(queryResult.map((result) => [result.annotations!.key, result.annotations!]));
 
   const ballad = {
     ...ballads,
@@ -29,6 +33,9 @@ const mapQueryResult = (queryResult: QueryResult[]): Ballad => {
     motto: mottos,
     notes: notesMap ? Array.from(notesMap.values()).sort((n1, n2) => n1.order - n2.order) : [],
     contents: Array.from(contentsMap.values()).sort((c1, c2) => c1.order - c2.order),
+    annotations: annotationsMap
+      ? Array.from(annotationsMap?.values()).sort((a1, a2) => a1.key - a2.key)
+      : [],
   };
 
   return ballad;
@@ -47,6 +54,7 @@ export const GET: APIRoute = async ({ params }) => {
     .leftJoin(nextBallad, eq(ballads.nextId, nextBallad.id))
     .leftJoin(mottos, eq(ballads.id, mottos.balladId))
     .leftJoin(notes, eq(ballads.id, notes.balladId))
+    .leftJoin(annotations, eq(ballads.id, annotations.balladId))
     .innerJoin(contents, eq(ballads.id, contents.balladId));
 
   const ballad = mapQueryResult(queryResult as any as QueryResult[]);

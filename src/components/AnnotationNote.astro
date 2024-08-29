@@ -1,0 +1,28 @@
+---
+import type { Annotation } from '@model';
+
+type Props = Annotation;
+
+const { key, text } = Astro.props;
+---
+
+<div>
+  <a id={`cite_note-${key}`} href={`#cite_ref-${key}`}>: </a>
+  {text}
+</div>
+
+<style>
+  div {
+    font: var(--font-sm);
+    text-wrap: wrap;
+    margin-inline: -80px;
+  }
+  a {
+    color: var(--text-color-link);
+  }
+  a::before {
+    counter-increment: annotationNote;
+    content: counter(annotationNote);
+    text-decoration: underline;
+  }
+</style>
