@@ -50,16 +50,18 @@ export async function getStaticPaths() {
     <article>
       {motto && <Motto {...motto} />}
       {contents.map((content) => <Content {...content} />)}
-      {
-        annotations.length > 0 && (
+    </article>
+    {
+      annotations.length > 0 && (
+        <article>
           <section class="annotations">
             {annotations.map((annotation) => (
               <AnnotationNote {...annotation}>{annotation.text}</AnnotationNote>
             ))}
           </section>
-        )
-      }
-    </article>
+        </article>
+      )
+    }
   </main>
   <footer>
     Tekst oraz przypisy pochodzą ze strony: <a target="_blank" href={link}>{link}</a>
@@ -69,6 +71,7 @@ export async function getStaticPaths() {
 <style lang="scss">
   main {
     margin-bottom: 48px;
+    overflow: hidden;
   }
 
   header {
@@ -116,7 +119,8 @@ export async function getStaticPaths() {
   }
 
   article {
-    width: min-content;
+    width: max-content;
+    max-width: 90vw;
     margin-inline: auto;
   }
 
@@ -132,6 +136,7 @@ export async function getStaticPaths() {
 
     a {
       text-decoration: underline;
+      text-wrap: wrap;
     }
   }
 </style>

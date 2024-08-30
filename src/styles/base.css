@@ -13,8 +13,8 @@
   --font-xs: 0.75rem/1rem var(--font-default);
   --font-sm: 0.875rem/1.25rem var(--font-default);
   --font-md: 1rem/1.5rem var(--font-default);
-  --font-lg: clamp(1rem, 3vw, 1.5rem) / 2rem var(--font-default);
-  --font-xl: clamp(1.5rem, 5vw, 2.25rem) / 2.5rem var(--font-default);
+  --font-lg: clamp(0.85rem, 3vw, 1.5rem) / 1 var(--font-default);
+  --font-xl: clamp(1.25rem, 5vw, 2.25rem) / 1 var(--font-default);
   --font-xxl: clamp(3rem, 10vw, 6rem) / 1 var(--font-default);
 }
 
