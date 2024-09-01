@@ -1,5 +1,7 @@
 ---
 import '@styles/base.css';
+import italiannoWoff2 from '@fontsource/italianno/files/italianno-latin-400-normal.woff2?url';
+import montserratWoff2 from '@fontsource-variable/montserrat/files/montserrat-latin-wght-normal.woff2?url';
 
 interface Props {
   title: string;
@@ -15,7 +17,18 @@ const { title } = Astro.props;
     <meta name="description" content="Ballady i romanse - Adam Mickiewicz" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/icon.ico" />
+
+    <link rel="preload" as="font" type="font/woff2" href={italiannoWoff2} crossorigin="anonymous" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href={montserratWoff2}
+      crossorigin="anonymous"
+    />
+
     <meta name="generator" content={Astro.generator} />
+
     <title>{title}</title>
   </head>
   <body>

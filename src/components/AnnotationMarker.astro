@@ -25,7 +25,8 @@ const formattedText = formatText(
   const template = document.createElement('template');
   template.innerHTML = `<style>
     #root.anchor #text {
-      text-decoration: underline dotted;
+      text-decoration: underline dashed;
+      text-decoration-thickness: 1px;
     }
     #root.anchor [role="link"] {
       display: inline;

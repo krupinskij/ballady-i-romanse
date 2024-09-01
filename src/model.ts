@@ -34,6 +34,6 @@ export const keys = [
   'rekawiczka',
   'pani-twardowska',
   'tukaj-albo-proby-przyjazni',
-  'lilije',
+  'lilje',
   'dudarz',
 ];

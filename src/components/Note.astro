@@ -1,4 +1,6 @@
 ---
+import AnnotationMarker from './AnnotationMarker.astro';
+
 type Props = {
   note: string;
 };
@@ -6,7 +8,7 @@ type Props = {
 const { note } = Astro.props;
 ---
 
-<span>{note}</span>
+<span><AnnotationMarker text={note} /></span>
 
 <style>
   span {

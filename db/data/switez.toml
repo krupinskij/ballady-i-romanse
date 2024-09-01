@@ -1,7 +1,7 @@
 key = "switez"
 title = "Świteź"
 order = 2
-link = "https://pl.wikisource.org/wiki/Świteź_(Mickiewicz)"
+link = "https://wolnelektury.pl/katalog/lektura/ballady-i-romanse-switez.html"
 
 notes = ["(Do Michała Wereszczaki)"]
 
@@ -10,7 +10,7 @@ text = '''
 Ktokolwiek będziesz w Nowogródzkiej stronie,
 Do Płużyn ciemnego boru
 Wjechawszy, pomnij zatrzymać twe konie,
-Byś się przypatrzył jezioru.'''
+By się przypatrzyć jezioru.'''
 
 [[contents]]
 text = '''
@@ -23,14 +23,14 @@ A gładka jak szyba lodu.'''
 text = '''
 Jeżeli nocną przybliżysz się dobą
 I zwrócisz ku wodom lice:
-Gwiazdy nad tobą i gwiazdy pod tobą,
+Gwiazdy nad tobą i gwiazdy pod tobą
 I dwa obaczysz księżyce.'''
 
 [[contents]]
 text = '''
-Niepewny, czyli szklana z pod twej stopy
+Niepewny, czyli szklanna spod twej stopy
 Pod niebo idzie równina,
-Czyli też niebo swoje szklane stropy
+Czyli też niebo swoje szklanne stropy
 Aż do nóg twoich ugina;'''
 
 [[contents]]
@@ -43,30 +43,30 @@ W jakiejś otchłani błękitu.'''
 [[contents]]
 text = '''
 Tak w noc, pogodna jeśli służy pora,
-Wzrok się przyjemnie ułudzi...
-Lecz żeby w nocy jechać do jeziora,
+Wzrok się przyjemnie ułudzi…
+Lecz, żeby w nocy jechać do jeziora,
 Trzeba być najśmielszym z ludzi.'''
 
 [[contents]]
 text = '''
 Bo jakie szatan wyprawia tam harce!
-Jakie się larwy szamocą!
-Drżę cały, kiedy bają o tem starce,
+Jakie się {{1:larwy}} szamocą!
+Drżę cały, kiedy bają o tém starce,
 I strach wspominać przed nocą.'''
 
 [[contents]]
 text = '''
-Nieraz śród wody gwar, jakoby w mieście,
+Nieraz śród wody gwar jakoby w mieście,
 Ogień i dym bucha gęsty,
-I zgiełk walczących, i wrzaski niewieście,
-I dzwonów gwałt, i zbrój chrzęsty.'''
+I zgiełk walczących i wrzaski niewieście
+I dzwonów gwałt i zbrój chrzęsty.'''
 
 [[contents]]
 text = '''
 Nagle dym spada, hałas się uśmierza,
 Na brzegach tylko szum jodły,
 W wodach gadanie cichego pacierza,
-I dziewic żałosne modły.'''
+I dziewic żałośne modły.'''
 
 [[contents]]
 text = '''
@@ -79,50 +79,50 @@ Lecz któż z nich prawdę odgadnie?'''
 text = '''
 Pan na Płużynach, którego pradziady
 Były Świtezi dziedzice,
-Zdawna przemyślał i zasięgał rady,
+Z dawna przemyślał i zasięgał rady,
 Jak te zbadać tajemnice.'''
 
 [[contents]]
 text = '''
-Kazał przybory w blizkiem robić mieście,
+Kazał przybory w bliskiem robić mieście,
 I wielkie sypał wydatki:
-Związano niewód głęboki stóp dwieście,
-Budują czółna i statki.'''
+Związano niewód, głęboki stóp dwieście,
+Budują czółny i statki.'''
 
 [[contents]]
 text = '''
-Ja ostrzegałem, że w tak wielkiem dziele
+Ja ostrzegałem: że w tak wielkiem dziele
 Dobrze, kto z Bogiem poczyna;
 Dano więc na mszę w niejednym kościele,
-I ksiądz przyjechał z {{1:Cyryna}}.'''
+I ksiądz przyjechał z {{2:Cyryna}}.'''
 
 [[contents]]
 text = '''
 Stanął na brzegu, ubrał się w ornaty,
 Przeżegnał, pracę pokropił;
-Pan daje hasło: odbijają baty,
+Pan daje hasło: odbijają {{3:baty}},
 Niewód się z szumem zatopił.'''
 
 [[contents]]
 text = '''
-Topi się, pławki nadół z sobą spycha,
+Topi się, {{4:pławki}} na dół z sobą spycha,
 Tak przepaść wody głęboka;
 Prężą się liny, niewód idzie z cicha,
-Pewnie nie złowią ni oka.'''
+{{5:Pewnie nie złowią ni oka.}}'''
 
 [[contents]]
 text = '''
 Na brzeg oboje wyjęto już skrzydło,
 Ciągną ostatek więcierzy:
-Powiemże, jakie złowiono straszydło?
+Powiemże jakie złowiono straszydło?
 Choć powiem, nikt nie uwierzy.'''
 
 [[contents]]
 text = '''
 Powiem jednakże. Nie straszydło wcale,
-Żywa kobieta w niewodzie!
+Żywa kobieta w niewodzie,
 Twarz miała jasną, usta jak korale,
-Włos biały, skąpany w wodzie.'''
+Włos biały skąpany w wodzie.'''
 
 [[contents]]
 text = '''
@@ -133,77 +133,77 @@ Drudzy zwracają ku ucieczce nogi,
 
 [[contents]]
 text = '''
-»Młodzieńcy! wiecie, że tutaj bezkarnie
+„Młodzieńcy! wiecie, że tutaj bezkarnie
 Dotąd nikt statku nie spuści:
 Każdego śmiałka jezioro zagarnie
 Do nieprzebrnionych czeluści.'''
 
 [[contents]]
 text = '''
-»I ty zuchwały, i twoja gromada,
-Wrazbyście poszli w głębinie:
-Lecz że to kraj był twojego pradziada,
+I ty, zuchwały, i twoja gromada
+Wraz byście poszli w {{6:głębinie}}:
+Lecz, że to kraj był twojego pradziada,
 Że w tobie nasza krew płynie;'''
 
 [[contents]]
 text = '''
-»Choć godna kary jest ciekawość pusta,
-Lecz żeście z Bogiem poczęli:
-Bóg wam przez moje opowiada usta
+Choć godna kary jest ciekawość pusta,
+Lecz, żeście z Bogiem poczęli,
+Bóg wam przez moje opowiada usta,
 Dzieje tej cudnej topieli.'''
 
 [[contents]]
 text = '''
-»Na miejscach, które dziś piaskiem zaniosło,
-Gdzie car i trzcina zarasta,
+Na miejscach, które dziś piaskiem zaniosło,
+Gdzie {{7:car}} i trzcina zarasta,
 Po których teraz wasze biega wiosło,
 Stał okrąg pięknego miasta.'''
 
 [[contents]]
 text = '''
-»Świteź, i w sławne orężem ramiona
+Świteź, i w sławne orężem ramiona
 I w kraśne twarze bogata,
-Niegdyś od książąt Tuhanów rządzona,
+Niegdyś {{8:od książąt Tuhanów}} rządzona,
 Kwitnęła przez długie lata.'''
 
 [[contents]]
 text = '''
-»Nie ćmił widoku ten ostęp ponury:
+Nie ćmił widoku ten ostęp ponury:
 Przez żyzne wskroś okolice
 Widać stąd było Nowogródzkie mury,
 Litwy naówczas stolicę.'''
 
 [[contents]]
 text = '''
-»Raz niespodzianie obległ tam {{2:Mendoga}}
+Raz niespodzianie obiegł tam Mendoga
 Potężnem wojskiem car z Rusi;
 Na całą Litwę wielka padła trwoga,
 Że Mendog poddać się musi.'''
 
 [[contents]]
 text = '''
-»Nim ściągnął wojsko z odległej granicy,
+Nim ściągnął wojsko z odległej granicy,
 Do ojca mego napisze:
 — »Tuhanie! w tobie obrona stolicy,
 Śpiesz, zwołaj twe towarzysze«. —'''
 
 [[contents]]
 text = '''
-»Skoro przeczytał Tuhan list książęcy
-I wydał rozkaz do wojny:
+Skoro przeczytał Tuhan list książęcy
+I wydał rozkaz do wojny,
 Stanęło zaraz mężów pięć tysięcy,
 A każdy konny i zbrojny.'''
 
 [[contents]]
 text = '''
-»Uderzą w trąby, rusza młódź, już w bramie
-Błyska Tuhana proporzec:
+Uderzą w trąby, rusza młódź, już w bramie
+Błyska Tuhana proporzec,
 Lecz Tuhan stanie i ręce załamie,
 I znowu jedzie na dworzec.'''
 
 [[contents]]
 text = '''
-»I mówi do mnie: — Jaż własnych mieszkańców
+I mówi do mnie: — »Jaż własnych mieszkańców
 Dla obcej zgubię odsieczy?
 Wszak wiesz, że Świteź nie ma innych szańców,
 Prócz naszych piersi i mieczy.'''
@@ -213,32 +213,32 @@ text = '''
 Jeśli rozdzielę szczupłe wojsko moje,
 Krewnemu nie dam obrony;
 A jeśli wszyscy pociągniem na boje,
-Jak będą córy i żony?'''
+Jak będą córy i żony?«'''
 
 [[contents]]
 text = '''
 — »Ojcze, odpowiem, lękasz się niewcześnie,
 Idź, kędy sława cię woła,
-Bóg nas obroni: dziś nad miastem we śnie
-Widziałam jego Anioła.'''
+Bóg nas obroni: dziś nad miastem we śnie,
+Widziałam jego anioła.'''
 
 [[contents]]
 text = '''
-»Okrążył Świteź miecza błyskawicą,
+Okrążył Świteź miecza błyskawicą,
 I nakrył złotemi pióry,
-I rzekł mi: póki męże za granicą,
-Ja bronię żony i córy. —'''
+I rzekł mi: »póki męże za granicą,
+Ja bronię żony i córy« «.'''
 
 [[contents]]
 text = '''
-»Usłuchał Tuhan i za wojskiem goni;
-Lecz gdy noc spadła ponura,
-Słychać gwar zdala, szczęk i tentent koni,
-I zewsząd straszny wrzask: ura!'''
+Usłuchał Tuhan, i za wojskiem goni;
+Lecz gdy noc spada ponura,
+Słychać gwar z dala, szczęk i tętent koni,
+I zewsząd straszny wrzask: »ura!«'''
 
 [[contents]]
 text = '''
-»Zagrzmią tarany, padły bram ostatki,
+Zagrzmią tarany, padły bram ostatki,
 Zewsząd pocisków grad leci,
 Biegą na dworzec starce, nędzne matki,
 Dziewice i drobne dzieci.'''
@@ -248,103 +248,131 @@ text = '''
 »Gwałtu! wołają, zamykajcie bramę,
 Tuż, tuż, za nami Ruś wali.
 Ach! zgińmy lepiej, zabijmy się same,
-Śmierć nas od hańby ocali.'''
+Śmierć nas od hańby ocali«'''
 
 [[contents]]
 text = '''
-»Natychmiast wściekłość bierze miejsce strachu;
+Natychmiast wściekłość bierze miejsce strachu;
 Miecą bogactwa na stosy,
 Przynoszą żagwie i płomień do gmachu,
-I krzyczą strasznymi głosy:'''
+I krzyczą strasznemi głosy:'''
 
 [[contents]]
 text = '''
-»Przeklęty będzie, kto się nie dobije!
+»Przeklęty będzie, kto się nie dobije!«
 Broniłam, lecz próżny opór:
 Klęczą, na progach wyciągają szyje,
 A drugie przynoszą topór.'''
 
 [[contents]]
 text = '''
-»Gotowa zbrodnia... Czyli wezwać hordy
+Gotowa zbrodnia… Czyli wezwać hordy
 I podłe przyjąć kajdany,
-Czy bezbożnymi wytępić się mordy?...
-Panie! zawołam, nad Pany:'''
+Czy bezbożnemi wytępić się mordy?…
+Panie, zawołam, nad pany:'''
 
 [[contents]]
 text = '''
-»Jeśli nie możem ujść nieprzyjaciela,
+Jeśli nie możem ujść nieprzyjaciela,
 O śmierć błagamy u Ciebie,
 Niechaj nas lepiej Twój piorun wystrzela,
-Lub żywych ziemia pogrzebie! —'''
+Lub żywych ziemia pogrzebie!'''
 
 [[contents]]
 text = '''
-»Wtem jakaś białość nagle mię otoczy,
+Wtem, jakaś białość nagle mnie otoczy,
 Dzień zda się spędzać noc ciemną:
-Spuszczam ku ziemi przerażone oczy...
-Już ziemi niema podemną!...'''
+Spuszczam ku ziemi przerażone oczy…
+Już ziemi nie ma pode mną!…'''
 
 [[contents]]
 text = '''
-»Takeśmy uszły zhańbienia i rzezi.
-Widzisz to ziele dokoła?
+Takeśmy uszły zhańbienia i rzezi.
+Widzisz to ziele dokoła,
 To są małżonki i córki Świtezi,
 Które Bóg przemienił w zioła.'''
 
 [[contents]]
 text = '''
-»Białawem kwieciem, jak białe motylki,
+Białawem kwieciem, jak białe motylki,
 Unoszą się nad topielą;
-Liść ich zielony, jak jodłowe szpilki,
+{{9:List}} ich zielony, jak jodłowe szpilki,
 Kiedy je śniegi pobielą.'''
 
 [[contents]]
 text = '''
-»Za życia cnoty niewinnej obrazy,
+Za życia cnoty niewinnej obrazy,
 Jej barwę mają po zgonie,
 W ukryciu żyją i nie cierpią skazy,
 Śmiertelne nie tkną ich dłonie.'''
 
 [[contents]]
 text = '''
-»Doświadczył tego car i ruska zgraja,
+Doświadczył tego car i ruska zgraja,
 Gdy piękne ujrzawszy kwiecie,
 Ten rwie i szyszak stalony umaja,
-Ten wianki na skronie plecie.'''
+Ten wianki na skronie plecie:'''
 
 [[contents]]
 text = '''
-»Kto tylko ściągnął do głębiny ramię,
+Kto tylko ściągnął do głębini ramie,
 Tak straszna jest kwiatów władza,
 Że go natychmiast choroba wyłamie,
 I śmierć gwałtowna ugadza.'''
 
 [[contents]]
 text = '''
-»Choć czas te dzieje wymazał z pamięci,
+Choć czas te dzieje wymazał z pamięci,
 Pozostał sam odgłos kary,
 Dotąd w swych baśniach prostota go święci,
-I kwiaty nazywa cary«. —'''
+I kwiaty nazywa Cary”. —'''
 
 [[contents]]
 text = '''
-To mówiąc, pani zwolna się oddala,
+To mówiąc, pani z wolna się oddala,
 Topią się statki i sieci,
 Szum słychać w puszczy, poburzona fala
 Z łoskotem na brzegi leci.'''
 
 [[contents]]
 text = '''
-Jezioro do dna pękło nakształt rowu,
-Lecz próżno za nią wzrok goni:
-Wpadła, i falą nakryła się znowu,
+Jezioro do dna pękło na kształt rowu,
+Lecz próżno za nią wzrok goni,
+Wpadła i falą nakryła się znowu,
 I więcej nie słychać o niéj.'''
 
 [[annotations]]
-text = "Cyryn, wieś kościelna niedaleko Zaosia."
+text = "„larwy” — straszydła. [przypis redakcyjny]"
 key = 1
 
 [[annotations]]
-text = "Mendog, albo Mindowe, w. książę litewski, który się koronował na króla w XIII w."
+text = "„Cyryn” — miasteczko w Nowogródzkiem, z kościołem parafialnym. Do parafii cyryńskiej należały Płużyny. [przypis redakcyjny]"
 key = 2
+
+[[annotations]]
+text = "„baty” — czółna. [przypis redakcyjny]"
+key = 3
+
+[[annotations]]
+text = "„pławki” (pławy, pławuki) — kawałki kory przytwierdzane do górnej krawędzi sieci w celu utrzymania jej na wodzie. [przypis redakcyjny]"
+key = 4
+
+[[annotations]]
+text = "„Pewnie nie złowią ni oka” — zwrot ludowy, używany na Białej Rusi i Podolu; oko — waga trzech funtów. [przypis redakcyjny]"
+key = 5
+
+[[annotations]]
+text = "„głębinia” (forma białorus.) — głębina. [przypis redakcyjny]"
+key = 6
+
+[[annotations]]
+text = "„car” — podbiał (ziele). [przypis redakcyjny]"
+key = 7
+
+[[annotations]]
+text = "„od książąt Tuhanów” — aluzja do Tuhanowicz, wsi należącej do Wereszczaków, gdzie przebywała Maryla. [przypis redakcyjny]"
+key = 8
+
+[[annotations]]
+text = "„List” (stpol.) — liść (por.: listopad). [przypis redakcyjny]"
+key = 9

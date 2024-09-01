@@ -16,7 +16,7 @@ const { title, href } = Astro.props;
 <style lang="scss">
   a {
     border: 6px double var(--border-color-default);
-    height: clamp(80px, 15vw, 128px);
+    width: min(40vw, 256px);
     aspect-ratio: 2/1;
 
     display: flex;

@@ -1,15 +1,15 @@
 key = "do-przyjaciol"
 title = "Do przyjaciół"
 order = 7
-link = "https://pl.wikisource.org/wiki/Do_przyjaciół_(Mickiewicz,_1899)"
+link = "https://wolnelektury.pl/katalog/lektura/mickiewicz-ballady-i-romanse-do-przyjaciol.html"
 
 notes = ["(Posyłając im balladę »To lubię«)"]
 
 [[contents]]
 text = '''
-Bije raz, dwa, trzy... już północna pora:
+Bije raz, dwa, trzy… już północna pora:
 Głuche wokoło zacisze,
-Wiatr tylko szumi po murach klasztora,
+Wiatr tylko szumi po murach klasztora
 I psów szczekanie gdzieś słyszę.'''
 
 [[contents]]
@@ -21,23 +21,23 @@ Błyska, zagasa i błyska.'''
 
 [[contents]]
 text = '''
-Straszno!... Nie była straszną ta godzina,
+Straszno!… Nie była straszną ta godzina,
 Gdy były nieba łaskawsze;
 Ileż mi słodkich chwilek przypomina!
-Precz!... to już znikło na zawsze!'''
+Precz! To już znikło na zawsze!'''
 
 [[contents]]
 text = '''
-Teraz ja szczęścia szukam ot w tej księdze...
+Teraz ja szczęścia szukam, ot w tej księdze…
 Księga znudziła, porzucam;
 Znowu ku lubym przedmiotom myśl pędzę,
 To marzę, to się ocucam.'''
 
 [[contents]]
 text = '''
-Czasem, gdy słodkie złudzi zachwycenie,
+Czasem, gdy słodkie zbudzi zachwycenie,
 Kochankę widzę lub braci;
-Zrywam się, patrzę: aż tylko po ścienie
+Zrywam się, patrzę; aż tylko po ścienie,
 Biega cień własnej postaci.'''
 
 [[contents]]
@@ -50,7 +50,7 @@ Zacznę, bo nie wiem, czy skończę.'''
 [[contents]]
 text = '''
 Może też pamięć o minionej wiośnie
-Zimowy wietrzyk umili;
+Zimowy wierszyk umili;
 Chcę coś okropnie, coś pisać miłośnie,
 O strachach i o Maryli.'''
 
@@ -63,7 +63,7 @@ Serca, rozumu zalety;'''
 
 [[contents]]
 text = '''
-Mnie choć to wszystko w umyśle przytomne,
+Mnie, choć to wszystko w umyśle przytomne,
 Pociechy szukam, nie sławy:
 Lepiej wam powiem, jeżeli przypomnę,
 Jakie z nią miałem zabawy.'''
@@ -72,16 +72,12 @@ Jakie z nią miałem zabawy.'''
 text = '''
 Maryla słodkie miłości wyrazy
 Dzieliła skąpo w rachubie:
-Choć jej kto kocham mówił po sto razy,
+Choć jej kto kocham mówił po sto razy
 Nie rzekła nawet i lubię.'''
 
 [[contents]]
 text = '''
-Za to więc w {{1:Rucie}}, pod północną chwilę,
+Za to więc w Rucie, pod północną chwilę,
 Kiedy się wszyscy spać kładą,
 Ja na dobranoc żegnając Marylę,
-Taką straszyłem balladą.'''
-
-[[annotations]]
-text = "Ruta — wieś w pobliżu Zaosia."
-key = 1
+Taką straszyłem balladą:'''

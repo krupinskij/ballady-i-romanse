@@ -50,21 +50,21 @@ const ballads = await response.json<Ballad[]>();
 
   header {
     position: relative;
-    width: max-content;
+    width: 100%;
     height: calc(460px * var(--scale, 1));
     margin-inline: auto;
     margin-bottom: 48px;
 
     --scale: 0.7;
-    @media (min-width: 800px) {
+    @media (min-width: 460px) {
       --scale: 1;
+      width: max-content;
     }
   }
 
   .image {
     position: absolute;
     scale: var(--scale, 1);
-    --offset: clamp(100px, 15vw, 160px);
 
     &.image-top {
       top: 0;
@@ -83,13 +83,13 @@ const ballads = await response.json<Ballad[]>();
     }
 
     &.image-left {
-      left: calc(-1 * var(--offset));
+      left: 0;
       transform-origin: 0 0;
       z-index: 0;
     }
 
     &.image-right {
-      right: calc(-1 * var(--offset));
+      right: 0;
       transform-origin: 100% 0;
       z-index: 0;
     }
@@ -97,16 +97,28 @@ const ballads = await response.json<Ballad[]>();
 
   h1 {
     font: var(--font-xxl);
+    line-height: 0.6;
+    margin-inline: 120px;
+    top: 50%;
+
+    @media (min-width: 460px) {
+      line-height: 1;
+    }
   }
 
   h2 {
     font: var(--font-xl);
+    line-height: 1rem;
+    top: 43%;
+
+    @media (min-width: 460px) {
+      top: 50%;
+    }
   }
 
   h1,
   h2 {
     position: relative;
-    top: 50%;
     translate: 0 -50%;
 
     font-family: var(--font-cursive);
@@ -118,9 +130,9 @@ const ballads = await response.json<Ballad[]>();
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;
-
-    margin-inline: min(5vw, 64px);
+    gap: 12px;
+    max-width: 1400px;
+    margin-inline: auto;
   }
 
   footer {

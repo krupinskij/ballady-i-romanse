@@ -1,25 +1,27 @@
 key = "rekawiczka"
 title = "Rękawiczka"
 order = 9
-link = "https://pl.wikisource.org/wiki/Poezye_Adama_Mickiewicza/Rękawiczka"
+link = "https://wolnelektury.pl/katalog/lektura/ballady-i-romanse-rekawiczka.html"
+
+notes = ["{{1:(z Schillera)}}"]
 
 [[contents]]
 text = '''
 Chcąc być widzem dzikich bojów,
-Już u zwierzyńca podwojów
+Już u zwierzyńca {{2:podwojów}}
 Król zasiada.
-Przy nim książęta i panowie Rada,
-A gdzie wzniosły krążył ganek,
+Przy nim książęta i {{3:panowie Rada}};
+A gdzie {{4:wzniosły}} krążył ganek,
 Rycerze obok kochanek.'''
 
 [[contents]]
 text = '''
 Król skinął palcem, zaczęto igrzysko,
-Spadły wrzeciądze; ogromne lwisko
-Zwolna się toczy,
+Spadły {{5:wrzeciądze}}: ogromne lwisko
+Z wolna się toczy;
 Podnosi czoło,
 Milczkiem obraca oczy
-Wokoło,
+Wokoło;
 I ziewy rozdarł straszliwie,
 I kudły zatrząsł na grzywie,
 I wyciągnął cielska brzemię,
@@ -27,58 +29,86 @@ I obalił się na ziemię.'''
 
 [[contents]]
 text = '''
-Król skinął znowu,
-Znowu przemknie się krata,
-Szybkimi skoki, chciwy połowu,
+Król skinął znowu.
+Znowu przemknie się krata:
+Szybkiemi skoki, chciwy połowu
 Tygrys wylata.
-Spoziera z dala
+Spoziera z dala,
 I kłami błyska,
 Język wywala,
-Ogonem ciska
-I lwa dokoła obiega.
-Topiąc wzrok jaszczurczy
+Ogonem ciska,
+I lwa dokoła obiega;
+Topiąc wzrok jaszczurczy,
 Wyje i burczy;
-Burcząc na stronie przylega.'''
+Burcząc, na stronie przylega.'''
 
 [[contents]]
 text = '''
-Król skinął znowu,
-Znowu podwój otwarty,
-I z jednego zachowu
+Król skinął znowu:
+Znowu podwój otwarty:
+I z jednego {{6:zachowu}}
 Dwa wyskakują lamparty.
 Łakoma boju, para zajadła
 Już tygrysa opadła,
-Już się tygrys z nimi drapie,
-Już obudwu trzyma w łapie;
+Już się tygrys z niemi drapie,
+Już obydwu trzyma w łapie:
 Wtem lew podniósł łeb do góry,
-Zagrzmiał - i znowu cisze -
-A dzicz z krwawymi pazury
-Obiega... za mordem dysze.
-Dysząc na stronie przylega.'''
+Zagrzmiał — i znowu cisze —
+A dzicz z krwawemi pazury
+Obiega, za mordem dysze,
+Dysząc, na stronie przylega.'''
 
 [[contents]]
 text = '''
 Wtem leci rękawiczka z krużganków pałacu,
 Z rączek nadobnej Marty,
-Pada między tygrysa i między lamparty,
+Pada między tygrysa i między lamparty
 Na środek placu.'''
 
 [[contents]]
 text = '''
 Marta z uśmiechem rzecze do Emroda:
-»Kto mię tak kocha, jak po tysiąc razy
-Czułymi przysiągł wyrazy,
-Niechaj mi teraz rękawiczkę poda«.'''
+„Kto mię tak kocha, jak po tysiąc razy
+Czułemi przysiągł wyrazy,
+Niechaj mi teraz rękawiczkę poda”.'''
 
 [[contents]]
 text = '''
 Emrod przeskoczył zapory,
 Idzie pomiędzy potwory,
 Śmiało rękawiczkę bierze.
-Dziwią się panie, dziwią się rycerze.
+Dziwią się panie, dziwią się rycerze;
 A on w zwycięskiej chwale
 Wstępuje na krużganki.
-Tam od radośnej witany kochanki,
-Rycerz jej w oczy rękawiczkę rzucił,
-»Pani, twych dzięków nie trzeba mi wcale«.
+Tam, {{7:od radosnej witany kochanki}},
+Rycerz jej w oczy rękawiczkę rzucił:
+„Pani, twych dzięków nie trzeba mi wcale”.
 To rzekł i poszedł, i więcej nie wrócił.'''
+
+[[annotations]]
+text = "„z Schillera” — przekład Adama Mickiewicza powstał w kwietniu 1820 r. w Kownie; poeta zmienił imiona osób występujące w oryginale: król Franz (w tłumaczeniu polskim nie pada jego imię), dama imieniem Kunigund (tu: Marta), rycerz Delorges (tu: Emrod). [przypis edytorski]"
+key = 1
+
+[[annotations]]
+text = "„podwoje” — podwójne drzwi a. brama. [przypis edytorski]"
+key = 2
+
+[[annotations]]
+text = "„panowie Rada” — zwrot staropolski na oznaczenie senatu. [przypis redakcyjny]"
+key = 3
+
+[[annotations]]
+text = "„wzniosły” — wzniesiony; znajdujący się wysoko. [przypis redakcyjny]"
+key = 4
+
+[[annotations]]
+text = "„wrzeciądze” — zamknięcie drzwi a. bramy. [przypis edytorski]"
+key = 5
+
+[[annotations]]
+text = "„z zachowu” — z zamkniętego miejsca. [przypis redakcyjny]"
+key = 6
+
+[[annotations]]
+text = "„od radosnej witany kochanki” — dziś: „witany przez radosną kochankę”. [przypis edytorski]"
+key = 7
