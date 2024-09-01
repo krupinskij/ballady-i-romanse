@@ -1,52 +1,49 @@
 key = "tukaj-albo-proby-przyjazni"
 title = "Tutaj albo próby przyjaźni"
 order = 11
-link = "https://pl.wikisource.org/wiki/Tukaj_albo_próby_przyjaźni_(Mickiewicz,_1899)"
+link = "https://wolnelektury.pl/katalog/lektura/mickiewicz-tukaj.html"
 
-notes = ["(We czterech częściach)"]
+notes = ["{{1:(We czterech częściach)}}"]
 
 [[contents]]
 character = "I"
 text = '''
-»Ja umieram. — Ja nie płaczę.
+„Ja umieram. — Ja nie płaczę,
 I wy chciejcie ulżyć sobie;
-Prędzej, później, legniem w grobie,
+Prędzej, później legniem w grobie.
 Nie wrócą na świat rozpacze.
-»Byłem panem mnogich włości,
+Byłem panem mnogich włości,
 Sławny potęgą i zbiorem;
 Zamki me stały otworem
-Dla przyjaciół i dla gości,
+Dla przyjaciół i dla gości.
 O potęgo! o człowieku!
-Wielkie zamki, wielkie imię,
+Wielkie zamki, wielkie {{2:imie}},
 Wielkie nic! Wielkość, czczy dymie!
-Ja umieram w kwiecie wieku!'''
-
-[[contents]]
-text = '''
-»Gdy za mądrości widziadłem
+Ja umieram w kwiecie wieku!
+Gdy za mądrości widziadłem
 Goniąc, zbiegam kraje cudze,
 Gdy wzrok nad księgami trudzę,
 Skarbnice nauk posiadłem:
 O nauki! o człowieku!
-Wielka mądrość, wielkie imię,
-Wielkie nic! Rozum, czczy dymie!
+Wielka mądrość, wielkie imie,
+Wielkie nic! rozum, czczy dymie!
 Ja umieram w kwiecie wieku!
-»Strzegłem ustaw świętej wiary
-W ducha i serca prostocie;
+Strzegłem ustaw świętej wiary
+W duchu i serca prostocie;
 Hojnie nagradzałem cnocie,
-Kościołom niosłem ofiary:
-{{1:O pobożności! człowieku!}}
-Święta wiaro, święte imię,
-Święte nic! Cnoto, czczy dymie!
-Ja umieram w kwiecie wieku.
-»Twórco, jakże igrasz srodze!
+Kościołom niosłem ofiary.
+O pobożności! człowieku!
+Święta wiaro, święte imie,
+Święte nic! cnoto, czczy dymie!
+Ja umieram w kwiecie wieku!
+Twórco, jakże igrasz srodze!
 Kiedy mi dasz wiek niedługi,
-Coż, że mi dasz wierne sługi?
-Czemże za wierność nagrodzę?
-Dasz kochankę kochankowi:
+Cóż, że mi dasz wierne sługi?
+Czymże za wierność nagrodzę?
+Dasz kochankę kochankowi,
 Śmierć truje ślubów słodycze.
 I tylu przyjaciół liczę!
-Bądźcie zdrowi, bądźcie zdrowi!«'''
+Bądźcie zdrowi, bądźcie zdrowi!”'''
 
 [[contents]]
 text = '''
@@ -59,124 +56,112 @@ Gasnące zamknął powieki.'''
 text = '''
 Wtem grom łamie szczyty dachu,
 Zadrżały zamkowe ściany,
-Jakowyś starzec nieznany,
+Jakowyś starzec nieznany
 Wlatuje na środek gmachu.
 Siwy włos okrył mu skronie,
-Twarz marszczkami rozorana,'''
-
-[[contents]]
-text = '''
+Twarz marszczkami rozorana,
 Broda długa za kolana,
-Na kosturze wsparte dłonie.
-»Tukaju!« Porwał z pościeli,
+Na {{3:kosturze}} wsparte dłonie.
+„Tukaju!” Porwał z pościeli
 I wraz za sobą iść każe;
-Już wierzchne sale minęli,
+Już {{4:wierzchne}} sale minęli,
 Minęli wały i straże.
-Idą — ciemno, deszczyk kropi:
-A srebrzysta twarz miesiąca,
+Idą — ciemno, deszczyk kropi;
+A {{5:srebrzysta twarz miesiąca}},
 To grubawe mgły roztrąca,
 To się znowu we mgle topi.
-Idą ponad trzęskie kępy,
+Idą ponad {{6:trzęskie}} kępy,
 Mijają bagna, głębinie,
-{{2:Hnilicy}} ciemnej ostępy,
-{{3:Kołdyczewa}} nurty sinie,
+Hnilicy ciemnej ostępy,
+{{7:Kołdyczewa}} nurty {{8:sinie}}.
 Gdzie puszcza zarosła wkoło,
-Spodem czarna, zwierzchu płowa,
-Żwirami nasute czoło
-Wynosi góra {{4:Żarnowa}},
+Spodem czarna, z wierzchu płowa,
+Żwirami {{9:nasute}} czoło
+wynosi góra Żarnowa,
 Tam szli. Starzec kląkł na grobie,
 Rozwarł usta, okiem błysnął,
 Podniósł w górę ręce obie,
 Trzykroć krzyknął, trzykroć świsnął.
-»Tukaju, patrz, oto ścieżka!
+„Tukaju, patrz, oto ścieżka!
 Za ścieżką chatka na bagnie,
-W chatce mędrzec Polel mieszka:
-Mędrzec mędrca wspomódz pragnie.
+W chatce mędrzec {{10:Polel}} mieszka:
+Mędrzec mędrca wspomóc pragnie.
 Znana twa nauka, cnota;
-Znam, że Bóg węzły lubemi,
+Znam, że Bóg, węzły lubemi
 Przywiązawszy cię do ziemi,
 Długiego nie da żywota.
 Ale rzucaj przestrach płony,
-Mych sposobów uznaj dzielność;
+Mych sposobów uznaj {{11:dzielność}};
 Żyj dla sług, przyjaciół, żony,
-Lata, wieki, nieśmiertelność.'''
-
-[[contents]]
-text = '''
-Ja pierwszy ziemskiemu oku,
+Lata, wieki, nieśmiertelność.
+Ja pierwszy ziemskiemu oku
 Śmiem do niej pokazać drogę;
-Lecz podług ustaw wyroku,
+Lecz podług ustaw wyroku
 Dwom tylko pokazać mogę.
 Wybierz drugiego człowieka,
-Człowieka doznanej wiary,
-Któremubyś w każdej probie
-Tak zaufał, jak sam sobie.
+Człowieka doznanej {{12:wiary}},
+Któremu byś w każdej probie
+Tak zaufał, jak sam sobie;
 Trafisz — nieśmiertelność czeka!
-Chybisz — śmierć i wieczne kary!«'''
-
-[[contents]]
-text = '''
-»Starcze! twe zjawienia wieszcze
+Chybisz — śmierć i wieczne kary!”
+— „Starcze! twe zjawienie wieszcze
 Ciemna zasłona powleka,
-Powiedz...« — »Powiadam ci jeszcze:
+Powiedz…” — „Powiadam ci jeszcze,
 Wybierz drugiego człowieka.
-Radź się twej głowy i serca:
+Radź się twej głowy i serca,
 Idzie o ciało i duszę!
-Wierny, albo przeniewierca,
-Nieśmiertelność, lub katusze!...
-Czy mógłbyś się zwierzyć słudze?«'''
+Wierny albo przeniewierca,
+Nieśmiertelność lub katusze!…
+Czy mógłbyś {{13:zwierzyć się}} słudze?”'''
 
 [[contents]]
 text = '''
-Tukaj nic nie odpowiada;
+Tukaj nic nie odpowiada,
 Bo któż zgadnie myśli cudze?
 Bo zbyt częsta w sługach zdrada.
-»Może kochance, lub żonie?«
-»Tak...« wtem uciął, patrzy smutnie;
-»Tak« rzecze, i znowu utnie.
+„Może kochance lub żonie?”
+— „Tak…” wtem uciął, patrzy smutnie;
+„Tak” rzecze i znowu utnie.
 Myśli, sam się z sobą biedzi,
-»Tak jest, kochance... tak, żonie!«
-I wierzy i strach nań pada,
+„Tak jest, kochance… tak, żonie!”
+I wierzy, i strach nań pada,
 I wątpi, i wstydem płonie;
-Myśli, sam się z sobą biedzi;
+Myśli, sam się z sobą biedzi,
 Umyślił, już w odpowiedzi,
-Już... i nic nie odpowiada.
-»Umrzyj więc! ty śmiałeś żądać?
-Daj pokój żądaniom dzikim!'''
-
-[[contents]]
-text = '''
-Ty nie masz ufności w nikim,
-Wartoż dłużej świat oglądać?«
-On myśli... »Nikogoż z wiela?
-Sługi, żony, przyjaciela?«
-On myśli... Tu, w mgnieniu oka,
+Już… i nic nie odpowiada.
+— „Umrzyj więc! ty śmiałeś żądać?
+Daj pokój żądaniom dzikim!
+Ty nie masz ufności w nikim.
+Wartoż dłużej świat oglądać?”
+On myśli… — „Nikogoż z wiela?
+Sługi, żony, przyjaciela?”
+— On myśli… Tu w mgnieniu oka
 Czerni się niebios sklepienie,
 Słychać grzmienie, ziemi drżenie,
 Kipią bagna, lasy gorą,
 Niknie w płomieniach opoka,
-I doliny i jezioro.
-Śród gromów świstu i szczęku,
-Czy to zły duch, czy moc boża,
+I doliny, i jezioro.
+Śród gromów, świstu i szczęku,
+Czy to zły duch, czy moc Boża,
 Tukaj znalazł się śród łoża,
 Na swych domowników ręku.
-Głos tylko zagrzmiał zdaleka:
-»Niemasz drugiego człowieka,
-Któremubyś w każdej probie
-Tak zaufał, jak sam sobie«.'''
+Głos tylko zagrzmiał z daleka:
+„Nie masz drugiego człowieka,
+Któremu byś w każdej probie
+Tak zaufał, jak sam sobie”.'''
 
 [[contents]]
 character = "II"
 text = '''
-»Ja mam, ja mam przyjaciela!«
+„Ja mam, ja mam przyjaciela!”
 Konający Tukaj woła.
 Wraz uchodzi bladość z czoła,
 Iskrą zdrowia oko strzela;
-Tukaj, wydarty mogile,
+Tukaj wydarty mogile,
 Wstaje, dziwią się doktory;
 Wstaje, chodzi o swej sile,
 Jakby nigdy nie był chory.
-A wtem na poduszce z boku,
+A wtem, na poduszce z boku,
 Ujrzy z wolej skóry karty,
 Gdzie tajemnice wyroku
 Przeklęte spisały czarty.
@@ -185,51 +170,48 @@ Siada, podparł się, i czyta:'''
 
 [[contents]]
 text = '''
-»Kiedy miesiąc na młodziku,
-Idź na górę do gaiku,
-Znajdziesz kamień, z pod kamienia
-Białego urwij korzenia.
-Kiedy będziesz blizki śmierci,
+„Kiedy {{14:miesiąc na młodziku}},
+Idź za górę do gaiku,
+Znajdziesz kamień, spod kamienia
+Białego urwij korzenia,
+Kiedy będziesz bliski śmierci,
 Każ ciało posiec na ćwierci,
 W wodzie zgotować korzonki,
 Pocięte namaścić członki:
 Znowu się duch z ciałem zrośnie,
 W młodocianej wstaniesz wiośnie,
-I możesz skutkiem tych leków
-Umierać, wstawać, wiek wieków«.'''
+I możesz, skutkiem tych leków,
+Umierać, wstawać, wiek wieków”.'''
 
 [[contents]]
 text = '''
 Dalej tam były przestrogi:
-Jak siekać głowę, jak nogi:
+Jak siekać głowę, jak nogi,
 W jakiej wodzie smażyć trunek,
 Po jakiej brać zioła szczypcie;
-Ale w końcu w post-skrypcie,
+Ale na końcu w {{15:post-skrypcie}},
 Taki dodano warunek:'''
 
 [[contents]]
 text = '''
-»Jeśli użyty ktoś drugi,
+„Jeśli użyty ktoś drugi
 Do namaszczalnej posługi,
-Zwiedzion przez nasze fortele,
-Innemu pokaże ziele,
-Lub w oznaczonej godzinie,
-Twego ciała nie namaści;
+Zwiedzion przez nasze {{16:fortele}},
+Innemu pokaże ziele
+Lub w oznaczonej godzinie
+Twego ciała nie namaści:
 Wtenczas skutek zioła zginie,
 Wtenczas piekło czeka waści.
 Jeśli na to się ośmielisz,
 Dla znaku, że zaszła zgoda,
-Nasz poseł Mefistofelisz,
+Nasz poseł Mefistofelisz
 Do wymiany traktat poda.
 Ostrzegliśmy o fortelach,
-Strzeż się; potem próżny kweres.
-Dan w {{5:Erebie}}, w szabas rano;
-Własną ręką podpisano:'''
-
-[[contents]]
-text = '''
+Strzeż się; potem próżny {{17:kweres}}.
+Dan w {{18:Erebie}}, w szabas rano;
+{{19:Własną ręką podpisano:
 Tak ma stać się: Lucyferes,
-A za zgodność: {{6:Hadramelach}}«.'''
+A za zgodność: Hadramelach}}».'''
 
 [[contents]]
 text = '''
@@ -240,92 +222,86 @@ Potarł czoło, skrzywił nosa,
 Na kontrakt spojrzał z ukosa:
 Tabaczki dwa razy zażył,
 To na ziemię spuszcza oczy,
-To po stolowaniu toczy.
-Wziął pergamin, w ręku zważył;
+To po {{20:stolowaniu}} toczy.
+Wziął {{21:pargamin}}, w ręku zważył;
 Znowu nań zezem poziera,
 Znowu czytał i odczytał,
 Znowu zważył, znowu zmierzył,
-Kułakiem o stół uderzył,
+{{22:Kułakiem}} o stół uderzył,
 Westchnął, mruczał, zębem zgrzytał,
 Ręce nad czoło zakłada,
 Skoczył raptem i w zapędzie
-Machnął ręką: »Niech tak będzie!«
+Machnął ręką: „Niech tak będzie!”
 Znowu umilkł, znowu siada,
 Znowu myśli, znowu wstaje,
 Znowu chodzi, znowu siada.
 Niech go za to nikt nie łaje,
-Bo z dyabłami rzecz nie lada.'''
+Bo z diabłami rzecz nie lada.'''
 
 [[contents]]
 text = '''
 Myśli: albo wieczne życie,
-Albo wiecznie dyabłu dusza.
+Albo wiecznie diabłu dusza.
 Nic nie mówi, myśli skrycie,
 Tylko trochę wargą rusza.'''
 
 [[contents]]
 text = '''
 Nadszedł już czas odpowiedzi.
-Tukaj oddala się z tłumu,
+Tukaj oddala się z tłumu
 I do pracowni rozumu
-Zamknąwszy się, jeden siedzi,'''
-
-[[contents]]
-text = '''
+Zamknąwszy się, jeden siedzi.
 I tam swój traktat raz jeszcze,
-Nim stępel przyjęcia zyska,
+Nim stempel przyjęcia zyska,
 W surowej uwagi kleszcze
 Bierze i porządnie ściska.
 Tam myśl rozmaita ścieka
-W jedne podobieństwa tygle;
-Tam jedną myśl niedościgle
+W jedne podobieństwa {{23:tygle}};
+Tam jednę myśl niedościgle
 Różnicy nożykiem sieka;
-Sieka, topi, nakształt wosku,
+Sieka, topi na kształt wosku,
 Aż wycisnął ekstrakt wniosku.
 Obejrzawszy wniosek ściśle,
 Tak rzekł po długim namyśle:
-»Jakieżkolwiek to fortele,
+„Jakieżkolwiek to fortele,
 O których słyszałem z góry,
 Czy ich niewiele, czy wiele,
 Trojakiej będą natury.
 Chcąc kogo przywieść do zdrady,
-Trzeba siły, albo rady;
+Trzeba siły albo rady;
 Albo podarunkiem skusić,
 Albo strwożyć, albo zmusić.
-Toż samo krótszemi słowy,
-Będzie {{7:syllogizm}} takowy:
-Trojaka do zguby droga —
+Toż samo krótszymi słowy,
+Będzie {{24:sylogizm}} takowy:
+Trojaka do zguby droga,
 Ciekawość, łakomstwo, trwoga.
 Więc kto w tym trojakim względzie
 Twardej nie ulegnie probie,
 Takiemu już można będzie
-Ufać, jak samemu sobie«.'''
+Ufać jak samemu sobie”.'''
 
 [[contents]]
 text = '''
-Tukaj, kontent z wynalazku,
+Tukaj, {{25:kontent}} z wynalazku,
 Szuka atramentu, piasku,
 Idzie kreślić pismo grzechu,
 Ale idzie bez pośpiechu.
-Już ciemno, pisać niewcześnie.
-W atramencie jakieś pleśnie;'''
-
-[[contents]]
-text = '''
-Dwie świece musiał zapalać,
+Już ciemno, pisać {{26:niewcześnie}},
+W atramencie jakieś pleśnie;
+Dwie świece musiał zapalać
 I dwa kałamarze nalać.
 Coś mu zabolało w łokciu;
-Wziął pióro, na piórze włosek,
-I bardzo spisany nosek:
-Otrząsł, przyciął na paznogciu.
-Po długim względzie, rozględzie,
-Wreszcie pisze: niech tak będzie.
+Wziął pióro — na piórze włosek
+I bardzo spisany nosek;
+Otrząsł, przyciął na paznokciu.
+{{26:Po długim względzie, rozględzie}},
+Wreszcie pisze: NIECH TAK BĘDZIE.
 Chciał dołożyć i nazwisko:
-Lecz nim pierwsze »T« napisał,
-Myślał pół godziny blizko,
+Lecz nim pierwsze T napisał,
+Myślał pół godziny blisko,
 Głową i piórem kołysał,
 I nic więcej nie napisał;
-Tylko do pierwszej litery
+Tylko do pierwszej litery,
 Dodał małe kropki.... cztery.'''
 
 [[contents]]
@@ -333,31 +309,28 @@ text = '''
 Gdy już napisano widzi,
 Jeszcze patrzy, jeszcze bada;
 Niechaj z tego nikt nie szydzi,
-Bo z dyabłami rzecz nie lada.'''
+Bo z diabłami rzecz nie lada.'''
 
 [[contents]]
 text = '''
 Lecz jakże się musiał zdumieć,
-Gdy głoska B, w słowie będzie,
+Gdy głoska «B» w słowie BĘDZIE,
 Zaczęła brzęczeć i szumieć,
 I wzdymać wszystkie krawędzie.
-Kręci się, beczy, podrasta,
+Kręci się, beczy, podrasta
 Jak na drożdżach kawał ciasta;
-Dolna litery połowa,
+Dolna litery połowa
 Wykurcza się w brzuch i żebra,
 U zwierzchniej wypukła głowa,
-Nakształt ogromnego cebra.
-Szyjka jak u osy wązka,
-Nosik orła, bródka kozła,
+Na kształt ogromnego cebra.
+Szyjka jak u osy wąska,
+{{28:Nosik}} orła, bródka kozła,
 A z jednej go strony końska,
-Z drugiej kurza łapka wiozła;'''
-
-[[contents]]
-text = '''
+Z drugiej kurza łapka wiozła;
 Pogląda okiem wołowem,
-Skrzydła nakształt młyńskich wioseł...
-Był to dyabeł jednem słowem,
-Był to Mefistofel poseł.'''
+Skrzydła na kształt młyńskich wioseł…
+Był to diabeł jednym słowem,
+Był to Miefistofel poseł.'''
 
 [[contents]]
 text = '''
@@ -365,43 +338,123 @@ Jeszcze Tukaj nie mógł wiedzieć,
 Czy żegnać, czy prosić siedzieć,
 Kiedy przyskoczył zuchwalec,
 Porwał za maleńki palec,
-Zasadził nożyk pod skórką
+Zasadził nożyk pod skórką,
 I umoczył we krwi piórko;
 Piórko wścibił, ścisnął w ręku,
 Ręką wodzi pomaleńku,
-Gdy już u, k, a, j, minął,
-Zrobiło się całkiem Tukaj.
-Dyabeł świsnął, czmychnął, zginął...
-{{8:Terazże z nim ładu szukaj!}}'''
+Gdy już U, K, A, J minął,
+Zrobiło się całkiem TUKAJ.
+Djabeł świsnął, czmychnął, zginął…
+Terazże z nim ładu szukaj!'''
 
 [[annotations]]
-text = "Za te bluźnierstwa znajdzie czytelnik ukaranie w następnych balladach."
+text = "„we czterech częściach” — W pierwszym tomie Poezji Mickiewicza z 1822 r. zostały opublikowane dwie pieśni Tukaja z takim dopiskiem autorskim; swojego zamierzenia Mickiewicz nigdy jednak nie zrealizował. Pozostałe dwie części dopisał kilka lat później Antoni Edward Odyniec. [przypis edytorski]"
 key = 1
 
 [[annotations]]
-text = "Hnilica — rzeczka w powiecie nowogrodzkim."
+text = "„imie” (daw.) — tu: mienie, majątek. [przypis edytorski]"
 key = 2
 
 [[annotations]]
-text = "Kołdyczew — nazwisko jeziora."
+text = "„kostur” — kij, laska używany przez wędrowców do podpierania się. [przypis edytorski]"
 key = 3
 
 [[annotations]]
-text = "Góra Żarnowa w Zaosiu."
+text = "„wierzchne” — górne, znajdujące się na piętrze. [przypis edytorski]"
 key = 4
 
 [[annotations]]
-text = "Ereb — świat podziemny, tu znaczy piekło."
+text = "„srebrzysta twarz miesiąca” — księżyc. [przypis edytorski]"
 key = 5
 
 [[annotations]]
-text = "Hadramelach albo Adrammelech — jedna z licznych nazw szatana."
+text = "„trzęski” (daw.) — grząski. [przypis edytorski]"
 key = 6
 
 [[annotations]]
-text = "Syllogizm jest to nazwa pewnej formy rozumowania, złożonej z trzech zdań."
+text = "„Kołdyczew” — nazwisko jeziora. [Wszystkie nazwy miejscowości: Hnilica, Kołdyczew, Żarnowa Góra pochodzą z okolic rodzinnego Zaosia Mickiewicza; przyp. red.]. [przypis autorski]"
 key = 7
 
 [[annotations]]
-text = "Mickiewicz nie napisał dalszych dwu części »Tukaja«; zrobił to za niego Antoni Edward Odyniec i pomieścił w zbiorze swoich Poezyj."
+text = "„sinie” — sine. [przypis edytorski]"
 key = 8
+
+[[annotations]]
+text = "„żwirami nasute” — zasypane żwirem. [przypis edytorski]"
+key = 9
+
+[[annotations]]
+text = "„Polel” — imię rzekomej postaci (bóstwa) z mitologii słowiańskiej; Lel i Polel mieli być synami Łady, boga wojny (w wersji męskiej) a. miłości i płodności (w wersji męskiej). [przypis edytorski]"
+key = 10
+
+[[annotations]]
+text = "„dzielność” — tu: siłę, skuteczność. [przypis edytorski]"
+key = 11
+
+[[annotations]]
+text = "„doznanej wiary” — zaufanego; o sprawdzonej, doświadczonej wierności. [przypis edytorski]"
+key = 12
+
+[[annotations]]
+text = "„zwierzyć się” — zawierzyć się; powierzyć komuś swój los. [przypis edytorski]"
+key = 13
+
+[[annotations]]
+text = "„miesiąc na młodziku” — księżyc po nowiu. [przypis edytorski]"
+key = 14
+
+[[annotations]]
+text = "„post scriptum” (łac.) — dopisek. [przypis edytorski]"
+key = 15
+
+[[annotations]]
+text = "„fortel” — podstęp. [przypis edytorski]"
+key = 16
+
+[[annotations]]
+text = "„kweres” (daw.) — zamieszanie, zamęt. [przypis edytorski]"
+key = 17
+
+[[annotations]]
+text = "„Ereb” (mit. gr.) — najciemniejsza część Hadesu, także: bóstwo i uosobienie ciemności świata podziemnego; tu: piekło [przypis edytorski]"
+key = 18
+
+[[annotations]]
+text = "„Własną ręką podpisano (…) A za zgodność: Hadramelach” — przedrzeźnianie formy ukazów carskich. [przypis edytorski]"
+key = 19
+
+[[annotations]]
+text = "„stolowanie” (białorus.) — stoĺ (zapis fonetyczny): pułap. [przypis edytorski]"
+key = 20
+
+[[annotations]]
+text = "„pargamin” — pergamin. [przypis edytorski]"
+key = 21
+
+[[annotations]]
+text = "„kułak” — mocno zaciśnięta dłoń; pięść. [przypis edytorski]"
+key = 22
+
+[[annotations]]
+text = "„tygiel” — ogniotrwałe naczynie. [przypis edytorski]"
+key = 23
+
+[[annotations]]
+text = "„sylogizm” — schemat wnioskowania pośredniego złożonego z dwóch przesłanek i wynikającego z nich wniosku. [przypis edytorski]"
+key = 24
+
+[[annotations]]
+text = "„kontent” (daw.) — zadowolony. [przypis edytorski]"
+key = 25
+
+[[annotations]]
+text = "„niewczesny” — dziejący się w niewłaściwym czasie. [przypis edytorski]"
+key = 26
+
+[[annotations]]
+text = "„po długim względzie, rozględzie” — po długim namyśle. [przypis edytorski]"
+key = 27
+
+[[annotations]]
+text = "„nosik” — nosek. [przypis edytorski]"
+key = 28

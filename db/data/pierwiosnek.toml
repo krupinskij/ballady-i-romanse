@@ -1,7 +1,7 @@
 key = "pierwiosnek"
 title = "Pierwiosnek"
 order = 0
-link = "https://pl.wikisource.org/wiki/Pierwiosnek_(Mickiewicz)"
+link = "https://wolnelektury.pl/katalog/lektura/mickiewicz-ballady-i-romanse-pierwiosnek.html"
 
 notes = ["(Primula veris)"]
 
@@ -9,35 +9,35 @@ notes = ["(Primula veris)"]
 text = '''
 Z niebieskich najrańszą piosnek
 Ledwie zadzwonił skowronek,
-Najrańszy kwiatek, pierwiosnek,
+Najrańszy kwiatek pierwiosnek
 Błysnął ze złotych obsłonek.'''
 
 [[contents]]
 character = "Ja"
 text = '''
-Zawcześnie, kwiatku, zawcześnie,
+Za wcześnie, kwiatku, za wcześnie,
 Jeszcze północ mrozem dmucha,
-Z gór białe nie zeszły pleśnie,
+Z gór białe nie zeszły {{1:pleśnie}},
 Dąbrowa jeszcze nie sucha.'''
 
 [[contents]]
 text = '''
 Przymruż złociste światełka,
 Ukryj się pod matki rąbek,
-Nim cię zgubi szronu ząbek,
+Nim cię zgubi śronu ząbek
 Lub chłodnej rosy perełka.'''
 
 [[contents]]
 character = "Kwiatek"
 text = '''
-Dni nasze jak dni motylka;
+Dni nasze jak dni motylka,
 Życiem wschód, śmiercią południe;
-Lepsza w kwietniu jedna chwilka,
+Lepsza w kwietniu jedna chwilka
 Niż w jesieni całe grudnie.'''
 
 [[contents]]
 text = '''
-Czy dla Bogów szukasz datku,
+Czy dla bogów szukasz datku,
 Czy dla druha lub kochanki,
 Upleć wianek z mego kwiatku,
 Wianek to będzie nad wianki.'''
@@ -45,8 +45,8 @@ Wianek to będzie nad wianki.'''
 [[contents]]
 character = "Ja"
 text = '''
-W podłej trawce, w dzikim lasku
-Urosłeś, o kwiatku luby!
+W podlej trawce, w dzikim lasku
+Urosleś, o kwiatku luby!
 Mało wzrostu, mało blasku,
 Cóż ci daje tyle chluby?'''
 
@@ -54,13 +54,13 @@ Cóż ci daje tyle chluby?'''
 text = '''
 Ni to kolory jutrzenki,
 Ni zawoje tulipana,
-Ni liliowe sukienki,
+Ni lilijowe sukienki,
 Ni róży pierś malowana.'''
 
 [[contents]]
 text = '''
-Uplatam ciebie do wianka,
-Lecz skądże ufności tyle?
+Uplatam ciebie do wianka;
+Lecz skądże ufności tyle!
 Przyjaciele i kochanka
 Czy cię powitają mile?'''
 
@@ -77,4 +77,8 @@ text = '''
 Czym kochanki godzien rączek,
 Powiedz, niebieska Marylko!
 Za pierwszy młodości pączek
-Zyskam pierwszą — ach! łzę tylko...'''
+Zyskam pierwszą… ach! łzę tylko.'''
+
+[[annotations]]
+text = "Chodzi o śnieg. Mickiewicz nieprzypadkowo nazywa śnieg pleśnią - czymś starym i zepsutym. Pierwiosnek zwiastuje nadejście wiosny po zimie, narodziny czegoś nowego i świeżego, tak jak Romantyzm, który przyjdzie po mrokach Oświecenia. [przypis własny]"
+key = 1

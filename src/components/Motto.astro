@@ -1,5 +1,6 @@
 ---
 import { type Motto } from '@model';
+import AnnotationMarker from './AnnotationMarker.astro';
 
 interface Props extends Motto {}
 
@@ -7,9 +8,15 @@ const { text, author, translation } = Astro.props;
 ---
 
 <section>
-  <pre>{text}</pre>
-  <pre class="author">{author}</pre>
-  {translation && <pre>{translation}</pre>}
+  <pre><AnnotationMarker text={text} /></pre>
+  <pre class="author"><AnnotationMarker text={author} /></pre>
+  {
+    translation && (
+      <pre>
+        <AnnotationMarker text={translation} />
+      </pre>
+    )
+  }
 </section>
 
 <style lang="scss">

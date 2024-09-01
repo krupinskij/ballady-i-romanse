@@ -1,13 +1,13 @@
 key = "rybka"
 title = "Rybka"
 order = 4
-link = "https://pl.wikisource.org/wiki/Rybka_(Mickiewicz)"
+link = "https://wolnelektury.pl/katalog/lektura/ballady-i-romanse-rybka.html"
 
 notes = ["(Ze śpiewu gminnego)"]
 
 [[contents]]
 text = '''
-Od dworu, z pod lasa, z wioski,
+Od dworu, spod lasa, z wioski,
 Smutna wybiega dziewica,
 Rozpuściła na wiatr włoski
 I łzami skropiła lica.'''
@@ -21,35 +21,35 @@ I tak żałośnie narzeka:'''
 
 [[contents]]
 text = '''
-»O wy, co mieszkacie w wodzie,
+„O wy, co mieszkacie w wodzie,
 Siostry moje, Świtezianki,
 Słuchajcie w ciężkiej przygodzie
 Głosu zdradzonej kochanki.'''
 
 [[contents]]
 text = '''
-»Kochałam pana tak szczerze,
-On mię przysięgał zaślubić:
+Kochałam pana tak szczerze,
+On mię przysięgał zaślubić;
 Dziś księżnę za żonę bierze,
 Krysię ubogą chce zgubić.'''
 
 [[contents]]
 text = '''
-»Niechże sobie żyją młodzi,
+Niechże sobie żyją młodzi,
 Niech się z nią obłudnik pieści,
 Niech tylko tu nie przychodzi
-Urągać się z mych boleści.'''
+{{1:Urągać}} się z mych boleści.'''
 
 [[contents]]
 text = '''
-»Dla opuszczonej kochanki
+Dla opuszczonej kochanki
 Cóż pozostało na świecie?
 Przyjmijcie mię, Świtezianki:
-Lecz moje dziecię... ach, dziecię!«'''
+Lecz moje dziecię… ach dziecię!”'''
 
 [[contents]]
 text = '''
-To mówiąc, rzewnie zapłacze,
+To mówiąc rzewnie zapłacze,
 Rączkami oczy zasłoni,
 I z brzegu do wody skacze,
 I w bystrej nurza się toni.'''
@@ -58,7 +58,7 @@ I w bystrej nurza się toni.'''
 text = '''
 Wtem z lasu, gdzie się dwór bieli,
 Tysiączne świecą kagańce,
-Zjeżdzają goście weseli,
+Zjeżdżają goście weseli,
 Muzyka, hałas i tańce.'''
 
 [[contents]]
@@ -71,48 +71,48 @@ I dziecię na ręku niesie.'''
 [[contents]]
 text = '''
 Ku wodzie obraca kroki,
-Gdzie łoza, gęsto spleciona,
+Gdzie łoza gęsto spleciona
 Wzdłuż wykręconej zatoki
 Okryła rzeki ramiona.'''
 
 [[contents]]
 text = '''
 Tam staje w ciemnym zakątku,
-Płacze i woła: — »Niestety!
+Płacze i woła: — „Niestety!
 Ach! któż da piersi dzieciątku?
-Ach! gdzie ty, Krysiu, ach, gdzie ty?«'''
+Ach! gdzie ty, Krysiu, ach, gdzie ty?”'''
 
 [[contents]]
 text = '''
-— »Tu jestem, w rzece, u spodu,
-Cichy mu głos odpowiada:
+— „Tu jestem, w rzece, u spodu, —
+Cichy mu głos odpowiada —
 Tutaj drżę cała od chłodu,
 A żwir mnie oczki wyjada.'''
 
 [[contents]]
 text = '''
-»Przez żwir, przez ostre kamuszki,
+Przez żwir, przez ostre kamuszki
 Fale mnie gwałtowne niosą;
-Pokarm mój: koralki, muszki,
-A zapijam zimną rosą.'''
+Pokarm mój koralki, muszki,
+A zapijam zimną rosą”.'''
 
 [[contents]]
 text = '''
-Lecz sługa, jak na początku,
-Tak wszystko woła: — »Niestety!
+Lecz sługa jak na początku,
+Tak {{2:wszystko woła}}: — „Niestety!
 Ach! któż da piersi dzieciątku?
-Ach! gdzie ty, Krysiu, ach, gdzie ty?'''
+Ach! gdzież ty, Krysiu, ach, gdzie ty?”'''
 
 [[contents]]
 text = '''
-Wtem się coś zlekka potrąci
-Śród kryształowej przezroczy,
-Woda się zlekka zamąci,
+Wtem się coś z lekka potrąci
+Śród kryształowej przeźroczy,
+Woda się z lekka zamąci,
 Rybka nad wodę podskoczy;'''
 
 [[contents]]
 text = '''
-I jak skałka, płaskim bokiem,
+I jak {{3:skałka}} płaskim bokiem,
 Gdy z lekkich rąk chłopca pierzchnie,
 Tak nasza rybka podskokiem
 Mokre całuje powierzchnie.'''
@@ -134,16 +134,16 @@ Szyjka cieniuchna się wzdyma.'''
 [[contents]]
 text = '''
 Na licach różana krasa,
-Piersi, jak jabłuszka mleczne,
-Rybią ma pletwę do pasa,
-Płynie pod chrósty nadrzeczne.'''
+Piersi jak jabłuszka mleczne,
+Rybią ma płetwę do pasa,
+Płynie pod chrusty nadrzeczne.'''
 
 [[contents]]
 text = '''
 I dziecię bierze do ręki,
-U łona białego tuli,
-— »Luli, woła, mój maleńki,
-Luli, mój maleńki, luli». —'''
+U łona białego tuli:
+— „Luli, woła, mój maleńki,
+Luli, mój maleńki, luli”. —'''
 
 [[contents]]
 text = '''
@@ -154,9 +154,9 @@ I główkę nadobną zwęzi.'''
 
 [[contents]]
 text = '''
-Znowu ją łuski powleką
-Od boków wyskoczą skrzelki;
-Plusła: i tylko nad rzeką
+Znowu ją łuski powleką,
+Od boków wyskoczą skrzelki,
+Plusła, i tylko nad rzeką
 Kipiące pękły bąbelki.'''
 
 [[contents]]
@@ -182,28 +182,28 @@ Poszli przechadzką nad rzeczkę.'''
 
 [[contents]]
 text = '''
-Wrócił się, czekał zdaleka,
+Wrócił się, czekał z daleka,
 Za gęstym usiadłszy krzakiem:
 Lecz próżno czeka i czeka,
 Nikt nie powracał tym szlakiem.'''
 
 [[contents]]
 text = '''
-Wstaje, i dłoń w trąbkę zwinął,
+Wstaje, i {{4:dłoń w trąbkę zwinął}},
 I patrzył przez palców szparę,
 Ale i dzień już przeminął,
 I mroki padają szare.'''
 
 [[contents]]
 text = '''
-Czekał długo po zachodzie;
+Czekał długo po zachodzie,
 A gdy noc gwiazdy zapala,
-Zbliża się zlekka ku wodzie
-I śledzi oczyma zdala.'''
+Zbliża się z lekka ku wodzie
+I śledzi oczyma z dala.'''
 
 [[contents]]
 text = '''
-Przebóg! Cudy, czy moc piekła?
+Przebóg! cudy, czy moc piekła?
 Uderza go widok nowy:
 Gdzie pierwej rzeczułka ciekła,
 Tam suchy piasek i rowy.'''
@@ -217,9 +217,9 @@ Nie widać nigdzie ni śladu.'''
 
 [[contents]]
 text = '''
-Tylko z zatoki połową
+Tylko {{5:z zatoki połową}}
 Sterczał wielki głazu kawał,
-I dziwną kształtu budową
+I dziwną kształtu budową,
 Dwa ludzkie ciała udawał.'''
 
 [[contents]]
@@ -227,12 +227,12 @@ text = '''
 Zdumiewa się wierny sługa,
 Rozpierzchłych myśli nie złowił;
 Przeszła godzina, i druga,
-Nim wreszcie słówko przemowił:'''
+Nim wreszcie słówko przemówił.'''
 
 [[contents]]
 text = '''
-»Krysiu, o Krysiu!« zawoła:
-Echo mu »Krysiu« odpowie;
+„Krysiu, o Krysiu!” zawoła:
+Echo mu „Krysiu” odpowie;
 Lecz próżno patrzy dokoła,
 Nikt nie pokazał się w rowie.'''
 
@@ -249,3 +249,23 @@ Dzieciątko na ręce bierze,
 Śmieje się dzikim uśmiechem,
 I odmawiając pacierze,
 Wraca do domu z pośpiechem.'''
+
+[[annotations]]
+text = "„urągać” — naśmiewać się z kogoś. [przypis edytorski]"
+key = 1
+
+[[annotations]]
+text = "„wszystko woła” (z białorus.) — ciągle woła. [przypis redakcyjny]"
+key = 2
+
+[[annotations]]
+text = "„skałka” — płaski kamyk nadbrzeżny, umiejętnie rzucony odbija się kilkakroć od powierzchni wody. [przypis redakcyjny]"
+key = 3
+
+[[annotations]]
+text = "„dłoń w trąbkę zwinął” — aby lepiej dostrzec z odległości. [przypis redakcyjny]"
+key = 4
+
+[[annotations]]
+text = "„z zatoki połową” — w połowie zatoki. [przypis redakcyjny]"
+key = 5
