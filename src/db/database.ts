@@ -1,7 +1,7 @@
 import { createClient } from '@libsql/client';
 import { drizzle, LibSQLDatabase } from 'drizzle-orm/libsql';
 
-import type { SupportedLang } from '@i18n';
+import type { SupportedLng } from '@i18n';
 
 const database_pl = drizzle(
   createClient({
@@ -17,7 +17,7 @@ const database_ru = drizzle(
   })
 );
 
-const databases: Record<SupportedLang, LibSQLDatabase<Record<string, never>>> = {
+const databases: Record<SupportedLng, LibSQLDatabase<Record<string, never>>> = {
   pl: database_pl,
   ru: database_ru,
 };

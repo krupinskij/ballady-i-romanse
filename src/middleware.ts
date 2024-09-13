@@ -2,12 +2,14 @@ import { defineMiddleware } from 'astro/middleware';
 
 import { databases } from '@db';
 
-import { isSupportedLang, supportedLangs } from './i18n';
+import i18next, { isSupportedLng, supportedLngs } from './i18n';
 
 export const onRequest = defineMiddleware((context, next) => {
-  const lang = context.preferredLocale;
+  const lng = context.preferredLocale;
+  const supportedLng = isSupportedLng(lng) ? lng : supportedLngs[0];
 
-  context.locals.DB = databases[isSupportedLang(lang) ? lang : supportedLangs[0]];
+  i18next.changeLanguage(supportedLng);
+  context.locals.DB = databases[supportedLng];
 
   return next();
 });

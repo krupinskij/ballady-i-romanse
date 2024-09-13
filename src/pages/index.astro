@@ -11,19 +11,20 @@ import topImage from '@assets/images/title/top.png';
 
 import { GET } from './api/ballads/list.json';
 import type { Ballad } from '@model';
+import i18n from '@i18n';
 
 const response = await GET(Astro);
 const ballads = await response.json<Ballad[]>();
 ---
 
-<Layout title="Ballady i romanse | Adam Mickiewicz">
+<Layout title={`${i18n.t('title')} | ${i18n.t('author')}`}>
   <header>
     <Image src={topImage} alt="" role="presentation" class="image image-top" />
     <Image src={bottomImage} alt="" role="presentation" class="image image-bottom" />
     <Image src={leftImage} alt="" role="presentation" class="image image-left" />
     <Image src={rightImage} alt="" role="presentation" class="image image-right" />
-    <h1>Ballady i Romanse</h1>
-    <h2>Adam Mickiewicz</h2>
+    <h1>{i18n.t('title')}</h1>
+    <h2>{i18n.t('author')}</h2>
   </header>
   <main>
     <ul>
@@ -37,7 +38,7 @@ const ballads = await response.json<Ballad[]>();
     </ul>
   </main>
   <footer>
-    Projekt powstał w celach edukacyjnych (programistycznych) oraz ku czci Adama Mickiewicza.
+    {i18n.t('footer', { ns: 'home' })}
   </footer>
 </Layout>
 

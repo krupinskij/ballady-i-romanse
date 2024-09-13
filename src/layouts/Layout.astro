@@ -2,6 +2,7 @@
 import '@styles/base.css';
 import italiannoWoff2 from '@fontsource/italianno/files/italianno-latin-400-normal.woff2?url';
 import montserratWoff2 from '@fontsource-variable/montserrat/files/montserrat-latin-wght-normal.woff2?url';
+import i18n from '@i18n';
 
 interface Props {
   title: string;
@@ -11,10 +12,10 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="pl">
+<html lang={i18n.language}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Ballady i romanse - Adam Mickiewicz" />
+    <meta name="description" content={`${i18n.t('title')} - ${i18n.t('author')}`} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/icon.ico" />
 
