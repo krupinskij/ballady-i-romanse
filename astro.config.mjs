@@ -9,4 +9,11 @@ export default defineConfig({
       enabled: true,
     },
   }),
+  i18n: {
+    defaultLocale: 'pl',
+    locales: ['pl', 'ru'],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
 });

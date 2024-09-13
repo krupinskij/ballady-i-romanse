@@ -9,15 +9,9 @@ import AnnotationMarker from '@components/AnnotationMarker.astro';
 import { formatText } from '@utils';
 import AnnotationNote from '@components/AnnotationNote.astro';
 
-export const prerender = true;
-
 const response = await GET(Astro);
 const ballad = await response.json<Ballad>();
 const { title, link, prevBallad, nextBallad, notes, motto, contents, annotations } = ballad;
-
-export async function getStaticPaths() {
-  return keys.map((key) => ({ params: { key } }));
-}
 ---
 
 <Layout title={`${formatText(title, (_, __, title) => title)} | Ballady i Romanse`}>

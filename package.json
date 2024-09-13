@@ -9,12 +9,10 @@
     "start": "astro dev",
     "preview": "astro build && wrangler pages dev --node-compat",
     "astro": "astro",
-    "db:generate": "npx drizzle-kit generate",
-    "db:push": "npx drizzle-kit push",
-    "db:seed": "tsx --env-file .env ./db/seeder.ts",
-    "db:seed:prod": "tsx ./db/seeder.ts",
-    "build": "astro check && astro build",
-    "build:prod": "npm run db:push && npm run db:seed:prod && npm run build"
+    "db:gen": "bash ./scripts/generate.sh",
+    "db:push": "bash ./scripts/push.sh",
+    "db:seed": "bash ./scripts/seed.sh",
+    "build": "bash ./scripts/build.sh"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.2",

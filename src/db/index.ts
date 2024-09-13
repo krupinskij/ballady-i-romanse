@@ -1,2 +1,2 @@
-export { default as db } from './database';
 export * from './schema';
+export { default as databases } from './database';
