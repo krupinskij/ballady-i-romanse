@@ -1,12 +1,12 @@
 import { migrate } from 'drizzle-orm/libsql/migrator';
 
 import { databases } from '@db';
-import { isSupportedLang } from '@i18n';
+import { isSupportedLng } from '@i18n';
 
 async function main() {
   const lang = process.argv[2] || undefined;
 
-  if (lang !== undefined && !isSupportedLang(lang)) {
+  if (lang !== undefined && !isSupportedLng(lang)) {
     throw new Error(`Language "${lang}" isn't supported.`);
   } else if (!lang) {
     console.log('Empty language. Migrate for all databases.');
