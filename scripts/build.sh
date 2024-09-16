@@ -12,4 +12,4 @@ done
 
 bash ./scripts/push.sh -e $env
 bash ./scripts/seed.sh -e $env
-npm astro build
+astro build

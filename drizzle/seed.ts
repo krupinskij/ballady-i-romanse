@@ -2,7 +2,7 @@ import { eq } from 'drizzle-orm';
 import type { LibSQLDatabase } from 'drizzle-orm/libsql';
 
 import { annotations, ballads, contents, databases, mottos, notes } from '@db';
-import { isSupportedLang } from '@i18n';
+import { isSupportedLng } from '@i18n';
 import { keys } from '@model';
 
 import { readTomlFile } from './helpers';
@@ -10,7 +10,7 @@ import { readTomlFile } from './helpers';
 async function main() {
   const lang = process.argv[2] || undefined;
 
-  if (lang !== undefined && !isSupportedLang(lang)) {
+  if (lang !== undefined && !isSupportedLng(lang)) {
     throw new Error(`Language "${lang}" isn't supported.`);
   } else if (!lang) {
     console.log('Empty language. Seed for all databases.');
