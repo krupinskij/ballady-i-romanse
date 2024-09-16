@@ -1,11 +1,25 @@
 import { createClient } from '@libsql/client';
-import { drizzle } from 'drizzle-orm/libsql';
+import { drizzle, LibSQLDatabase } from 'drizzle-orm/libsql';
 
-const client = createClient({
-  url: process.env.DATABASE_URL || import.meta.env.DATABASE_URL!,
-  authToken: process.env.DATABASE_TOKEN || import.meta.env.DATABASE_TOKEN!,
-});
+import type { SupportedLng } from '@i18n';
 
-const database = drizzle(client);
+const database_pl = drizzle(
+  createClient({
+    url: process.env.PL_DATABASE_URL || import.meta.env.PL_DATABASE_URL!,
+    authToken: process.env.PL_DATABASE_TOKEN || import.meta.env.PL_DATABASE_TOKEN!,
+  })
+);
 
-export default database;
+const database_ru = drizzle(
+  createClient({
+    url: process.env.RU_DATABASE_URL || import.meta.env.RU_DATABASE_URL!,
+    authToken: process.env.RU_DATABASE_TOKEN || import.meta.env.RU_DATABASE_TOKEN!,
+  })
+);
+
+const databases: Record<SupportedLng, LibSQLDatabase<Record<string, never>>> = {
+  pl: database_pl,
+  ru: database_ru,
+};
+
+export default databases;

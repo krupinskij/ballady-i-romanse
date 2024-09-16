@@ -6,6 +6,7 @@
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
       "@db": ["src/db"],
+      "@i18n": ["src/i18n"],
       "@layouts/*": ["src/layouts/*"],
       "@model": ["src/model"],
       "@styles/*": ["src/styles/*"],
