@@ -1,7 +1,7 @@
 import { createClient } from '@libsql/client';
 import { drizzle } from 'drizzle-orm/libsql';
 
-export const client = createClient({
+const client = createClient({
   url: process.env.DATABASE_URL || import.meta.env.DATABASE_URL!,
   authToken: process.env.DATABASE_TOKEN || import.meta.env.DATABASE_TOKEN!,
 });
