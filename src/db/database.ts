@@ -1,5 +1,8 @@
 import { createClient } from '@libsql/client';
+import dotenv from 'dotenv';
 import { drizzle } from 'drizzle-orm/libsql';
+
+dotenv.config();
 
 const client = () =>
   createClient({
