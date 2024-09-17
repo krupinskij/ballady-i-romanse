@@ -10,7 +10,7 @@ while getopts ":e:" opt; do
   esac
 done
 
-# bash ./scripts/push.sh -e $env &&
-# bash ./scripts/seed.sh -e $env &&
+bash ./scripts/push.sh -e $env &&
+bash ./scripts/seed.sh -e $env &&
 astro check &&
 astro build

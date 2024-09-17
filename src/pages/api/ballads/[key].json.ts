@@ -31,12 +31,10 @@ const mapQueryResult = (queryResult: QueryResult[]): Ballad => {
     prevBallad,
     nextBallad,
     motto: mottos,
-    notes: notesMap
-      ? Array.from(notesMap.values()).sort((n1: any, n2: any) => n1.order - n2.order)
-      : [],
+    notes: notesMap ? Array.from(notesMap.values()).sort((n1, n2) => n1.order - n2.order) : [],
     contents: Array.from(contentsMap.values()).sort((c1, c2) => c1.order - c2.order),
     annotations: annotationsMap
-      ? Array.from(annotationsMap?.values()).sort((a1: any, a2: any) => a1.key - a2.key)
+      ? Array.from(annotationsMap?.values()).sort((a1, a2) => a1.key - a2.key)
       : [],
   };
 

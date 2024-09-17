@@ -40,18 +40,18 @@ const { title, link, prevBallad, nextBallad, notes, motto, contents, annotations
         }
       </span>
     </nav>
-    {notes && notes.map(({ text }: any) => <Note note={text} />)}
+    {notes && notes.map(({ text }) => <Note note={text} />)}
   </header>
   <main>
     <article>
       {motto && <Motto {...motto} />}
-      {contents.map((content: any) => <Content {...content} />)}
+      {contents.map((content) => <Content {...content} />)}
     </article>
     {
       annotations.length > 0 && (
         <article>
           <section class="annotations">
-            {annotations.map((annotation: any) => (
+            {annotations.map((annotation) => (
               <AnnotationNote {...annotation}>{annotation.text}</AnnotationNote>
             ))}
           </section>
