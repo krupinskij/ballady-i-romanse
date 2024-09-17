@@ -1,4 +1,4 @@
-import type { Schema } from '@db';
+type Schema = any;
 
 export namespace DB {
   export type Annotation = Schema['annotations']['$inferSelect'];
