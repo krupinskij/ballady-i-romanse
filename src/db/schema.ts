@@ -138,4 +138,4 @@ const schemaByLng: Record<SupportedLng, Schema> = {
   },
 };
 
-export default schemaByLng;
+export const getSchema = (lng: SupportedLng) => schemaByLng[lng];

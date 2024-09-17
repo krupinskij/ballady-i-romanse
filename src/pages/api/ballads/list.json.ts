@@ -1,10 +1,10 @@
 import type { APIRoute } from 'astro';
 
-import { database, schemaByLng } from '@db';
+import { getDatabase, getSchema } from '@db';
 
 export const GET: APIRoute = async (context) => {
-  const DB = database;
-  const { ballads } = schemaByLng[context.locals.LANG];
+  const DB = getDatabase();
+  const { ballads } = getSchema(context.locals.LANG);
 
   const results = await DB.select({ key: ballads.key, title: ballads.title })
     .from(ballads)

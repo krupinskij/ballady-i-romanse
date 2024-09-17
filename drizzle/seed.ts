@@ -1,7 +1,7 @@
 import { eq } from 'drizzle-orm';
 import type { LibSQLDatabase } from 'drizzle-orm/libsql';
 
-import { database, schemaByLng } from '@db';
+import { getDatabase, getSchema } from '@db';
 import { isSupportedLng, supportedLngs, type SupportedLng } from '@i18n';
 import { keys } from '@model';
 
@@ -22,7 +22,7 @@ async function main() {
 
   console.log('Running seeds');
 
-  // const result = await Promise.allSettled(lngs.map((lng) => seed(lng, database)));
+  const database = getDatabase();
   for (let i = 0; i < lngs.length; i++) {
     const lng = lngs[i];
     await seed(lng, database);
@@ -33,9 +33,9 @@ async function main() {
   process.exit(0);
 }
 
-async function seed(lng: SupportedLng, db: LibSQLDatabase<Record<string, never>>) {
+async function seed(lng: SupportedLng, db: LibSQLDatabase<Record<string, unknown>>) {
   const balladsOriginData = keys.map((key) => readTomlFile(`./drizzle/data/${lng}/${key}.toml`));
-  const { annotations, mottos, notes, contents, ballads } = schemaByLng[lng];
+  const { annotations, mottos, notes, contents, ballads } = getSchema(lng);
 
   await db.delete(annotations);
   await db.delete(mottos);
