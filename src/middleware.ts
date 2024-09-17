@@ -6,7 +6,7 @@ export const onRequest = defineMiddleware((context, next) => {
   const lng = context.preferredLocale;
   const supportedLng = isSupportedLng(lng) ? lng : supportedLngs[0];
 
-  context.locals.LANG = supportedLng;
+  // context.locals.LANG = supportedLng;
 
   i18next.changeLanguage(supportedLng);
 

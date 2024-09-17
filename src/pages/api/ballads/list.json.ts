@@ -7,11 +7,11 @@ import { getSchema } from '@db';
 export const GET: APIRoute = async (context) => {
   const DB = drizzle(
     createClient({
-      url: import.meta.env.DATABASE_URL!,
-      authToken: import.meta.env.DATABASE_TOKEN!,
+      url: process.env.DATABASE_URL || import.meta.env.DATABASE_URL!,
+      authToken: process.env.DATABASE_TOKEN || import.meta.env.DATABASE_TOKEN!,
     })
   );
-  const { ballads } = getSchema(context.locals.LANG);
+  const { ballads } = getSchema('pl');
 
   const results = await DB.select({ key: ballads.key, title: ballads.title })
     .from(ballads)

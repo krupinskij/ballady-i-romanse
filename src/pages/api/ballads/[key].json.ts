@@ -44,7 +44,7 @@ const mapQueryResult = (queryResult: QueryResult[]): Ballad => {
 export const GET: APIRoute = async ({ locals, params, redirect }) => {
   const key = params.key;
   const DB = getDatabase();
-  const { annotations, ballads, contents, mottos, notes } = getSchema(locals.LANG);
+  const { annotations, ballads, contents, mottos, notes } = getSchema('pl');
 
   if (!key) {
     return redirect('/');
