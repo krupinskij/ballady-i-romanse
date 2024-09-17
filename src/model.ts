@@ -1,11 +1,11 @@
-import type { annotations, ballads, contents, mottos, notes } from '@db';
+import type { Schema } from '@db';
 
 export namespace DB {
-  export type Annotation = typeof annotations.$inferSelect;
-  export type Ballad = typeof ballads.$inferSelect;
-  export type Content = typeof contents.$inferSelect;
-  export type Motto = typeof mottos.$inferSelect;
-  export type Note = typeof notes.$inferSelect;
+  export type Annotation = Schema['annotations']['$inferSelect'];
+  export type Ballad = Schema['ballads']['$inferSelect'];
+  export type Content = Schema['contents']['$inferSelect'];
+  export type Motto = Schema['mottos']['$inferSelect'];
+  export type Note = Schema['notes']['$inferSelect'];
 }
 
 export type Annotation = DB.Annotation;
