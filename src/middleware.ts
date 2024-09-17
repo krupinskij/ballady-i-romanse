@@ -1,6 +1,6 @@
 import { defineMiddleware } from 'astro/middleware';
 
-import { databases } from '@db';
+import { database, schemaByLng } from '@db';
 
 import i18next, { isSupportedLng, supportedLngs } from './i18n';
 
@@ -9,7 +9,9 @@ export const onRequest = defineMiddleware((context, next) => {
   const supportedLng = isSupportedLng(lng) ? lng : supportedLngs[0];
 
   i18next.changeLanguage(supportedLng);
-  context.locals.DB = databases[supportedLng];
+
+  context.locals.DB = database;
+  context.locals.SCHEMA = schemaByLng[supportedLng];
 
   return next();
 });

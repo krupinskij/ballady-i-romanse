@@ -1,42 +1,49 @@
 import { eq } from 'drizzle-orm';
 import type { LibSQLDatabase } from 'drizzle-orm/libsql';
 
-import { annotations, ballads, contents, databases, mottos, notes } from '@db';
-import { isSupportedLng } from '@i18n';
+import { database, schemaByLng } from '@db';
+import { isSupportedLng, supportedLngs, type SupportedLng } from '@i18n';
 import { keys } from '@model';
 
 import { readTomlFile } from './helpers';
 
 async function main() {
-  const lang = process.argv[2] || undefined;
+  const lng = process.argv[2] || undefined;
 
-  if (lang !== undefined && !isSupportedLng(lang)) {
-    throw new Error(`Language "${lang}" isn't supported.`);
-  } else if (!lang) {
-    console.log('Empty language. Seed for all databases.');
+  if (lng !== undefined && !isSupportedLng(lng)) {
+    throw new Error(`Language "${lng}" isn't supported.`);
+  } else if (!lng) {
+    console.log('Empty language. Seed for all schemas.');
   } else {
-    console.log(`Seed for language "${lang}"`);
+    console.log(`Seed for language "${lng}"`);
   }
 
-  const dbs = !lang ? Object.entries(databases) : [[lang, databases[lang]] as const];
+  const lngs = !lng ? supportedLngs : [lng];
 
   console.log('Running seeds');
 
-  const result = await Promise.allSettled(dbs.map(([lang, db]) => seed(lang, db)));
+  // const result = await Promise.allSettled(lngs.map((lng) => seed(lng, database)));
+  for (let i = 0; i < lngs.length; i++) {
+    const lng = lngs[i];
+    await seed(lng, database);
+  }
 
-  console.log('Seeded successfully', result);
+  console.log('Seeded successfully');
 
   process.exit(0);
 }
 
-async function seed(lang: string, db: LibSQLDatabase<Record<string, never>>) {
-  const balladsOriginData = keys.map((key) => readTomlFile(`./drizzle/data/${lang}/${key}.toml`));
+async function seed(lng: SupportedLng, db: LibSQLDatabase<Record<string, never>>) {
+  const balladsOriginData = keys.map((key) => readTomlFile(`./drizzle/data/${lng}/${key}.toml`));
+  const { annotations, mottos, notes, contents, ballads } = schemaByLng[lng];
 
   await db.delete(annotations);
   await db.delete(mottos);
   await db.delete(notes);
   await db.delete(contents);
   await db.delete(ballads);
+
+  console.log('Clearing database complete!');
 
   const balladsDbData = await db
     .insert(ballads)
