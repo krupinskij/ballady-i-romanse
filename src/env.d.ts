@@ -11,10 +11,10 @@ interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
 
-declare namespace App {
-  type Lang = import('@i18n').SupportedLng;
+// declare namespace App {
+//   type Lang = import('@i18n').SupportedLng;
 
-  interface Locals {
-    LANG: Lang;
-  }
-}
+//   interface Locals {
+//     LANG: Lang;
+//   }
+// }
