@@ -12,12 +12,12 @@ interface ImportMeta {
 }
 
 declare namespace App {
-  type Schema = any;
-  type DB = any;
+  type Schema = import('@db').Schema;
+  type DB = import('@db').Database;
 
   interface Locals {
-    // DB: DB;
-    // SCHEMA: Schema;
+    DB: DB;
+    SCHEMA: Schema;
     LANG: 'pl' | 'ru';
   }
 }
