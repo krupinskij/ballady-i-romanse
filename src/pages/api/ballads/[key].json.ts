@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { aliasedTable, eq } from 'drizzle-orm';
 
+import { database, schemaByLng } from '@db';
 import type { Ballad, DB } from '@model';
 
 type QueryResult = {
@@ -42,8 +43,8 @@ const mapQueryResult = (queryResult: QueryResult[]): Ballad => {
 
 export const GET: APIRoute = async ({ locals, params, redirect }) => {
   const key = params.key;
-  const DB = locals.DB;
-  const { annotations, ballads, contents, mottos, notes } = locals.SCHEMA;
+  const DB = database;
+  const { annotations, ballads, contents, mottos, notes } = schemaByLng[locals.LANG];
 
   if (!key) {
     return redirect('/');
