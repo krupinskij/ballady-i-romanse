@@ -123,18 +123,18 @@ export type Schema = {
 
 const schemaByLng: Record<SupportedLng, Schema> = {
   pl: {
-    ballads: aliasedTable(ballads_pl, 'ballads'),
-    contents: aliasedTable(contents_pl, 'contents'),
-    notes: aliasedTable(notes_pl, 'notes'),
-    mottos: aliasedTable(mottos_pl, 'mottos'),
-    annotations: aliasedTable(annotations_pl, 'annotations'),
+    ballads: ballads_pl,
+    contents: contents_pl,
+    notes: notes_pl,
+    mottos: mottos_pl,
+    annotations: annotations_pl,
   },
   ru: {
-    ballads: aliasedTable(ballads_ru, 'ballads'),
-    contents: aliasedTable(contents_ru, 'contents'),
-    notes: aliasedTable(notes_ru, 'notes'),
-    mottos: aliasedTable(mottos_ru, 'mottos'),
-    annotations: aliasedTable(annotations_ru, 'annotations'),
+    ballads: ballads_ru,
+    contents: contents_ru,
+    notes: notes_ru,
+    mottos: mottos_ru,
+    annotations: annotations_ru,
   },
 };
 
