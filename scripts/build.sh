@@ -11,7 +11,7 @@ while getopts ":e:" opt; do
 done
 
 echo "ENV variable"
-echo $ENV
+echo $CF_PAGES_BRANCH
 
 if [[ $ENV == "production" ]]; then
   bash ./scripts/push.sh -e $env && 
