@@ -7,6 +7,16 @@ export const isSupportedLng = (value: any): value is SupportedLng => {
   return supportedLngs.includes(value);
 };
 
+const hostnameRegexp = /^(?<lng>[a-z]*).balladyromanse.pl/;
+
+export const getSupportedLng = (url: URL): SupportedLng => {
+  const hostname = url.hostname;
+  const hostLng = hostname.match(hostnameRegexp)?.groups?.lng;
+  const supportedLng = isSupportedLng(hostLng) ? hostLng : supportedLngs[0];
+
+  return supportedLng;
+};
+
 i18next.init({
   supportedLngs,
   fallbackLng: supportedLngs[0],
