@@ -5,8 +5,8 @@ let _client: ReturnType<typeof createClient> | null = null;
 export const getClient = () => {
   // if (!_client) {
   _client = createClient({
-    url: process.env.VITE_DATABASE_URL || import.meta.env.VITE_DATABASE_URL!,
-    authToken: process.env.VITE_DATABASE_TOKEN || import.meta.env.VITE_DATABASE_TOKEN!,
+    url: process.env.PUBLIC_DATABASE_URL || import.meta.env.PUBLIC_DATABASE_URL!,
+    authToken: process.env.PUBLIC_DATABASE_TOKEN || import.meta.env.PUBLIC_DATABASE_TOKEN!,
   });
   // }
 

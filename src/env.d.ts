@@ -3,8 +3,8 @@
 type Runtime = import('@astrojs/cloudflare').Runtime<Env>;
 
 interface ImportMetaEnv {
-  readonly VITE_DATABASE_URL: string;
-  readonly VITE_DATABASE_TOKEN: string;
+  readonly PUBLIC_DATABASE_URL: string;
+  readonly PUBLIC_DATABASE_TOKEN: string;
 }
 
 interface ImportMeta {
