@@ -8,19 +8,15 @@ import { GET } from './api/ballads/[key].json';
 import AnnotationMarker from '@components/AnnotationMarker.astro';
 import { formatText } from '@utils';
 import AnnotationNote from '@components/AnnotationNote.astro';
-
-export const prerender = true;
+import i18next from 'i18next';
+import i18n from '@i18n';
 
 const response = await GET(Astro);
 const ballad = await response.json<Ballad>();
 const { title, link, prevBallad, nextBallad, notes, motto, contents, annotations } = ballad;
-
-export async function getStaticPaths() {
-  return keys.map((key) => ({ params: { key } }));
-}
 ---
 
-<Layout title={`${formatText(title, (_, __, title) => title)} | Ballady i Romanse`}>
+<Layout title={`${formatText(title, (_, __, title) => title)} | ${i18next.t('title')}`}>
   <header>
     <h1><AnnotationMarker text={title} /></h1>
     <nav>
@@ -33,7 +29,7 @@ export async function getStaticPaths() {
           )
         }
       </span>
-      <a href="/" style={{ textAlign: 'center' }}>⌂ <span>Strona główna</span></a>
+      <a href="/" style={{ textAlign: 'center' }}>⌂ <span>{i18n.t('homepage')}</span></a>
       <span>
         {
           nextBallad && (
@@ -64,7 +60,8 @@ export async function getStaticPaths() {
     }
   </main>
   <footer>
-    Tekst oraz przypisy pochodzą ze strony: <a target="_blank" href={link}>{link}</a>
+    {i18n.t('footer', { ns: 'ballad' })}
+    <a target="_blank" href={link}>{link}</a>
   </footer>
 </Layout>
 

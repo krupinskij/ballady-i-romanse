@@ -7,7 +7,7 @@ export default {
   trailingComma: 'es5',
   importOrder: [
     '<THIRD_PARTY_MODULES>',
-    '^(@assets|@components|@db|@layouts|@model|@styles|@utils)',
+    '^(@assets|@components|@db|@i18n|@layouts|@model|@styles|@utils)',
     '^[./]',
   ],
   importOrderSeparation: true,

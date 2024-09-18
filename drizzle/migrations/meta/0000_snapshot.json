@@ -1,8 +1,8 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "50ec360e-0f9a-47e7-9eee-27225fca5900",
-  "prevId": "d771b3b6-6ea1-49cc-a7a7-4e428a3247f7",
+  "id": "3e0fdce0-adee-4a45-a9b6-8d5481c52f65",
+  "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "annotations": {
       "name": "annotations",
@@ -84,7 +84,7 @@
           "name": "link",
           "type": "text",
           "primaryKey": false,
-          "notNull": true,
+          "notNull": false,
           "autoincrement": false
         },
         "prev_id": {

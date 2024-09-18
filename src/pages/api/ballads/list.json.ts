@@ -1,10 +1,10 @@
 import type { APIRoute } from 'astro';
 
-import { ballads, db } from '@db';
+export const GET: APIRoute = async (context) => {
+  const DB = context.locals.DB;
+  const { ballads } = context.locals.SCHEMA;
 
-export const GET: APIRoute = async () => {
-  const results = await db
-    .select({ key: ballads.key, title: ballads.title })
+  const results = await DB.select({ key: ballads.key, title: ballads.title })
     .from(ballads)
     .orderBy(ballads.order);
 
