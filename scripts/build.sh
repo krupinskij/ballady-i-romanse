@@ -10,6 +10,8 @@ while getopts ":e:" opt; do
   esac
 done
 
+echo "ENV variable"
+echo $ENV
 
 if [[ $ENV == "production" ]]; then
   bash ./scripts/push.sh -e $env && 
