@@ -1,7 +1,9 @@
 #!/bin/bash
 
-while getopts ":e:" opt; do
+while getopts ":l:e:" opt; do
   case $opt in
+    l) lang="$OPTARG"
+    ;;
     e) env="$OPTARG"
     ;;
     \?) echo "Invalid option -$OPTARG" >&2
@@ -11,7 +13,7 @@ while getopts ":e:" opt; do
 done
 
 if [[ $env == "prod" ]]; then
-  tsx ./drizzle/migrate.ts
+  tsx ./drizzle/migrate.ts $lang
 else
-  tsx --env-file .env ./drizzle/migrate.ts
+  tsx --env-file .env ./drizzle/migrate.ts $lang
 fi

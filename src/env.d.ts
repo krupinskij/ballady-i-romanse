@@ -3,8 +3,10 @@
 type Runtime = import('@astrojs/cloudflare').Runtime<Env>;
 
 interface ImportMetaEnv {
-  readonly PUBLIC_DATABASE_URL: string;
-  readonly PUBLIC_DATABASE_TOKEN: string;
+  readonly PUBLIC_PL_DATABASE_URL: string;
+  readonly PUBLIC_PL_DATABASE_TOKEN: string;
+  readonly PUBLIC_RU_DATABASE_URL: string;
+  readonly PUBLIC_RU_DATABASE_TOKEN: string;
 }
 
 interface ImportMeta {
@@ -12,13 +14,13 @@ interface ImportMeta {
 }
 
 declare namespace App {
-  type Lang = import('@i18n').SupportedLng;
+  type Database = import('@db').Database;
   type Schema = import('@db').Schema;
-  type DB = any;
+  type Lang = import('@i18n').SupportedLng;
 
   interface Locals {
-    LANG: Lang;
-    DB: DB;
+    DB: Database;
     SCHEMA: Schema;
+    LANG: Lang;
   }
 }
