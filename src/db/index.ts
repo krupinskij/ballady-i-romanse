@@ -1,2 +1,2 @@
-export { getSchema, type Schema } from './schema';
-export { getClient, getDatabase } from './database';
+export { schemaByLng, type Schema } from './schema';
+export { database } from './database';

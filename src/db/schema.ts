@@ -1,4 +1,3 @@
-import { aliasedTable } from 'drizzle-orm';
 import {
   foreignKey,
   integer,
@@ -121,7 +120,7 @@ export type Schema = {
   annotations: ReturnType<typeof makeAnnotationsTable>;
 };
 
-const schemaByLng: Record<SupportedLng, Schema> = {
+export const schemaByLng: Record<SupportedLng, Schema> = {
   pl: {
     ballads: ballads_pl,
     contents: contents_pl,
@@ -137,5 +136,3 @@ const schemaByLng: Record<SupportedLng, Schema> = {
     annotations: annotations_ru,
   },
 };
-
-export const getSchema = (lng: SupportedLng) => schemaByLng[lng];

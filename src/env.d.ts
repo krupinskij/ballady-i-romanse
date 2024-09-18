@@ -11,10 +11,14 @@ interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
 
-// declare namespace App {
-//   type Lang = import('@i18n').SupportedLng;
+declare namespace App {
+  type Lang = import('@i18n').SupportedLng;
+  type Schema = import('@db').Schema;
+  type DB = any;
 
-//   interface Locals {
-//     LANG: Lang;
-//   }
-// }
+  interface Locals {
+    LANG: Lang;
+    DB: DB;
+    SCHEMA: Schema;
+  }
+}
