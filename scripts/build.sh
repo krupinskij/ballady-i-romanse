@@ -10,7 +10,13 @@ while getopts ":e:" opt; do
   esac
 done
 
-bash ./scripts/push.sh -e $env &&
-bash ./scripts/seed.sh -e $env &&
-astro check &&
-astro build
+
+if [[ $ENV == "production" ]]; then
+  bash ./scripts/push.sh -e $env && 
+  bash ./scripts/seed.sh -e $env && 
+  astro check && 
+  astro build
+else
+  astro check && 
+  astro build
+fi

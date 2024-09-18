@@ -1,7 +1,6 @@
 import type { APIRoute } from 'astro';
 import { aliasedTable, eq } from 'drizzle-orm';
 
-import { database, schemaByLng } from '@db';
 import type { Ballad, DB } from '@model';
 
 type QueryResult = {
@@ -43,30 +42,25 @@ const mapQueryResult = (queryResult: QueryResult[]): Ballad => {
 
 export const GET: APIRoute = async ({ locals, params, redirect }) => {
   const key = params.key;
-  const DB = database;
-  const { annotations, ballads, contents, mottos, notes } = schemaByLng[locals.LANG];
+  const DB = locals.DB;
+  const { annotations, ballads, contents, mottos, notes } = locals.SCHEMA;
 
   if (!key) {
     return redirect('/');
   }
 
-  const _ballads = aliasedTable(ballads, 'ballads');
-  const _prevBallad = aliasedTable(ballads, 'prevBallad');
-  const _nextBallad = aliasedTable(ballads, 'nextBallad');
-  const _mottos = aliasedTable(mottos, 'mottos');
-  const _notes = aliasedTable(notes, 'notes');
-  const _annotations = aliasedTable(annotations, 'annotations');
-  const _contents = aliasedTable(contents, 'contents');
+  const prevBallad = aliasedTable(ballads, 'prevBallad');
+  const nextBallad = aliasedTable(ballads, 'nextBallad');
 
   const queryResult = await DB.select()
-    .from(_ballads)
-    .where(eq(_ballads.key, key))
-    .leftJoin(_prevBallad, eq(_ballads.prevId, _prevBallad.id))
-    .leftJoin(_nextBallad, eq(_ballads.nextId, _nextBallad.id))
-    .leftJoin(_mottos, eq(_ballads.id, _mottos.balladId))
-    .leftJoin(_notes, eq(_ballads.id, _notes.balladId))
-    .leftJoin(_annotations, eq(_ballads.id, _annotations.balladId))
-    .innerJoin(_contents, eq(_ballads.id, _contents.balladId));
+    .from(ballads)
+    .where(eq(ballads.key, key))
+    .leftJoin(prevBallad, eq(ballads.prevId, prevBallad.id))
+    .leftJoin(nextBallad, eq(ballads.nextId, nextBallad.id))
+    .leftJoin(mottos, eq(ballads.id, mottos.balladId))
+    .leftJoin(notes, eq(ballads.id, notes.balladId))
+    .leftJoin(annotations, eq(ballads.id, annotations.balladId))
+    .innerJoin(contents, eq(ballads.id, contents.balladId));
 
   const ballad = mapQueryResult(queryResult as any as QueryResult[]);
 

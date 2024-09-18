@@ -9,6 +9,7 @@ export default defineConfig({
     platformProxy: {
       enabled: true,
     },
+    imageService: 'passthrough',
   }),
   i18n: {
     defaultLocale: 'pl',

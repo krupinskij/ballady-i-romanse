@@ -7,9 +7,11 @@
     "prepare": "husky",
     "dev": "astro dev",
     "start": "astro dev",
+    "check": "astro check",
     "preview": "astro build && wrangler pages dev --node-compat",
     "astro": "astro",
     "db:gen": "bash ./scripts/generate.sh",
+    "db:drop": "drizzle-kit drop",
     "db:push": "bash ./scripts/push.sh",
     "db:seed": "bash ./scripts/seed.sh",
     "build": "bash ./scripts/build.sh"
