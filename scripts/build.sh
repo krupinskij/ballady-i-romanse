@@ -10,8 +10,7 @@ while getopts ":e:" opt; do
   esac
 done
 
-
-if [[ $ENV == "production" ]]; then
+if [[ $CF_PAGES_BRANCH == "master" ]]; then
   bash ./scripts/push.sh -e $env && 
   bash ./scripts/seed.sh -e $env && 
   astro check && 
