@@ -1,0 +1,62 @@
+---
+import i18n, { getSupportedLng, supportedLngs } from '@i18n';
+
+const currentLng = getSupportedLng(Astro.url);
+---
+
+<div data-component="language-select">
+  {
+    supportedLngs.map((lng) => (
+      <span
+        aria-label={i18n.t(`language.${lng}`)}
+        data-value={lng}
+        aria-selected={lng === currentLng}
+        role="option"
+      >
+        <img src={`/${lng}.svg`} alt="" height="20" />
+      </span>
+    ))
+  }
+</div>
+
+<style>
+  div {
+    width: max-content;
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  span {
+    cursor: pointer;
+    border: 1px solid var(--border-color-default);
+    filter: grayscale(0.8);
+  }
+
+  span[aria-selected='true'] {
+    filter: none;
+    pointer-events: none;
+  }
+
+  img {
+    display: block;
+  }
+</style>
+
+<script>
+  const options = document.querySelectorAll<HTMLSpanElement>(
+    '[data-component="language-select"] [role="option"]'
+  );
+
+  options.forEach((option) => {
+    option.addEventListener('click', () => {
+      const value = option.dataset.value;
+      window.location.href = window.location.href.replace(
+        /^(https:\/\/)(pl|ru)(.)/,
+        `$1${value}$3`
+      );
+    });
+  });
+</script>

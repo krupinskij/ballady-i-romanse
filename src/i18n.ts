@@ -7,6 +7,16 @@ export const isSupportedLng = (value: any): value is SupportedLng => {
   return supportedLngs.includes(value);
 };
 
+const hostnameRegexp = /^(?<lng>[a-z]*).balladyromanse.pl/;
+
+export const getSupportedLng = (url: URL): SupportedLng => {
+  const hostname = url.hostname;
+  const hostLng = hostname.match(hostnameRegexp)?.groups?.lng;
+  const supportedLng = isSupportedLng(hostLng) ? hostLng : supportedLngs[0];
+
+  return supportedLng;
+};
+
 i18next.init({
   supportedLngs,
   fallbackLng: supportedLngs[0],
@@ -17,6 +27,10 @@ i18next.init({
         title: 'Ballady i Romanse',
         author: 'Adam Mickiewicz',
         homepage: 'Strona główna',
+        language: {
+          pl: 'język polski',
+          ru: 'język rosyjski',
+        },
       },
       ballad: {
         footer: 'Tekst oraz przypisy pochodzą ze strony:',
@@ -31,6 +45,10 @@ i18next.init({
         title: 'Баллады и Романсы',
         author: 'Адам Мицкевич',
         homepage: 'Домашняя страница',
+        language: {
+          pl: 'Польский язык',
+          ru: 'Русский язык',
+        },
       },
       ballad: {
         footer: 'Текст и сноски взяты с сайта:',

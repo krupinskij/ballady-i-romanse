@@ -18,14 +18,16 @@ const ballads = await response.json<Ballad[]>();
 ---
 
 <Layout title={`${i18n.t('title')} | ${i18n.t('author')}`}>
-  <header>
-    <Image src={topImage} alt="" role="presentation" class="image image-top" />
-    <Image src={bottomImage} alt="" role="presentation" class="image image-bottom" />
-    <Image src={leftImage} alt="" role="presentation" class="image image-left" />
-    <Image src={rightImage} alt="" role="presentation" class="image image-right" />
-    <h1>{i18n.t('title')}</h1>
-    <h2>{i18n.t('author')}</h2>
-  </header>
+  <Fragment slot="header">
+    <div class="header">
+      <Image src={topImage} alt="" role="presentation" class="image image-top" />
+      <Image src={bottomImage} alt="" role="presentation" class="image image-bottom" />
+      <Image src={leftImage} alt="" role="presentation" class="image image-left" />
+      <Image src={rightImage} alt="" role="presentation" class="image image-right" />
+      <h1>{i18n.t('title')}</h1>
+      <h2>{i18n.t('author')}</h2>
+    </div>
+  </Fragment>
   <main>
     <ul>
       {
@@ -37,9 +39,11 @@ const ballads = await response.json<Ballad[]>();
       }
     </ul>
   </main>
-  <footer>
-    {i18n.t('footer', { ns: 'home' })}
-  </footer>
+  <Fragment slot="footer">
+    <div class="footer">
+      {i18n.t('footer', { ns: 'home' })}
+    </div>
+  </Fragment>
 </Layout>
 
 <style lang="scss">
@@ -47,7 +51,7 @@ const ballads = await response.json<Ballad[]>();
     margin-bottom: 48px;
   }
 
-  header {
+  .header {
     position: relative;
     width: 100%;
     height: calc(460px * var(--scale, 1));
@@ -134,9 +138,9 @@ const ballads = await response.json<Ballad[]>();
     margin-inline: auto;
   }
 
-  footer {
+  .footer {
     text-align: center;
     font: var(--font-xs);
-    padding: 20px;
+    padding: 20px 120px;
   }
 </style>
