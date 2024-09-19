@@ -46,8 +46,8 @@ i18next.init({
         author: 'Адам Мицкевич',
         homepage: 'Домашняя страница',
         language: {
-          pl: 'język polski',
-          ru: 'język rosyjski',
+          pl: 'Польский язык',
+          ru: 'Русский язык',
         },
       },
       ballad: {
