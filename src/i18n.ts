@@ -27,6 +27,10 @@ i18next.init({
         title: 'Ballady i Romanse',
         author: 'Adam Mickiewicz',
         homepage: 'Strona główna',
+        language: {
+          pl: 'język polski',
+          ru: 'język rosyjski',
+        },
       },
       ballad: {
         footer: 'Tekst oraz przypisy pochodzą ze strony:',
@@ -41,6 +45,10 @@ i18next.init({
         title: 'Баллады и Романсы',
         author: 'Адам Мицкевич',
         homepage: 'Домашняя страница',
+        language: {
+          pl: 'język polski',
+          ru: 'język rosyjski',
+        },
       },
       ballad: {
         footer: 'Текст и сноски взяты с сайта:',
