@@ -3,6 +3,7 @@ import '@styles/base.css';
 import italiannoWoff2 from '@fontsource/italianno/files/italianno-latin-400-normal.woff2?url';
 import montserratWoff2 from '@fontsource-variable/montserrat/files/montserrat-latin-wght-normal.woff2?url';
 import i18n from '@i18n';
+import LanguageSelect from '@components/LanguageSelect.astro';
 
 interface Props {
   title: string;
@@ -33,6 +34,13 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <header>
+      <slot name="header" />
+    </header>
     <slot />
+    <footer>
+      <slot name="footer" />
+      <LanguageSelect />
+    </footer>
   </body>
 </html>

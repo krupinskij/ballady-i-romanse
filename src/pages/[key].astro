@@ -17,8 +17,7 @@ const { title, link, prevBallad, nextBallad, notes, motto, contents, annotations
 ---
 
 <Layout title={`${formatText(title, (_, __, title) => title)} | ${i18next.t('title')}`}>
-  <header>
-    <h1><AnnotationMarker text={title} /></h1>
+  <Fragment slot="header">
     <nav>
       <span>
         {
@@ -40,8 +39,9 @@ const { title, link, prevBallad, nextBallad, notes, motto, contents, annotations
         }
       </span>
     </nav>
+    <h1><AnnotationMarker text={title} /></h1>
     {notes && notes.map(({ text }) => <Note note={text} />)}
-  </header>
+  </Fragment>
   <main>
     <article>
       {motto && <Motto {...motto} />}
@@ -59,10 +59,12 @@ const { title, link, prevBallad, nextBallad, notes, motto, contents, annotations
       )
     }
   </main>
-  <footer>
-    {i18n.t('footer', { ns: 'ballad' })}
-    <a target="_blank" href={link}>{link}</a>
-  </footer>
+  <Fragment slot="footer">
+    <div class="footer">
+      {i18n.t('footer', { ns: 'ballad' })}
+      <a target="_blank" href={link}>{link}</a>
+    </div>
+  </Fragment>
 </Layout>
 
 <style lang="scss">
@@ -126,10 +128,10 @@ const { title, link, prevBallad, nextBallad, notes, motto, contents, annotations
     counter-reset: annotationNote;
   }
 
-  footer {
+  .footer {
     text-align: center;
     font: var(--font-xs);
-    padding: 20px;
+    padding: 20px 120px;
 
     a {
       text-decoration: underline;
