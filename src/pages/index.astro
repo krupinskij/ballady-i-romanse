@@ -33,7 +33,7 @@ const ballads = await response.json<Ballad[]>();
       {
         ballads.map((ballad) => (
           <li>
-            <Card title={ballad.title} href={`/${ballad.key}`} />
+            <Card title={ballad.title} href={`/ballad/${ballad.key}`} />
           </li>
         ))
       }

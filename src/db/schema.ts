@@ -1,13 +1,4 @@
-import {
-  foreignKey,
-  integer,
-  primaryKey,
-  sqliteTable,
-  text,
-  unique,
-} from 'drizzle-orm/sqlite-core';
-
-import { type SupportedLng } from '@i18n';
+import { foreignKey, integer, primaryKey, sqliteTable, text } from 'drizzle-orm/sqlite-core';
 
 export const ballads = sqliteTable(
   'ballads',
