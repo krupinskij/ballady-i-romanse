@@ -2,7 +2,7 @@
 import { type Motto } from '@model';
 import AnnotationMarker from './AnnotationMarker.astro';
 
-interface Props extends Motto {}
+type Props = Motto;
 
 const { body, author, translation } = Astro.props;
 ---

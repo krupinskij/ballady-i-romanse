@@ -10,7 +10,7 @@ const { speaker, body } = Astro.props;
 <section>
   {speaker && <h2>{speaker}:</h2>}
 
-  <pre><AnnotationMarker body={body} /></pre>
+  <p><AnnotationMarker body={body} /></p>
 </section>
 
 <style>
@@ -22,7 +22,8 @@ const { speaker, body } = Astro.props;
     font: var(--font-md);
   }
 
-  pre {
+  p {
+    white-space: pre-line;
     font: var(--font-md);
     font-family: var(--font-default);
     text-wrap: wrap;

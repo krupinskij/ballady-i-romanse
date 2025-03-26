@@ -26,7 +26,7 @@ const { title, link, prevBallad, nextBallad, notes, mottos, contents, annotation
       <span>
         {
           prevBallad && (
-            <a href={`/ballad/${prevBallad.id}`} style={{ textAlign: 'left' }}>
+            <a href={`/ballada/${prevBallad.id}`} style={{ textAlign: 'left' }}>
               ⬅<span> {formatText(prevBallad.title, (_, __, title) => title)}</span>
             </a>
           )
@@ -36,7 +36,7 @@ const { title, link, prevBallad, nextBallad, notes, mottos, contents, annotation
       <span>
         {
           nextBallad && (
-            <a href={`/ballad/${nextBallad.id}`} style={{ textAlign: 'right' }}>
+            <a href={`/ballada/${nextBallad.id}`} style={{ textAlign: 'right' }}>
               <span>{formatText(nextBallad.title, (_, __, title) => title)} </span>➡
             </a>
           )

@@ -34,7 +34,7 @@ const ballads = z.array(ListSchema).parse(await response.json());
       {
         ballads.map((ballad) => (
           <li>
-            <Card title={ballad.title} href={`/ballad/${ballad.id}`} />
+            <Card title={ballad.title} href={`/ballada/${ballad.id}`} />
           </li>
         ))
       }
