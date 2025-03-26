@@ -5,7 +5,7 @@
     "paths": {
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
-      "@db": ["src/db"],
+      "@database": ["database"],
       "@i18n": ["src/i18n"],
       "@layouts/*": ["src/layouts/*"],
       "@model": ["src/model"],

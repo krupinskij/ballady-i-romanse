@@ -1,0 +1,115 @@
+id = "rekawiczka"
+title = "Rękawiczka"
+ordinal = 9
+link = "https://wolnelektury.pl/katalog/lektura/ballady-i-romanse-rekawiczka.html"
+
+[[notes]]
+body = "{{1:(z Schillera)}}"
+
+[[contents]]
+body = '''
+Chcąc być widzem dzikich bojów,
+Już u zwierzyńca {{2:podwojów}}
+Król zasiada.
+Przy nim książęta i {{3:panowie Rada}};
+A gdzie {{4:wzniosły}} krążył ganek,
+Rycerze obok kochanek.'''
+
+[[contents]]
+body = '''
+Król skinął palcem, zaczęto igrzysko,
+Spadły {{5:wrzeciądze}}: ogromne lwisko
+Z wolna się toczy;
+Podnosi czoło,
+Milczkiem obraca oczy
+Wokoło;
+I ziewy rozdarł straszliwie,
+I kudły zatrząsł na grzywie,
+I wyciągnął cielska brzemię,
+I obalił się na ziemię.'''
+
+[[contents]]
+body = '''
+Król skinął znowu.
+Znowu przemknie się krata:
+Szybkiemi skoki, chciwy połowu
+Tygrys wylata.
+Spoziera z dala,
+I kłami błyska,
+Język wywala,
+Ogonem ciska,
+I lwa dokoła obiega;
+Topiąc wzrok jaszczurczy,
+Wyje i burczy;
+Burcząc, na stronie przylega.'''
+
+[[contents]]
+body = '''
+Król skinął znowu:
+Znowu podwój otwarty:
+I z jednego {{6:zachowu}}
+Dwa wyskakują lamparty.
+Łakoma boju, para zajadła
+Już tygrysa opadła,
+Już się tygrys z niemi drapie,
+Już obydwu trzyma w łapie:
+Wtem lew podniósł łeb do góry,
+Zagrzmiał — i znowu cisze —
+A dzicz z krwawemi pazury
+Obiega, za mordem dysze,
+Dysząc, na stronie przylega.'''
+
+[[contents]]
+body = '''
+Wtem leci rękawiczka z krużganków pałacu,
+Z rączek nadobnej Marty,
+Pada między tygrysa i między lamparty
+Na środek placu.'''
+
+[[contents]]
+body = '''
+Marta z uśmiechem rzecze do Emroda:
+„Kto mię tak kocha, jak po tysiąc razy
+Czułemi przysiągł wyrazy,
+Niechaj mi teraz rękawiczkę poda”.'''
+
+[[contents]]
+body = '''
+Emrod przeskoczył zapory,
+Idzie pomiędzy potwory,
+Śmiało rękawiczkę bierze.
+Dziwią się panie, dziwią się rycerze;
+A on w zwycięskiej chwale
+Wstępuje na krużganki.
+Tam, {{7:od radosnej witany kochanki}},
+Rycerz jej w oczy rękawiczkę rzucił:
+„Pani, twych dzięków nie trzeba mi wcale”.
+To rzekł i poszedł, i więcej nie wrócił.'''
+
+[[annotations]]
+body = "„z Schillera” — przekład Adama Mickiewicza powstał w kwietniu 1820 r. w Kownie; poeta zmienił imiona osób występujące w oryginale: król Franz (w tłumaczeniu polskim nie pada jego imię), dama imieniem Kunigund (tu: Marta), rycerz Delorges (tu: Emrod). [przypis edytorski]"
+id = 1
+
+[[annotations]]
+body = "„podwoje” — podwójne drzwi a. brama. [przypis edytorski]"
+id = 2
+
+[[annotations]]
+body = "„panowie Rada” — zwrot staropolski na oznaczenie senatu. [przypis redakcyjny]"
+id = 3
+
+[[annotations]]
+body = "„wzniosły” — wzniesiony; znajdujący się wysoko. [przypis redakcyjny]"
+id = 4
+
+[[annotations]]
+body = "„wrzeciądze” — zamknięcie drzwi a. bramy. [przypis edytorski]"
+id = 5
+
+[[annotations]]
+body = "„z zachowu” — z zamkniętego miejsca. [przypis redakcyjny]"
+id = 6
+
+[[annotations]]
+body = "„od radosnej witany kochanki” — dziś: „witany przez radosną kochankę”. [przypis edytorski]"
+id = 7

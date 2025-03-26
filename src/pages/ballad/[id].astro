@@ -1,10 +1,10 @@
 ---
-import { keys, type Ballad } from '@model';
+import { BalladSchema } from '@model';
 import Layout from '@layouts/Layout.astro';
 import Motto from '@components/Motto.astro';
 import Note from '@components/Note.astro';
 import Content from '@components/Content.astro';
-import { GET } from '../api/ballads/[key].json';
+import { GET } from '../api/ballads/[id].json';
 import AnnotationMarker from '@components/AnnotationMarker.astro';
 import { formatText } from '@utils';
 import AnnotationNote from '@components/AnnotationNote.astro';
@@ -16,8 +16,8 @@ if (response.status >= 300 && response.status <= 400) {
   return Astro.redirect(response.headers.get('Location', response.status));
 }
 
-const ballad = await response.json<Ballad>();
-const { title, link, prevBallad, nextBallad, notes, motto, contents, annotations } = ballad;
+const ballad = BalladSchema.parse(await response.json());
+const { title, link, prevBallad, nextBallad, notes, mottos, contents, annotations } = ballad;
 ---
 
 <Layout title={`${formatText(title, (_, __, title) => title)} | ${i18next.t('title')}`}>
@@ -26,7 +26,7 @@ const { title, link, prevBallad, nextBallad, notes, motto, contents, annotations
       <span>
         {
           prevBallad && (
-            <a href={`/${prevBallad.key}`} style={{ textAlign: 'left' }}>
+            <a href={`/ballad/${prevBallad.id}`} style={{ textAlign: 'left' }}>
               ⬅<span> {formatText(prevBallad.title, (_, __, title) => title)}</span>
             </a>
           )
@@ -36,19 +36,19 @@ const { title, link, prevBallad, nextBallad, notes, motto, contents, annotations
       <span>
         {
           nextBallad && (
-            <a href={`/${nextBallad.key}`} style={{ textAlign: 'right' }}>
+            <a href={`/ballad/${nextBallad.id}`} style={{ textAlign: 'right' }}>
               <span>{formatText(nextBallad.title, (_, __, title) => title)} </span>➡
             </a>
           )
         }
       </span>
     </nav>
-    <h1><AnnotationMarker text={title} /></h1>
-    {notes && notes.map(({ text }) => <Note note={text} />)}
+    <h1><AnnotationMarker body={title} /></h1>
+    {notes && notes.map(({ body }) => <Note body={body} />)}
   </Fragment>
   <main>
     <article>
-      {motto && <Motto {...motto} />}
+      {mottos.map((motto) => <Motto {...motto} />)}
       {contents.map((content) => <Content {...content} />)}
     </article>
     {
@@ -56,7 +56,7 @@ const { title, link, prevBallad, nextBallad, notes, motto, contents, annotations
         <article>
           <section class="annotations">
             {annotations.map((annotation) => (
-              <AnnotationNote {...annotation}>{annotation.text}</AnnotationNote>
+              <AnnotationNote {...annotation}>{annotation.body}</AnnotationNote>
             ))}
           </section>
         </article>

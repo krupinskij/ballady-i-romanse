@@ -2,13 +2,13 @@
 import AnnotationMarker from './AnnotationMarker.astro';
 
 type Props = {
-  note: string;
+  body: string;
 };
 
-const { note } = Astro.props;
+const { body } = Astro.props;
 ---
 
-<span><AnnotationMarker text={note} /></span>
+<span><AnnotationMarker body={body} /></span>
 
 <style>
   span {

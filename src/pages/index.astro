@@ -10,11 +10,12 @@ import rightImage from '@assets/images/title/right.png';
 import topImage from '@assets/images/title/top.png';
 
 import { GET } from './api/ballads/list.json';
-import type { Ballad } from '@model';
 import i18n from '@i18n';
+import { z } from 'astro/zod';
+import { ListSchema } from '@model';
 
 const response = await GET(Astro);
-const ballads = await response.json<Ballad[]>();
+const ballads = z.array(ListSchema).parse(await response.json());
 ---
 
 <Layout title={`${i18n.t('title')} | ${i18n.t('author')}`}>
@@ -33,7 +34,7 @@ const ballads = await response.json<Ballad[]>();
       {
         ballads.map((ballad) => (
           <li>
-            <Card title={ballad.title} href={`/ballad/${ballad.key}`} />
+            <Card title={ballad.title} href={`/ballad/${ballad.id}`} />
           </li>
         ))
       }

@@ -2,14 +2,14 @@
 import { formatText } from '@utils';
 
 type Props = {
-  text: string;
+  body: string;
   noAnchor?: boolean;
 };
 
-const { text, noAnchor } = Astro.props;
+const { body, noAnchor } = Astro.props;
 
 const formattedText = formatText(
-  text,
+  body,
   (_, key, text) => `<cite-ref text="${text}" key="${key}" anchor="${!noAnchor}"></cite-ref>`
 );
 ---

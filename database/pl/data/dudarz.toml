@@ -1,0 +1,383 @@
+id = "dudarz"
+title = "Dudarz"
+ordinal = 13
+link = "https://wolnelektury.pl/katalog/lektura/mickiewicz-dudarz.html"
+
+[[notes]]
+body = "(Myśl z pieśni gminnej)"
+
+[[contents]]
+body = '''
+Jakiż to dziadek, jak gołąb siwy,
+Z siwą aż do pasa brodą?
+Dwaj go chłopczyki pod rękę wiodą,
+Wiodą mimo naszej niwy.'''
+
+[[contents]]
+body = '''
+Starzec na lirze brząka i nuci,
+Chłopcy dmą w dudeczki z piórek.
+Zawołam starca, niech się zawróci
+I przyjdzie pod ten pagórek.'''
+
+[[contents]]
+body = '''
+„Zawróć się, starcze, tu na igrzysko,
+Tu się po {{1:siewbie}} weselim;
+Co nam dał Pan Bóg, tem się podzielim,
+I do wsi na noc stąd blisko”.'''
+
+[[contents]]
+body = '''
+Posłuchał, przyszedł, skłonił się nisko
+I usiadł sobie pod miedzą;
+Przy nim po bokach chłopczyki siedzą,
+Patrząc na wiejskie igrzysko.'''
+
+[[contents]]
+body = '''
+Tu brzmią piszczałki, biją bębenki,
+Płoną stosy suchych drewek;
+Piją staruszki, skaczą panienki,
+Obchodząc {{2:święto dosiewek}}.'''
+
+[[contents]]
+body = '''
+Milczą piszczałki, głuchną bębenki,
+Porzuca ogień gromadka;
+Biegą staruszki, biegą panienki,
+Biegą do dudarza dziadka.'''
+
+[[contents]]
+body = '''
+„Witaj, dudarzu, witamy radzi,
+W wesołej przychodzisz dobie;
+Pewnie z daleka Pan Bóg prowadzi,
+Pogrzej się i spocznij sobie”.'''
+
+[[contents]]
+body = '''
+Wiodą, gdzie ogień, gdzie stół z murawy,
+Sadzą dudarza pośrodku:
+„Może pozwolisz na trochę strawy,
+Albo na szklaneczkę miodku?'''
+
+[[contents]]
+body = '''
+Widzim i lirę, widzim piszczałki:
+Zagraj co nam {{3:samotrzeci}};
+Napełnim za to tłomok, kobiałki,
+I będziem wdzięczni waszeci”.'''
+
+[[contents]]
+body = '''
+„No, stójcież cicho, — rzekł do gromadki —
+Cicho, — powtarza, w dłoń klaska —
+Jeżeli chcecie, zagram wam, dziatki,
+A cóż wam zagrać?” — „Co łaska”.'''
+
+[[contents]]
+body = '''
+Wziął w ręce lirę i szklankę sporą,
+Miodem pierś starą zagrzewa:
+Mrugnął na chłopców, ci dudki biorą;
+Brząknął, nastroił i śpiewa:'''
+
+[[contents]]
+body = '''
+„Idę ja Niemnem, jak Niemen długi,
+Od wioseczki do wioseczki,
+Z borku do borku, z smugów na smugi,
+Śpiewając moje piosneczki.'''
+
+[[contents]]
+body = '''
+Wszyscy się zbiegli, wszyscy słuchali,
+Ale nikt mię nie rozumie!
+Ja łzy ocieram, westchnienia tłumię,
+I idę daléj a daléj.'''
+
+[[contents]]
+body = '''
+Kto mię zrozumie, ten się użali,
+I w białe uderzy dłonie;
+Uroni łezkę, i ja uronię,
+Ale już nie pójdę daléj”.'''
+
+[[contents]]
+body = '''
+A wtem grać przestał. Nim znowu zacznie,
+Przelotem spojrzał po błoniu:
+Lecz w jednę stronę spoziera bacznie;
+Któż tam stoi na ustroniu?'''
+
+[[contents]]
+body = '''
+Stała pasterka i plotła wieniec,
+To uplecie, to rozplecie,
+A obok przy niej stoi młodzieniec,
+I splecione przyjął kwiecie.'''
+
+[[contents]]
+body = '''
+Spokojność duszy z jej widać czoła,
+Ku ziemi spuszczone oko;
+Nie była smutna ani wesoła,
+Tylko coś myśli głęboko.'''
+
+[[contents]]
+body = '''
+Jak puszkiem chwieje trawka zielona,
+Choć wiatr przestanie oddychać:
+Tak się na piersiach chwieje zasłona,
+Chociaż westchnienia nie słychać.'''
+
+[[contents]]
+body = '''
+Wtem z piersi {{4:listek}} zżółkły odepnie,
+Listek nieznanego drzewa;
+Spójrzy nań, rzuci i z cicha szepnie,
+Jakby się na listek gniewa.'''
+
+[[contents]]
+body = '''
+Odwraca głowę, odeszła nieco,
+Podniosła w niebo źrenice;
+Nagle na oczach łezki zaświecą
+I róż wystąpił na lice.'''
+
+[[contents]]
+body = '''
+A dudarz milczy, brząka powoli,
+A wzrok utopił w pasterce,
+Utopił w licu, lecz wzrok sokoli
+Zdał się przedzierać aż w serce.'''
+
+[[contents]]
+body = '''
+Znowu wziął lirę i spory dzbanek,
+Miodem pierś starą zagrzewa,
+Skinął na chłopców, ci do {{5:multanek}},
+Brząknął, nastroił i śpiewa:'''
+
+[[contents]]
+body = '''
+„Komu ślubny splatasz wieniec
+Z róż, liliji i tymianka?
+Ach, jak szczęśliwy młodzieniec,
+Komu ślubny splatasz wieniec!'''
+
+[[contents]]
+body = '''
+Pewnie dla twego kochanka?
+Wydają łzy i rumieniec,
+Komu ślubny splatasz wieniec
+Z róż, liliji i tymianka?'''
+
+[[contents]]
+body = '''
+Jednemu oddajesz wieniec
+Z róż, liliji i tymianka;
+Kocha cię drugi młodzieniec:
+Ty jednemu oddasz wieniec,'''
+
+[[contents]]
+body = '''
+Zostawże łzy i rumieniec
+Dla nieszczęsnego kochanka,
+Gdy szczęśliwy bierze wieniec
+{{6:Z róż, liliji i tymianka}}”.'''
+
+[[contents]]
+body = '''
+Na to szmer powstał; różne pogłoski
+Pomiędzy ciżbą przytomną:
+Tę piosnkę śpiewał ktoś z naszej wioski;
+Lecz kto i kiedy — nie pomną.'''
+
+[[contents]]
+body = '''
+Starzec ucisza, podnosi rękę:
+„Słuchajcie, dzieci, — zawoła —
+Powiem, od kogo mam tę piosenkę,
+Może on był z tego sioła.'''
+
+[[contents]]
+body = '''
+Kiedym wędrując przez kraje cudze
+Królewiec zwiedził przechodem,
+Wtenczas przypłynął z Litwy na {{7:strudze}}
+Pasterz jakiś z tych stron rodem.'''
+
+[[contents]]
+body = '''
+Smutny był bardzo, ale przyczyny
+Smutku nie mówił nikomu,
+Odbił się potem od swej drużyny
+I nie powrócił do domu.'''
+
+[[contents]]
+body = '''
+Często widziałem, czy świecą zorza,
+Czyli księżyc w pełnym blasku,
+Jak on po błoniach, albo u morza
+Po nadbrzeżnym błądził piasku.'''
+
+[[contents]]
+body = '''
+Posród skał nieraz, podobny skale,
+Na deszczu, wietrze i chłodzie,
+Odludny dumał, wiatrom swe żale,
+A łzy powierzając wodzie.'''
+
+[[contents]]
+body = '''
+Szedłem ku niemu; spozierał smutnie,
+Ale ode mnie nie stronił;
+Jam, nic nie mówiąc, nastroił lutnię,
+Zaśpiewał, w struny zadzwonił.'''
+
+[[contents]]
+body = '''
+Łzy mu się rzucą; lecz skinął czołem,
+Że się to granie podoba;
+Ścisnął za rękę, ja go ścisnąłem,
+I zapłakaliśmy oba.'''
+
+[[contents]]
+body = '''
+Poznaliśmy się lepiej nawzajem,
+I byliśmy przyjaciele.
+On zawsze milczał swoim zwyczajem,
+I ja mówiłem niewiele.'''
+
+[[contents]]
+body = '''
+Potem, gdy troską strawiony długą,
+Już nie mógł rady dać sobie;
+Ja towarzyszem, ja byłem sługą,
+Jam go pilnował w chorobie.'''
+
+[[contents]]
+body = '''
+Nędzny, w mych oczach gasnął powoli,
+Raz mię przywołał do łoża:
+»Czuję — rzekł — bliski koniec niedoli,
+Niech się spełni wola Boża.'''
+
+[[contents]]
+body = '''
+{{8:Zgrzeszyłem tylko, że moje lata
+Tak się nadaremnie starły:
+Ale bez żalu schodzę ze świata,
+Dawno już na nim umarły.}}'''
+
+[[contents]]
+body = '''
+Kiedy mię skał tych dziki zakątek
+Ukrył przed gminu obliczem,
+Odtąd już dla mnie świat ten był niczem:
+Żyłem na świecie pamiątek.'''
+
+[[contents]]
+body = '''
+Ty, coś mi wiernym został do grobu,
+— Kończył, ściskając za ręce —
+Nagrodzić tobie nie mam sposobu,
+Wszakże to, co mam, poświęcę.'''
+
+[[contents]]
+body = '''
+Znasz piosnkę, którąm po tyle razy
+Śpiewał, płacząc nad mym losem;
+Pomnisz zapewne wszystkie wyrazy,
+I wiesz, jakim śpiewać głosem.'''
+
+[[contents]]
+body = '''
+Mam jeszcze z bladych włosów zawiązkę
+I zeschły cyprysu listek:
+Naucz się piosnki, weź tę gałązkę,
+To mój na ziemi skarb wszystek.'''
+
+[[contents]]
+body = '''
+Idź, może znajdziesz na brzegach Niemna
+Tę, której już nie obaczę;
+Może jej piosnka będzie przyjemna,
+Może nad listkiem zapłacze.'''
+
+[[contents]]
+body = '''
+Nagrodzi starca, do domu przyjmie,
+Powiedz…« Wtem oko ściemniało,
+A w ustach {{9:Panny Najświętszej imię,
+Wpół wymówione zostało}}.'''
+
+[[contents]]
+body = '''
+Silił się jeszcze i w samym skonie
+Na próżno coś wyrzec żądał;
+Wskazał ku sercu i ku tej stronie,
+Na którą, żyjąc, poglądał”. —'''
+
+[[contents]]
+body = '''
+Tu przerwał dudarz i szukał okiem,
+Dostając listek z papierka:
+Lecz już nie była między natłokiem
+Ta, której szukał — pasterka.'''
+
+[[contents]]
+body = '''
+Z daleka tylko poznał {{10:sukienkę}},
+Bo w chustce skryła twarz boską;
+Jakiś młodzieniec wiódł ją pod rękę;
+Już ich nie widać za wioską.'''
+
+[[contents]]
+body = '''
+Przybiegła zgraja, gdzie starzec siedział.
+„Co to jest?” wszyscy pytają…
+On nic nie wiedział — może i wiedział,
+Ale nie mówił przed zgrają.'''
+
+[[annotations]]
+body = "„siewba” — siew, obsiewanie pól. [przypis edytorski]"
+id = 1
+
+[[annotations]]
+body = "„święto dosiewek” — obchodzone dawniej na wiosnę, nieraz o chłodzie wczesnej wiosny; dlatego płoną stosy suchych drewek. [przypis redakcyjny]"
+id = 2
+
+[[annotations]]
+body = "„samotrzeci” — ty i dwaj chłopcy, we trzech. [przypis redakcyjny]"
+id = 3
+
+[[annotations]]
+body = "„listek” — listek cyprysu, o którym mowa w IV części Dziadów. [przypis redakcyjny]"
+id = 4
+
+[[annotations]]
+body = "„multanki” — dudki o kilku piszczałkach, nazywane od Multan (Wołoszczyzny), gdzie najpierw były w użyciu. [przypis redakcyjny]"
+id = 5
+
+[[annotations]]
+body = "„Komu ślubny splatasz wieniec… Z róż liliji i tymianka” — te triolety wyjęte są z poezji Tomasza Zana [triolet — strofa pochodząca z wł. poezji średniowiecznej, ośmiowersowa, o układzie rymów abaaabab Red. WL]. [przypis autorski]"
+id = 6
+
+[[annotations]]
+body = "„struga” — własc. strug (ros.), barka, galar rzeczny. [przypis redakcyjny]"
+id = 7
+
+[[annotations]]
+body = "„Zgrzeszyłem tylko… Dawno już na nim umarły” — ta strofa przypomina słowa Gustawa z Upiora i z IV cz. Dziadów. [przypis redakcyjny]"
+id = 8
+
+[[annotations]]
+body = "„Panny Najświętszej imię wpół wymówione zostało” — być może imię Maryli. [przypis redakcyjny]"
+id = 9
+
+[[annotations]]
+body = "„sukienkę” — wymawiał Mickiewicz: „sukiękę”; dlatego rymuje z „rękę”. [przypis redakcyjny]"
+id = 10

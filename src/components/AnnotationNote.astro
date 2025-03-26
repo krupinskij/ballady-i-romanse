@@ -3,12 +3,12 @@ import type { Annotation } from '@model';
 
 type Props = Annotation;
 
-const { key, text } = Astro.props;
+const { id, body } = Astro.props;
 ---
 
 <div>
-  <a id={`cite_note-${key}`} href={`#cite_ref-${key}`}>: </a>
-  {text}
+  <a id={`cite_note-${id}`} href={`#cite_ref-${id}`}>: </a>
+  {body}
 </div>
 
 <style>

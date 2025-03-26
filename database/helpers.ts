@@ -35,15 +35,20 @@ export type Ballad = {
   notes: Note[];
   mottos: Motto[];
   contents: Content[];
-  annotations?: Annotation[];
+  annotations: Annotation[];
 };
 
 export const readTomlFile = (path: string): Ballad => {
   const data = fs.readFileSync(path, 'utf8');
   const ballad = TOML.parse(data) as Ballad;
 
-  ballad.notes = ballad.notes.map((note, id) => ({ ...motto, balladId: ballad.id }));
-  ballad.mottos = ballad.mottos.map((motto, id) => ({ ...motto, balladId: ballad.id }));
+  ballad.notes =
+    ballad.notes?.map((note, i) => ({ ...note, balladId: ballad.id, ordinal: i })) || [];
+  ballad.mottos = ballad.mottos?.map((motto) => ({ ...motto, balladId: ballad.id })) || [];
+  ballad.contents =
+    ballad.contents?.map((content, i) => ({ ...content, balladId: ballad.id, ordinal: i })) || [];
+  ballad.annotations =
+    ballad.annotations?.map((annotation) => ({ ...annotation, balladId: ballad.id })) || [];
 
   return ballad;
 };

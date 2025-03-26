@@ -4,16 +4,16 @@ import AnnotationMarker from './AnnotationMarker.astro';
 
 interface Props extends Motto {}
 
-const { text, author, translation } = Astro.props;
+const { body, author, translation } = Astro.props;
 ---
 
 <section>
-  <pre><AnnotationMarker text={text} /></pre>
-  <pre class="author"><AnnotationMarker text={author} /></pre>
+  <pre><AnnotationMarker body={body} /></pre>
+  <pre class="author"><AnnotationMarker body={author} /></pre>
   {
     translation && (
       <pre>
-        <AnnotationMarker text={translation} />
+        <AnnotationMarker body={translation} />
       </pre>
     )
   }
