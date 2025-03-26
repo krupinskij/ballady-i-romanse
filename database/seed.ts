@@ -85,12 +85,6 @@ async function seed(lng: SupportedLng, writeStream: WriteStream) {
   await writeStream.write(`DELETE FROM Ballad;\n`);
   await writeStream.write(`\n`);
 
-  // await db.delete(annotations);
-  // await db.delete(mottos);
-  // await db.delete(notes);
-  // await db.delete(contents);
-  // await db.delete(ballads);
-
   await writeStream.write(`INSERT INTO Ballad (id, title, ordinal, link)\n`);
   await writeStream.write(`\tVALUES\n`);
   for (let i = 0; i < ballads.length; i++) {
@@ -105,18 +99,6 @@ async function seed(lng: SupportedLng, writeStream: WriteStream) {
       await writeStream.write(`,\n`);
     }
   }
-
-  // const balladsDbData = await db
-  //   .insert(ballads)
-  //   .values(
-  //     balladsOriginData.map((ballad) => ({
-  //       id: ballad.id,
-  //       title: ballad.title,
-  //       order: ballad.order,
-  //       link: ballad.link,
-  //     }))
-  //   )
-  //   .returning({ id: ballads.id, order: ballads.order });
 
   for (let i = 0; i < ballads.length; i++) {
     const ballad = ballads[i];
@@ -141,31 +123,11 @@ async function seed(lng: SupportedLng, writeStream: WriteStream) {
     await writeStream.write(sql`WHERE id = ${ballad.id};\n\n`);
   }
 
-  // balladsDbData.sort((b1, b2) => b1.order - b2.order);
-
-  // for (let i = 0; i < balladsDbData.length; i++) {
-  //   const ballad = balladsDbData[i];
-  //   if (i > 0) {
-  //     await db
-  //       .update(ballads)
-  //       .set({ prevId: balladsDbData[i - 1].id })
-  //       .where(eq(ballads.id, ballad.id));
-  //   }
-
-  //   if (i < balladsDbData.length - 1) {
-  //     await db
-  //       .update(ballads)
-  //       .set({ nextId: balladsDbData[i + 1].id })
-  //       .where(eq(ballads.id, ballad.id));
-  //   }
-  // }
-
-  // console.log('Seed ballads complete!');
-
-  await writeStream.write(`INSERT INTO Content (balladId, ordinal, speaker, body)\n`);
-  await writeStream.write(`\tVALUES\n`);
-
   const contents = ballads.flatMap((ballad) => ballad.contents);
+  if (contents.length > 0) {
+    await writeStream.write(`INSERT INTO Content (balladId, ordinal, speaker, body)\n`);
+    await writeStream.write(`\tVALUES\n`);
+  }
   for (let i = 0; i < contents.length; i++) {
     const content = contents[i];
     await writeStream.write(
@@ -179,23 +141,11 @@ async function seed(lng: SupportedLng, writeStream: WriteStream) {
     }
   }
 
-  // await db.insert(contents).values(
-  //   balladsOriginData.flatMap((ballad) =>
-  //     ballad.contents.map((content, order) => ({
-  //       balladId: balladsDbData[ballad.order].id,
-  //       order,
-  //       character: content.character,
-  //       text: content.text,
-  //     }))
-  //   )
-  // );
-
-  // console.log('Seed contents complete!');
-
-  await writeStream.write(`INSERT INTO Note (balladId, ordinal, body)\n`);
-  await writeStream.write(`\tVALUES\n`);
-
   const notes = ballads.flatMap((ballad) => ballad.notes);
+  if (notes.length > 0) {
+    await writeStream.write(`INSERT INTO Note (balladId, ordinal, body)\n`);
+    await writeStream.write(`\tVALUES\n`);
+  }
   for (let i = 0; i < notes.length; i++) {
     const note = notes[i];
     await writeStream.write(sql`\t\t(${note.balladId}, ${note.ordinal}, ${note.body})`);
@@ -207,23 +157,11 @@ async function seed(lng: SupportedLng, writeStream: WriteStream) {
     }
   }
 
-  // await db.insert(notes).values(
-  //   balladsOriginData.flatMap(
-  //     (ballad) =>
-  //       ballad.notes?.map((note, order) => ({
-  //         balladId: balladsDbData[ballad.order].id,
-  //         order,
-  //         text: note,
-  //       })) || []
-  //   )
-  // );
-
-  // console.log('Seed notes complete!');
-
-  await writeStream.write(`INSERT INTO Motto (balladId, body, author, translation)\n`);
-  await writeStream.write(`\tVALUES\n`);
-
   const mottos = ballads.flatMap((ballad) => ballad.mottos);
+  if (mottos.length > 0) {
+    await writeStream.write(`INSERT INTO Motto (balladId, body, author, translation)\n`);
+    await writeStream.write(`\tVALUES\n`);
+  }
   for (let i = 0; i < mottos.length; i++) {
     const motto = mottos[i];
     await writeStream.write(
@@ -237,24 +175,11 @@ async function seed(lng: SupportedLng, writeStream: WriteStream) {
     }
   }
 
-  // const mottoValues = balladsOriginData
-  //   .filter((ballad) => !!ballad.motto)
-  //   .map((ballad) => ({
-  //     balladId: balladsDbData[ballad.order].id,
-  //     text: ballad.motto!.text,
-  //     author: ballad.motto!.author,
-  //     translation: ballad.motto!.translation,
-  //   }));
-  // if (mottoValues.length > 0) {
-  //   await db.insert(mottos).values(mottoValues);
-  // }
-
-  // console.log('Seed mottos complete!');
-
-  await writeStream.write(`INSERT INTO Annotation (balladId, id, body)\n`);
-  await writeStream.write(`\tVALUES\n`);
-
   const annotations = ballads.flatMap((ballad) => ballad.annotations);
+  if (annotations.length > 0) {
+    await writeStream.write(`INSERT INTO Annotation (balladId, id, body)\n`);
+    await writeStream.write(`\tVALUES\n`);
+  }
   for (let i = 0; i < annotations.length; i++) {
     const annotation = annotations[i];
     await writeStream.write(
@@ -267,17 +192,6 @@ async function seed(lng: SupportedLng, writeStream: WriteStream) {
       await writeStream.write(`,\n`);
     }
   }
-
-  // await db.insert(annotations).values(
-  //   balladsOriginData.flatMap(
-  //     (ballad) =>
-  //       ballad.annotations?.map((annotation) => ({
-  //         balladId: balladsDbData[ballad.order].id,
-  //         id: annotation.id,
-  //         text: annotation.text,
-  //       })) || []
-  //   )
-  // );
 
   console.log('Seed annotations complete!');
 }

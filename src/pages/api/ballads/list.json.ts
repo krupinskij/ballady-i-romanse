@@ -16,7 +16,5 @@ export const GET: APIRoute = async (context) => {
 
   const list = z.array(ListSchema).parse(listDB.results);
 
-  console.log(list);
-
   return Response.json(list);
 };

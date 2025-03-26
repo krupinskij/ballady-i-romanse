@@ -1,0 +1,16 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "ballady-i-romanse"
+compatibility_date = "2024-08-15"
+pages_build_output_dir = "./dist"
+
+[[d1_databases]]
+binding = "DB_PL"
+database_name = "pl-ballady_i_romanse-dev"
+database_id = "9fc0047e-76f3-45e7-83a3-ceed7e3e5584"
+migrations_dir = "./database/pl/migrations"
+
+[[d1_databases]]
+binding = "DB_RU"
+database_name = "ru-ballady_i_romanse-dev"
+database_id = "d3b7987a-bfa8-4358-9c9b-254d7ee3fb4b"
+migrations_dir = "./database/ru/migrations"

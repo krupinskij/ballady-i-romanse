@@ -2,6 +2,7 @@
 
 type Env = {
   DB_PL: D1Database;
+  DB_RU: D1Database;
 };
 
 type Runtime = import('@astrojs/cloudflare').Runtime<Env>;
@@ -18,12 +19,10 @@ interface ImportMeta {
 }
 
 declare namespace App {
-  type Schema = import('@db').Schema;
   type Lang = import('@i18n').SupportedLng;
 
   interface Locals extends Runtime {
     DB: D1Database;
-    SCHEMA: Schema;
     LANG: Lang;
   }
 }
