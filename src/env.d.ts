@@ -1,5 +1,10 @@
 /// <reference path="astro/client.d.ts" />
 
+type Env = {
+  DB_PL: D1Database;
+  DB_RU: D1Database;
+};
+
 type Runtime = import('@astrojs/cloudflare').Runtime<Env>;
 
 interface ImportMetaEnv {
@@ -14,13 +19,10 @@ interface ImportMeta {
 }
 
 declare namespace App {
-  type Database = import('@db').Database;
-  type Schema = import('@db').Schema;
   type Lang = import('@i18n').SupportedLng;
 
-  interface Locals {
-    DB: Database;
-    SCHEMA: Schema;
+  interface Locals extends Runtime {
+    DB: D1Database;
     LANG: Lang;
   }
 }

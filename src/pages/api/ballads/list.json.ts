@@ -1,12 +1,20 @@
 import type { APIRoute } from 'astro';
+import { z } from 'astro/zod';
+
+import { ListSchema } from '@model';
 
 export const GET: APIRoute = async (context) => {
   const DB = context.locals.DB;
-  const { ballads } = context.locals.SCHEMA;
 
-  const results = await DB.select({ key: ballads.key, title: ballads.title })
-    .from(ballads)
-    .orderBy(ballads.order);
+  const listDB = await DB.prepare(
+    `
+    SELECT id, title
+    FROM Ballad
+    ORDER BY ordinal  
+  `
+  ).run();
 
-  return Response.json(results);
+  const list = z.array(ListSchema).parse(listDB.results);
+
+  return Response.json(list);
 };

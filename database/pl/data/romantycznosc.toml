@@ -1,0 +1,148 @@
+id = "romantycznosc"
+title = "Romantyczność"
+ordinal = 1
+link = "https://wolnelektury.pl/katalog/lektura/ballady-i-romanse-romantycznosc.html"
+
+[[mottos]]
+body = '''
+Methinks I see…
+— Where?…
+— In my mind's eye'''
+author = "{{1:W. Shakespeare}}"
+translation = '''
+Zdaje mi się, że widzę… Gdzie?
+Przed oczyma duszy mojej.'''
+
+[[contents]]
+body = '''
+Słuchaj dzieweczko!
+— Ona nie słucha. —
+To dzień biały! to miasteczko!
+Przy tobie nie ma żywego ducha,
+Co tam wkoło siebie chwytasz?
+Kogo wołasz, z kim się witasz?
+— Ona nie słucha. —'''
+
+[[contents]]
+body = '''
+To jak martwa opoka
+Nie zwróci w stronę oka,
+To strzela wkoło oczyma,
+To się łzami zaleje,
+Coś niby chwyta, coś niby trzyma,
+Rozpłacze się i zaśmieje.'''
+
+[[contents]]
+body = '''
+— „Tyżeś to w nocy? to ty Jasieńku!
+Ach! i po śmierci kocha!
+Tutaj, tutaj, pomaleńku,
+{{2:Czasem}} usłyszy macocha!…'''
+
+[[contents]]
+body = '''
+Niech sobie słyszy… już nie ma ciebie,
+Już po twoim pogrzebie!
+Ty już umarłeś? Ach! ja się boję!…
+Czego się boję mego Jasieńka?
+Ach, to on! lica twoje, oczki twoje!
+Twoja biała sukienka!'''
+
+[[contents]]
+body = '''
+I sam ty biały jak chusta,
+Zimny… jakie zimne dłonie!
+Tutaj połóż, tu na łonie,
+Przyciśnij mnie, do ust usta!…'''
+
+[[contents]]
+body = '''
+Ach, jak tam zimno musi być w grobie!
+Umarłeś, tak, dwa lata!
+Weź mię, ja umrę przy tobie,
+Nie lubię świata.'''
+
+[[contents]]
+body = '''
+Źle mnie w złych ludzi tłumie:
+Płaczę, a oni szydzą;
+Mówię, nikt nie rozumie:
+Widzę, oni nie widzą!'''
+
+[[contents]]
+body = '''
+Śród dnia przyjdź kiedy… To może we śnie?
+Nie, nie… trzymam ciebie w ręku,
+Gdzie znikasz, gdzie mój Jasieńku?
+Jeszcze wcześnie, jeszcze wcześnie!'''
+
+[[contents]]
+body = '''
+Mój Boże! {{3:kur się odzywa}},
+Zorza błyska w okienku.
+Gdzie znikłeś! ach! stój Jasieńku!
+Ja nieszczęśliwa!” —'''
+
+[[contents]]
+body = '''
+Tak się dziewczyna z kochankiem pieści,
+Bieży za nim, krzyczy, pada;
+Na ten upadek, na krzyk boleści,
+Skupia się ludzi gromada.'''
+
+[[contents]]
+body = '''
+„Mówcie pacierze! — krzyczy prostota —
+Tu jego dusza być musi.
+Jasio być musi przy swej Karusi,
+On ją kochał za żywota!”'''
+
+[[contents]]
+body = '''
+I ja to słyszę, i ja tak wierzę,
+Płaczę i mówię pacierze.
+— „Słuchaj dzieweczko!” — krzyknie śród zgiełku
+Starzec, i na lud zawoła:
+„Ufajcie memu oku i szkiełku,
+Nic tu nie widzę dokoła.'''
+
+[[contents]]
+body = '''
+— {{4:Duchy karczemnej tworem gawiedzi,
+W głupstwa wywarzone kuźni}};
+Dziewczyna {{5:duby smalone}} bredzi,
+A gmin rozumowi bluźni”.'''
+
+[[contents]]
+body = '''
+„Dziewczyna czuje, — odpowiadam skromnie —
+A gawiedź wierzy głęboko:
+Czucie i wiara silniej mówi do mnie,
+Niż mędrca szkiełko i oko.'''
+
+[[contents]]
+body = '''
+Martwe znasz prawdy, nieznane dla ludu,
+Widzisz świat w proszku, w każdej gwiazd iskierce;
+Nie znasz prawd żywych, nie obaczysz cudu!
+Miej serce i patrzaj w serce!”'''
+
+[[annotations]]
+body = "Motto wzięte z Szekspirowskiego Hamleta (akt I, scena 2). [przypis redakcyjny]"
+id = 1
+
+[[annotations]]
+body = "„Czasem” (z białorus.) — a nuż, może przypadkiem. [przypis redakcyjny]"
+id = 2
+
+[[annotations]]
+body = "Pianie koguta miało płoszyć duchy, upiory itp. [przypis redakcyjny]"
+id = 3
+
+[[annotations]]
+body = "W autografie do tego wiersza dał poeta dopisek: „Ob. Rosp. w Dzien. Wileń.”. Miał na myśli rozprawę Jana Śniadeckiego przeciw romantyczości, wydrukowaną w zeszycie „Dziennika Wileńskiego” ze stycznia 1819 r. [przypis redakcyjny]"
+id = 4
+
+[[annotations]]
+body = "„duby smalone” — głupstwa, brednie, rzeczy zmyślone, koszałki-opałki. Dubiel w staropolszczyźnie znaczył tyle co: głupiec, prostak. [przypis redakcyjny]"
+id = 5

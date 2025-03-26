@@ -62,3 +62,33 @@ h6 {
   font-weight: 400;
   margin: 0;
 }
+
+body {
+  counter-reset: annotationRef;
+  counter-increment: annotationNote;
+}
+
+.\@anno_text {
+  text-decoration: underline dashed;
+}
+
+.\@anno_ref {
+  color: var(--text-color-link);
+  vertical-align: super;
+  font: var(--font-xs);
+  user-select: none;
+}
+.\@anno_ref::after {
+  counter-increment: annotationRef;
+  content: '[' counter(annotationRef) ']';
+}
+
+.\@anno_note {
+  color: var(--text-color-link);
+  user-select: none;
+}
+.\@anno_note::before {
+  counter-increment: annotationNote;
+  content: counter(annotationNote);
+  text-decoration: underline;
+}

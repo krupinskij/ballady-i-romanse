@@ -11,8 +11,8 @@ while getopts ":e:" opt; do
 done
 
 if [[ $CF_PAGES_BRANCH == "master" ]]; then
-  bash ./scripts/push.sh -e $env && 
-  bash ./scripts/seed.sh -e $env && 
+  bash ./scripts/db.push.sh pl &&
+  bash ./scripts/db.push.sh ru &&
   astro check && 
   astro build
 else
