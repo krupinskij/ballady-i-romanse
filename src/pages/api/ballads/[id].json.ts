@@ -10,7 +10,7 @@ import {
 } from '@database';
 import { ids } from '@model';
 
-export const GET: APIRoute = async ({ locals, params, redirect, rewrite, url }) => {
+export const GET: APIRoute = async ({ locals, params, redirect }) => {
   const id = params.id;
   const DB = locals.DB;
 
