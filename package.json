@@ -21,8 +21,6 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/cloudflare": "^12.2.3",
-    "@fontsource-variable/montserrat": "^5.0.19",
-    "@fontsource/italianno": "^5.0.20",
     "astro": "^5.4.2",
     "i18next": "^23.15.1",
     "sass": "^1.77.8",

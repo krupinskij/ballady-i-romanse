@@ -25,6 +25,11 @@ const headers = defineMiddleware(async (context, next) => {
 
   if (url.pathname.startsWith('/ballada/')) {
     headers.append('Cache-Control', 'max-age=36000, public');
+    headers.append('Vary', 'Accept-Language');
+  }
+
+  if (url.pathname.endsWith('.ttf')) {
+    headers.append('Cache-Control', 'max-age=36000, public');
   }
 
   if (url.pathname.includes('pages.dev/')) {
