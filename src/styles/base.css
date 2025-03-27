@@ -1,5 +1,29 @@
-@import '@fontsource/italianno';
-@import '@fontsource-variable/montserrat';
+/* @import '@fontsource/italianno'; */
+/* @import '@fontsource-variable/montserrat'; */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+
+@font-face {
+  font-family: 'Great Vibes';
+  src: url('/fonts/GreatVibes-Regular.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Regular.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* .great-vibes-regular {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+} */
 
 :root {
   --text-color-default: #000;
@@ -7,8 +31,8 @@
   --bg-color-default: #fff;
   --border-color-default: #808080;
 
-  --font-default: 'Montserrat Variable', sans-serif;
-  --font-cursive: 'Italianno', cursive;
+  --font-default: 'Montserrat', sans-serif;
+  --font-cursive: 'Great Vibes', cursive;
 
   --font-xs: 0.75rem/1rem var(--font-default);
   --font-sm: 0.875rem/1.25rem var(--font-default);
@@ -69,7 +93,7 @@ body {
 }
 
 .\@anno_text {
-  text-decoration: underline dashed;
+  text-decoration: underline dotted 1px;
 }
 
 .\@anno_ref {
