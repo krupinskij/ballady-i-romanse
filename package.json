@@ -12,7 +12,9 @@
     "astro": "astro",
     "db:gen": "bash ./scripts/db.gen.sh",
     "db:seed": "bash ./scripts/db.seed.sh",
-    "db:push": "bash ./scripts/db.push.sh",
+    "db:push:dev": "bash ./scripts/db.push.sh dev",
+    "db:push:preview": "bash ./scripts/db.push.sh preview",
+    "db:push:prod": "bash ./scripts/db.push.sh prod",
     "build": "bash ./scripts/build.sh",
     "serve": "wrangler pages dev"
   },
