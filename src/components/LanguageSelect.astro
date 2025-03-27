@@ -46,17 +46,19 @@ const currentLng = getSupportedLng(Astro.url);
 </style>
 
 <script>
-  const options = document.querySelectorAll<HTMLSpanElement>(
-    '[data-component="language-select"] [role="option"]'
-  );
+  document.addEventListener('astro:page-load', () => {
+    const options = document.querySelectorAll<HTMLSpanElement>(
+      '[data-component="language-select"] [role="option"]'
+    );
 
-  options.forEach((option) => {
-    option.addEventListener('click', () => {
-      const value = option.dataset.value;
-      window.location.href = window.location.href.replace(
-        /^(https:\/\/)(pl|ru)(.)/,
-        `$1${value}$3`
-      );
+    options.forEach((option) => {
+      option.addEventListener('click', () => {
+        const value = option.dataset.value;
+        window.location.href = window.location.href.replace(
+          /^(https:\/\/)(pl|ru)(.)/,
+          `$1${value}$3`
+        );
+      });
     });
   });
 </script>
