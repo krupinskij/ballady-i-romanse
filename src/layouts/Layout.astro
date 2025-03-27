@@ -4,6 +4,7 @@ import italiannoWoff2 from '@fontsource/italianno/files/italianno-latin-400-norm
 import montserratWoff2 from '@fontsource-variable/montserrat/files/montserrat-latin-wght-normal.woff2?url';
 import i18n from '@i18n';
 import LanguageSelect from '@components/LanguageSelect.astro';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
   title: string;
@@ -32,6 +33,8 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
 
     <title>{title}</title>
+
+    <ClientRouter />
   </head>
   <body>
     <header>

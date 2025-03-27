@@ -1,0 +1,85 @@
+id = "pierwiosnek"
+title = "Pierwiosnek"
+ordinal = 0
+link = "https://wolnelektury.pl/katalog/lektura/mickiewicz-ballady-i-romanse-pierwiosnek.html"
+
+[[notes]]
+body = "(Primula veris)"
+
+[[contents]]
+body = '''
+Z niebieskich najrańszą piosnek
+Ledwie zadzwonił skowronek,
+Najrańszy kwiatek pierwiosnek
+Błysnął ze złotych obsłonek.'''
+
+[[contents]]
+speaker = "Ja"
+body = '''
+Za wcześnie, kwiatku, za wcześnie,
+Jeszcze północ mrozem dmucha,
+Z gór białe nie zeszły {{1:pleśnie}},
+Dąbrowa jeszcze nie sucha.'''
+
+[[contents]]
+body = '''
+Przymruż złociste światełka,
+Ukryj się pod matki rąbek,
+Nim cię zgubi śronu ząbek
+Lub chłodnej rosy perełka.'''
+
+[[contents]]
+speaker = "Kwiatek"
+body = '''
+Dni nasze jak dni motylka,
+Życiem wschód, śmiercią południe;
+Lepsza w kwietniu jedna chwilka
+Niż w jesieni całe grudnie.'''
+
+[[contents]]
+body = '''
+Czy dla bogów szukasz datku,
+Czy dla druha lub kochanki,
+Upleć wianek z mego kwiatku,
+Wianek to będzie nad wianki.'''
+
+[[contents]]
+speaker = "Ja"
+body = '''
+W podlej trawce, w dzikim lasku
+Urosleś, o kwiatku luby!
+Mało wzrostu, mało blasku,
+Cóż ci daje tyle chluby?'''
+
+[[contents]]
+body = '''
+Ni to kolory jutrzenki,
+Ni zawoje tulipana,
+Ni lilijowe sukienki,
+Ni róży pierś malowana.'''
+
+[[contents]]
+body = '''
+Uplatam ciebie do wianka;
+Lecz skądże ufności tyle!
+Przyjaciele i kochanka
+Czy cię powitają mile?'''
+
+[[contents]]
+speaker = "Kwiatek"
+body = '''
+Powitają przyjaciele
+Mnie, wiosny młodej aniołka;
+Przyjaźń ma blasku niewiele
+I cień lubi jak me ziołka.'''
+
+[[contents]]
+body = '''
+Czym kochanki godzien rączek,
+Powiedz, niebieska Marylko!
+Za pierwszy młodości pączek
+Zyskam pierwszą… ach! łzę tylko.'''
+
+[[annotations]]
+body = "Chodzi o śnieg. Mickiewicz nieprzypadkowo nazywa śnieg pleśnią - czymś starym i zepsutym. Pierwiosnek zwiastuje nadejście wiosny po zimie, narodziny czegoś nowego i świeżego, tak jak Romantyzm, który przyjdzie po mrokach Oświecenia. [przypis własny]"
+id = 1

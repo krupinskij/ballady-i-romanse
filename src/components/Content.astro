@@ -4,13 +4,13 @@ import AnnotationMarker from './AnnotationMarker.astro';
 
 type Props = Content;
 
-const { character, text } = Astro.props;
+const { speaker, body } = Astro.props;
 ---
 
 <section>
-  {character && <h2>{character}:</h2>}
+  {speaker && <h2>{speaker}:</h2>}
 
-  <pre><AnnotationMarker text={text} /></pre>
+  <p><AnnotationMarker body={body} /></p>
 </section>
 
 <style>
@@ -22,7 +22,8 @@ const { character, text } = Astro.props;
     font: var(--font-md);
   }
 
-  pre {
+  p {
+    white-space: pre-line;
     font: var(--font-md);
     font-family: var(--font-default);
     text-wrap: wrap;
