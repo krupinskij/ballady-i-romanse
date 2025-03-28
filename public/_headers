@@ -1,0 +1,12 @@
+/*
+  Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; form-action 'self'
+  Referrer-Policy: no-referrer
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+
+/fonts/*
+  Cache-Control: max-age=36000, public
+
+/images/*
+  Cache-Control: max-age=36000, public
