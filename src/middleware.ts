@@ -2,8 +2,6 @@ import { defineMiddleware, sequence } from 'astro/middleware';
 
 import i18next, { getSupportedLng, type SupportedLng } from './i18n';
 
-const ASSETS_EXTENSIONS = ['woff2', 'webp', 'svg', 'ico'];
-
 const headers = defineMiddleware(async (context, next) => {
   const url = new URL(context.url);
 
@@ -18,7 +16,7 @@ const headers = defineMiddleware(async (context, next) => {
   headers.append('Referrer-Policy', 'no-referrer');
   headers.append('X-Frame-Options', 'DENY');
   headers.append('X-Content-Type-Options', 'nosniff');
-  headers.append('Strict-Transport-Security', 'max-age=60; includeSubDomains; preload');
+  headers.append('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload');
 
   // /api/*
   if (url.pathname.startsWith('/api/')) {
@@ -27,10 +25,6 @@ const headers = defineMiddleware(async (context, next) => {
 
   if (url.pathname === '/' || url.pathname.startsWith('/ballada/')) {
     headers.append('Cache-Control', 'max-age=600, public');
-  }
-
-  if (ASSETS_EXTENSIONS.some((ext) => url.pathname.endsWith(ext))) {
-    headers.append('Cache-Control', 'max-age=36000, public');
   }
 
   if (url.pathname.includes('pages.dev/')) {
