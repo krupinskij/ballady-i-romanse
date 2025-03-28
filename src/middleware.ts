@@ -2,6 +2,8 @@ import { defineMiddleware, sequence } from 'astro/middleware';
 
 import i18next, { getSupportedLng, type SupportedLng } from './i18n';
 
+const ASSETS_EXTENSIONS = ['woff2', 'webp'];
+
 const headers = defineMiddleware(async (context, next) => {
   const url = new URL(context.url);
 
@@ -24,11 +26,10 @@ const headers = defineMiddleware(async (context, next) => {
   }
 
   if (url.pathname.startsWith('/ballada/')) {
-    headers.append('Cache-Control', 'max-age=36000, public');
-    headers.append('Vary', 'Accept-Language');
+    headers.append('Cache-Control', 'max-age=600, public');
   }
 
-  if (url.pathname.endsWith('.ttf')) {
+  if (ASSETS_EXTENSIONS.some((ext) => url.pathname.endsWith(ext))) {
     headers.append('Cache-Control', 'max-age=36000, public');
   }
 

@@ -21,10 +21,10 @@ const ballads = z.array(ListSchema).parse(await response.json());
 <Layout title={`${i18n.t('title')} | ${i18n.t('author')}`}>
   <Fragment slot="header">
     <div class="header">
-      <Image src={topImage} alt="" role="presentation" class="image image-top" />
-      <Image src={bottomImage} alt="" role="presentation" class="image image-bottom" />
-      <Image src={leftImage} alt="" role="presentation" class="image image-left" />
-      <Image src={rightImage} alt="" role="presentation" class="image image-right" />
+      <img src="/images/top.webp" alt="" role="presentation" class="image image-top" />
+      <img src="/images/bottom.webp" alt="" role="presentation" class="image image-bottom" />
+      <img src="/images/left.webp" alt="" role="presentation" class="image image-left" />
+      <img src="/images/right.webp" alt="" role="presentation" class="image image-right" />
       <h1>{i18n.t('title')}</h1>
       <h2>{i18n.t('author')}</h2>
     </div>
