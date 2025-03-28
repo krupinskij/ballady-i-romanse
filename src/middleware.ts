@@ -2,7 +2,7 @@ import { defineMiddleware, sequence } from 'astro/middleware';
 
 import i18next, { getSupportedLng, type SupportedLng } from './i18n';
 
-const ASSETS_EXTENSIONS = ['woff2', 'webp'];
+const ASSETS_EXTENSIONS = ['woff2', 'webp', 'svg', 'ico'];
 
 const headers = defineMiddleware(async (context, next) => {
   const url = new URL(context.url);
@@ -25,7 +25,7 @@ const headers = defineMiddleware(async (context, next) => {
     return Response.json({ headers }, { status: 403 });
   }
 
-  if (url.pathname.startsWith('/ballada/')) {
+  if (url.pathname === '/' || url.pathname.startsWith('/ballada/')) {
     headers.append('Cache-Control', 'max-age=600, public');
   }
 
