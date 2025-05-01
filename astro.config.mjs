@@ -23,4 +23,7 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
+  security: {
+    checkOrigin: false,
+  },
 });
