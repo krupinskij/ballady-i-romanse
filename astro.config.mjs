@@ -11,6 +11,11 @@ export default defineConfig({
     },
     imageService: 'passthrough',
   }),
+  env: {
+    schema: {
+      AUTH_PASS: envField.string({ context: 'server', access: 'secret' }),
+    },
+  },
   i18n: {
     defaultLocale: 'pl',
     locales: ['pl', 'ru'],
