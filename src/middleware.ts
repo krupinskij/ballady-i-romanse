@@ -96,4 +96,4 @@ const mobile = defineMiddleware(async (context, next) => {
   return next();
 });
 
-export const onRequest = sequence(headers, locals, mobile);
+export const onRequest = sequence(headers, locals, auth, mobile);
