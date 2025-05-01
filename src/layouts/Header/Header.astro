@@ -1,0 +1,44 @@
+---
+
+---
+
+<header>
+  <a id="title" href="/">Ballady i Romanse</a>
+  <a id="skip" href="#main">Pomiń nawigację</a>
+</header>
+
+<style lang="scss">
+  header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: var(--header-height);
+    width: 100%;
+    background-color: var(--color-bg-primary);
+    box-shadow: 0px 4px 4px var(--color-shadow);
+    font: var(--font-xl);
+    font-family: var(--font-cursive);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: var(--spacing-4);
+    text-wrap: nowrap;
+    z-index: 1;
+  }
+
+  #title {
+    padding-top: var(--spacing-2);
+  }
+
+  #skip {
+    font: var(--font-md);
+    font-family: var(--font-default);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100px);
+  }
+
+  #skip:focus {
+    transform: translateY(0);
+  }
+</style>

@@ -10,11 +10,14 @@ const { body } = Astro.props;
 
 <span><AnnotationMarker body={body} /></span>
 
-<style>
+<style lang="scss">
   span {
     display: block;
     text-align: center;
 
     font: var(--font-xs);
+    &:last-of-type {
+      margin-bottom: var(--spacing-3);
+    }
   }
 </style>
