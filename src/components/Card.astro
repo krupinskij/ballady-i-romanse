@@ -7,9 +7,10 @@ interface Props {
 }
 
 const { title, href } = Astro.props;
+const device = Astro.locals.DEVICE;
 ---
 
-<a href={href}>
+<a href={href} data-device={device}>
   <div><AnnotationMarker body={title} noAnchor /></div>
 </a>
 
@@ -17,7 +18,7 @@ const { title, href } = Astro.props;
   a {
     border: 3px double var(--color-border);
     background-color: var(--color-bg-primary);
-    width: 256px;
+    width: 160px;
     aspect-ratio: 2/1;
 
     display: flex;
@@ -32,5 +33,9 @@ const { title, href } = Astro.props;
       font: var(--font-lg);
       text-align: center;
     }
+  }
+
+  a[data-device='desktop'] {
+    width: 256px;
   }
 </style>

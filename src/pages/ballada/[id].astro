@@ -11,6 +11,8 @@ import AnnotationNote from '@components/AnnotationNote.astro';
 import i18next from 'i18next';
 import i18n from '@i18n';
 
+const device = Astro.locals.DEVICE;
+
 const response = await GET(Astro);
 if (response.status >= 300 && response.status <= 400) {
   return Astro.redirect(response.headers.get('Location', response.status));
@@ -21,7 +23,7 @@ const { title, link, prevBallad, nextBallad, notes, mottos, contents, annotation
 ---
 
 <Layout title={`${formatText(title, (_, __, title) => title)} | ${i18next.t('title')}`}>
-  <header>
+  <header data-device={device}>
     <h1><AnnotationMarker body={title} /></h1>
   </header>
   {notes && notes.map(({ body }) => <Note body={body} />)}
@@ -42,28 +44,34 @@ const { title, link, prevBallad, nextBallad, notes, mottos, contents, annotation
   }
 
   {
-    prevBallad && (
+    device === 'desktop' && prevBallad && (
       <a class="link" href={`/ballada/${prevBallad.id}`} data-order="prev">
         ⬅ {formatText(prevBallad.title, (_, __, title) => title)}
       </a>
     )
   }
   {
-    nextBallad && (
+    device === 'desktop' && nextBallad && (
       <a class="link" href={`/ballada/${nextBallad.id}`} data-order="next">
         {formatText(nextBallad.title, (_, __, title) => title)} ➡
       </a>
     )
   }
   <Fragment slot="footer">
-    <div class="footer">
-      {i18n.t('footer', { ns: 'ballad' })}
-      <a target="_blank" href={link}>{link}</a>
-    </div>
+    {i18n.t('footer', { ns: 'ballad' })}{' '}
+    <a class="source" target="_blank" href={link}>{link}</a>
   </Fragment>
 </Layout>
 
 <style lang="scss">
+  header {
+    padding-top: var(--spacing-4);
+  }
+
+  header[data-device='desktop'] {
+    padding-top: 0;
+  }
+
   h1 {
     font: var(--font-xxxl);
     font-family: var(--font-cursive);
@@ -99,14 +107,8 @@ const { title, link, prevBallad, nextBallad, notes, mottos, contents, annotation
     }
   }
 
-  .footer {
-    text-align: center;
-    font: var(--font-xs);
-    padding: 20px 120px;
-
-    a {
-      text-decoration: underline;
-      text-wrap: wrap;
-    }
+  a.source {
+    text-decoration: underline;
+    text-wrap: wrap;
   }
 </style>

@@ -57,4 +57,15 @@ const locals = defineMiddleware((context, next) => {
   return next();
 });
 
-export const onRequest = sequence(headers, locals);
+const mobile = defineMiddleware(async (context, next) => {
+  const headers = context.request.headers;
+  const userAgent = headers.get('User-Agent');
+
+  const isMobile = true; // userAgent?.includes('mobi') || userAgent?.includes('Mobi') || false;
+
+  context.locals.DEVICE = isMobile ? 'mobile' : 'desktop';
+
+  return next();
+});
+
+export const onRequest = sequence(headers, locals, mobile);

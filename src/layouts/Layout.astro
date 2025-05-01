@@ -11,10 +11,11 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const device = Astro.locals.DEVICE;
 ---
 
 <!doctype html>
-<html lang={i18n.language}>
+<html lang={i18n.language} data-device={device}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={`${i18n.t('title')} - ${i18n.t('author')}`} />
@@ -29,7 +30,7 @@ const { title } = Astro.props;
   </head>
   <body>
     <Header />
-    <main>
+    <main data-device={device}>
       <slot />
     </main>
     <footer>
@@ -43,13 +44,29 @@ const { title } = Astro.props;
   body {
     --header-height: 60px;
     --content-width: 80ch;
+
     overflow-x: hidden;
   }
 
   main {
+    --main-padding: var(--spacing-2);
+
     margin-top: var(--header-height);
-    padding: var(--spacing-6);
+    padding: 0 var(--main-padding);
     position: relative;
     z-index: 0;
+  }
+
+  main[data-device='desktop'] {
+    --main-padding: var(--spacing-6);
+
+    padding: var(--main-padding);
+  }
+
+  footer {
+    margin-top: var(--spacing-4);
+    text-align: center;
+    font: var(--font-xs);
+    padding: var(--spacing-4);
   }
 </style>

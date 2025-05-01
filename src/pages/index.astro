@@ -7,20 +7,26 @@ import i18n from '@i18n';
 import { z } from 'astro/zod';
 import { ListSchema } from '@model';
 
+const device = Astro.locals.DEVICE;
+
 const response = await GET(Astro);
 const ballads = z.array(ListSchema).parse(await response.json());
 ---
 
 <Layout title={`${i18n.t('title')} | ${i18n.t('author')}`}>
-  <header>
-    <img src="/images/top.webp" alt="" role="presentation" data-position="top" />
-    <img src="/images/bottom.webp" alt="" role="presentation" data-position="bottom" />
-    <img src="/images/left.webp" alt="" role="presentation" data-position="left" />
-    <img src="/images/right.webp" alt="" role="presentation" data-position="right" />
-    <h1 data-author={i18n.t('author')}>{i18n.t('title')}</h1>
-  </header>
+  {
+    device === 'desktop' && (
+      <header>
+        <img src="/images/top.webp" alt="" role="presentation" data-position="top" />
+        <img src="/images/bottom.webp" alt="" role="presentation" data-position="bottom" />
+        <img src="/images/left.webp" alt="" role="presentation" data-position="left" />
+        <img src="/images/right.webp" alt="" role="presentation" data-position="right" />
+        <h1 data-author={i18n.t('author')}>{i18n.t('title')}</h1>
+      </header>
+    )
+  }
   <article>
-    <ul>
+    <ul data-device={device}>
       {
         ballads.map((ballad) => (
           <li>
@@ -31,9 +37,7 @@ const ballads = z.array(ListSchema).parse(await response.json());
     </ul>
   </article>
   <Fragment slot="footer">
-    <div class="footer">
-      {i18n.t('footer', { ns: 'home' })}
-    </div>
+    {i18n.t('footer', { ns: 'home' })}
   </Fragment>
 </Layout>
 
@@ -109,19 +113,19 @@ const ballads = z.array(ListSchema).parse(await response.json());
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: var(--spacing-6);
+    gap: var(--spacing-2);
     max-width: max(1400px, 100dvw);
-    margin-inline: -30px;
-    padding: var(--spacing-6);
+    margin-inline: calc(-1 * var(--main-padding));
+    padding: var(--spacing-4);
     background-color: var(--color-bg-secondary);
+    box-shadow: inset 0px -4px 4px var(--color-shadow);
+  }
+
+  ul[data-device='desktop'] {
+    gap: var(--spacing-6);
+    padding: var(--spacing-6);
     box-shadow:
       inset 0px 4px 4px var(--color-shadow),
       inset 0px -4px 4px var(--color-shadow);
-  }
-
-  .footer {
-    text-align: center;
-    font: var(--font-xs);
-    padding: 20px 120px;
   }
 </style>

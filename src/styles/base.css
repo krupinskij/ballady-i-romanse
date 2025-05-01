@@ -19,9 +19,6 @@
 }
 
 :root {
-  --color-primary: #fffbbb;
-  --color-secondary: #ffffff;
-
   --color-icon: #888;
   --color-bg-primary: #fff;
   --color-bg-secondary: #f8f8f8;
@@ -35,16 +32,13 @@
   --font-default: 'Montserrat', sans-serif;
   --font-cursive: 'Great Vibes', cursive;
 
-  --font-normal: normal;
-  --font-bold: bold;
-
   --font-xs: 0.7rem/1rem var(--font-default);
   --font-sm: 0.8rem/1rem var(--font-default);
   --font-md: 1rem/1.25rem var(--font-default);
-  --font-lg: 1.5rem/1.75rem var(--font-default);
+  --font-lg: 1rem/1.25rem var(--font-default);
   --font-xl: 2rem/2.5rem var(--font-default);
   --font-xxl: 2.5rem/3.25rem var(--font-default);
-  --font-xxxl: 6rem/8rem var(--font-default);
+  --font-xxxl: 3rem/4rem var(--font-default);
 
   --spacing-1: 4px;
   --spacing-2: 8px;
@@ -53,6 +47,11 @@
   --spacing-5: 20px;
   --spacing-6: 24px;
   --spacing-8: 32px;
+}
+
+[data-device='desktop']:root {
+  --font-lg: 1.5rem/1.75rem var(--font-default);
+  --font-xxxl: 6rem/8rem var(--font-default);
 }
 
 html {
