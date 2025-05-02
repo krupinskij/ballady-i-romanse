@@ -1,5 +1,5 @@
 ---
-import { formatText } from '@utils';
+import { escapeText, formatText } from '@utils';
 
 type Props = {
   body: string;
@@ -8,8 +8,9 @@ type Props = {
 
 const { body, noAnchor } = Astro.props;
 
+const escapedText = escapeText(body);
 const formattedText = formatText(
-  body,
+  escapedText,
   (_, key, text) =>
     `<span id="cite_ref-${key}" class="${noAnchor ? '' : '@anno_text'}">${text}${
       noAnchor ? '' : `<a class="@anno_ref" href="#cite_note-${key}"></a>`
