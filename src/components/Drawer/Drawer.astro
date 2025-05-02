@@ -1,0 +1,29 @@
+---
+type Props = {
+  id: string;
+};
+
+const { id } = Astro.props;
+---
+
+<aside id={id} data-state="closed">
+  <slot />
+</aside>
+
+<style>
+  aside {
+    position: fixed;
+    inset: var(--header-height) -100% 0 auto;
+    width: 100dvw;
+    padding: var(--spacing-6) var(--spacing-4);
+    transition: right 0.7s;
+    background-color: var(--color-bg-primary);
+    z-index: 1;
+    overflow-y: auto;
+  }
+
+  aside[data-state='opened'] {
+    z-index: 2;
+    right: 0;
+  }
+</style>

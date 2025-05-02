@@ -4,13 +4,14 @@ import AnnotationMarker from './AnnotationMarker.astro';
 interface Props {
   title: string;
   href: string;
+  compact?: boolean;
 }
 
-const { title, href } = Astro.props;
+const { title, href, compact } = Astro.props;
 const device = Astro.locals.DEVICE;
 ---
 
-<a href={href} data-device={device}>
+<a class:list={[{ compact }]} href={href} data-device={device}>
   <div><AnnotationMarker body={title} noAnchor /></div>
 </a>
 
@@ -33,6 +34,11 @@ const device = Astro.locals.DEVICE;
       font: var(--font-lg);
       text-align: center;
     }
+  }
+
+  a.compact {
+    aspect-ratio: auto;
+    padding: var(--spacing-3) var(--spacing-2);
   }
 
   a[data-device='desktop'] {

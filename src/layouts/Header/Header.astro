@@ -1,10 +1,43 @@
 ---
+import hamburgerSVG from '/icons/hamburger.svg?raw';
+import settingsSVG from '/icons/settings.svg?raw';
 
+const device = Astro.locals.DEVICE;
 ---
 
-<header>
+<header data-device={device}>
   <a id="title" href="/">Ballady i Romanse</a>
-  <a id="skip" href="#main">Pomiń nawigację</a>
+  {
+    device === 'desktop' && (
+      <a id="skip" href="#main">
+        Pomiń nawigację
+      </a>
+    )
+  }
+  {
+    device === 'mobile' && (
+      <div class="controls">
+        <button
+          id="settings-toggle"
+          class="toggle"
+          aria-controls="navigation"
+          aria-expanded="false"
+        >
+          <span class="visually-hidden">Settings</span>
+          <Fragment set:html={settingsSVG} />
+        </button>
+        <button
+          id="navigation-toggle"
+          class="toggle"
+          aria-controls="settings"
+          aria-expanded="false"
+        >
+          <span class="visually-hidden">Navigation</span>
+          <Fragment set:html={hamburgerSVG} />
+        </button>
+      </div>
+    )
+  }
 </header>
 
 <style lang="scss">
@@ -19,10 +52,14 @@
     font-family: var(--font-cursive);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding-inline: var(--spacing-4);
     text-wrap: nowrap;
-    z-index: 1;
+    z-index: 3;
+  }
+
+  header[data-device='desktop'] {
+    justify-content: center;
   }
 
   #title {
@@ -41,4 +78,57 @@
   #skip:focus {
     transform: translateY(0);
   }
+
+  .controls {
+    display: flex;
+    gap: var(--spacing-1);
+  }
+
+  .toggle {
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    padding: var(--spacing-1);
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--spacing-1);
+    cursor: pointer;
+  }
 </style>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const navigationToggle = document.getElementById('navigation-toggle');
+    const navigationDrawer = document.getElementById('navigation-drawer');
+
+    const settingsToggle = document.getElementById('settings-toggle');
+    const settingsDrawer = document.getElementById('settings-drawer');
+
+    if (!navigationToggle || !navigationDrawer || !settingsToggle || !settingsDrawer) return;
+
+    const controlsMap = new WeakMap<HTMLElement, HTMLElement>();
+    controlsMap.set(navigationToggle, navigationDrawer);
+    controlsMap.set(settingsToggle, settingsDrawer);
+
+    const drawers = [navigationDrawer, settingsDrawer];
+
+    const handleClick = (event: MouseEvent) => {
+      const toggle = event.currentTarget as HTMLElement;
+      const drawer = controlsMap.get(toggle);
+
+      if (!toggle || !drawer) return;
+
+      const state = drawer.dataset.state;
+
+      if (state === 'opened') {
+        drawer.dataset.state = 'closed';
+      } else {
+        drawers.forEach((drawer) => (drawer.dataset.state = 'closed'));
+        drawer.dataset.state = 'opened';
+      }
+    };
+
+    navigationToggle.addEventListener('click', handleClick);
+    settingsToggle.addEventListener('click', handleClick);
+  });
+</script>

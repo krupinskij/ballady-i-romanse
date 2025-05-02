@@ -5,6 +5,7 @@ import i18n from '@i18n';
 import LanguageSelect from '@components/LanguageSelect.astro';
 import { ClientRouter } from 'astro:transitions';
 import Header from './Header';
+import { NavigationDrawer, SettingsDrawer } from '@components/Drawer';
 
 interface Props {
   title: string;
@@ -30,12 +31,14 @@ const device = Astro.locals.DEVICE;
   </head>
   <body>
     <Header />
+    <SettingsDrawer />
+    <NavigationDrawer />
     <main data-device={device}>
       <slot />
     </main>
     <footer>
       <slot name="footer" />
-      <LanguageSelect />
+      {device === 'desktop' && <LanguageSelect />}
     </footer>
   </body>
 </html>

@@ -1,0 +1,33 @@
+---
+import { GET } from 'src/pages/api/ballads/list.json';
+import Drawer from './Drawer.astro';
+import { z } from 'astro/zod';
+import { ListSchema } from '@model';
+import Card from '@components/Card.astro';
+
+const response = await GET(Astro);
+const ballads = z.array(ListSchema).parse(await response.json());
+---
+
+<Drawer id="navigation-drawer">
+  <section>
+    <ul>
+      {
+        ballads.map((ballad) => (
+          <li>
+            <Card title={ballad.title} href={`/ballada/${ballad.id}`} compact />
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Drawer>
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-2);
+  }
+</style>
