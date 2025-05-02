@@ -4,9 +4,10 @@ type Props = {
 };
 
 const { id } = Astro.props;
+const device = Astro.locals.DEVICE;
 ---
 
-<aside id={id} data-state="closed">
+<aside id={id} data-state="closed" data-device={device}>
   <slot />
 </aside>
 
@@ -20,6 +21,11 @@ const { id } = Astro.props;
     background-color: var(--color-bg-primary);
     z-index: 1;
     overflow-y: auto;
+    box-shadow: -2px 0 2px var(--color-shadow);
+  }
+
+  aside[data-device='desktop'] {
+    width: 420px;
   }
 
   aside[data-state='opened'] {

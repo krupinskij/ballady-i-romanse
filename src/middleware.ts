@@ -11,10 +11,6 @@ const headers = defineMiddleware(async (context, next) => {
   const headers = response.headers;
 
   // /*
-  headers.append(
-    'Content-Security-Policy',
-    `default-src 'self'; style-src 'unsafe-inline'  ${url.origin}; script-src 'unsafe-inline' ${url.origin}; frame-ancestors 'none'; form-action 'self'`
-  );
   headers.append('Referrer-Policy', 'no-referrer');
   headers.append('X-Frame-Options', 'DENY');
   headers.append('X-Content-Type-Options', 'nosniff');
