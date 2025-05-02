@@ -2,12 +2,17 @@
 import LanguageSelect from '@components/LanguageSelect.astro';
 import Drawer from './Drawer.astro';
 import i18n from '@i18n';
+import FontSizeSelect from '@components/FontSizeSelect.astro';
 ---
 
 <Drawer id="settings-drawer">
   <section>
     <div class="title">{i18n.t('settings.selectLanguage', { ns: 'drawer' })}</div>
     <LanguageSelect />
+  </section>
+  <section>
+    <div class="title">{i18n.t('settings.selectFontSize', { ns: 'drawer' })}</div>
+    <FontSizeSelect />
   </section>
 </Drawer>
 
@@ -17,6 +22,7 @@ import i18n from '@i18n';
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-2);
+    margin-bottom: var(--spacing-6);
   }
 
   .title {

@@ -47,6 +47,7 @@ i18next.init({
         settings: {
           label: 'Ustawienia',
           selectLanguage: 'Wybierz wersję językową',
+          selectFontSize: 'Wybierz rozmiar czcionki',
         },
       },
     },
@@ -74,7 +75,8 @@ i18next.init({
         },
         settings: {
           label: 'Настройки',
-          selectLanguage: 'Выберите языковую версию.',
+          selectLanguage: 'Выберите языковую версию',
+          selectFontSize: 'Выберите размер шрифта',
         },
       },
     },
