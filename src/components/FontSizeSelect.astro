@@ -1,0 +1,63 @@
+---
+import i18n from '@i18n';
+import fontSVG from '/icons/font.svg?raw';
+import { fonts } from 'src/font';
+---
+
+<div id="font-btns">
+  {
+    Object.keys(fonts).map((type) => (
+      <button id={`font-${type}-btn`} class="btn" class:list={[type]} data-type={type}>
+        <span class="visually-hidden">{i18n.t(`settings.${type}`)}</span>
+        <Fragment set:html={fontSVG} />
+      </button>
+    ))
+  }
+</div>
+
+<style lang="scss">
+  div {
+    width: max-content;
+    display: flex;
+    gap: var(--spacing-2);
+  }
+
+  .btn {
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    padding: var(--spacing-1);
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--spacing-1);
+    cursor: pointer;
+
+    &.small {
+      padding: var(--spacing-2);
+    }
+    &.medium {
+      padding: var(--spacing-1);
+    }
+    &.big {
+      padding: 0;
+    }
+  }
+</style>
+
+<script>
+  import { getFontSize } from 'src/font';
+  import cookies from 'js-cookie';
+
+  const html = document.documentElement;
+  document.addEventListener('astro:page-load', () => {
+    const btns = document.querySelectorAll<HTMLButtonElement>('#font-btns .btn');
+
+    btns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const font = btn.dataset.type || 'medium';
+        html.style.setProperty('--fontSize', getFontSize(font));
+        cookies.set('font-size', font, { path: '/' });
+      });
+    });
+  });
+</script>

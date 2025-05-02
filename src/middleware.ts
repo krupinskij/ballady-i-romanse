@@ -27,6 +27,7 @@ const headers = defineMiddleware(async (context, next) => {
 
   if (url.pathname === '/' || url.pathname.startsWith('/ballada/')) {
     headers.append('Cache-Control', 'max-age=600, public');
+    headers.append('Vary', 'Cookie');
   }
 
   if (url.pathname.includes('pages.dev/')) {

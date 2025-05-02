@@ -24,6 +24,7 @@
     "astro": "^5.4.2",
     "bcrypt-ts": "^7.0.0",
     "i18next": "^23.15.1",
+    "js-cookie": "^3.0.5",
     "sass": "^1.77.8",
     "toml": "^3.0.0",
     "typescript": "^5.6.2"
@@ -32,6 +33,7 @@
     "@cloudflare/workers-types": "^4.20240815.0",
     "@iarna/toml": "^2.2.5",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/js-cookie": "^3.0.6",
     "husky": "^9.1.4",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",

@@ -6,6 +6,8 @@ import LanguageSelect from '@components/LanguageSelect.astro';
 import { ClientRouter } from 'astro:transitions';
 import Header from './Header';
 import { NavigationDrawer, SettingsDrawer } from '@components/Drawer';
+import FontSizeSelect from '@components/FontSizeSelect.astro';
+import { getFontSize } from 'src/font';
 
 interface Props {
   title: string;
@@ -13,6 +15,8 @@ interface Props {
 
 const { title } = Astro.props;
 const device = Astro.locals.DEVICE;
+
+const fontSize = getFontSize(Astro.cookies.get('font-size')?.value);
 ---
 
 <!doctype html>
@@ -38,12 +42,23 @@ const device = Astro.locals.DEVICE;
     </main>
     <footer>
       <slot name="footer" />
-      {device === 'desktop' && <LanguageSelect />}
+      {
+        device === 'desktop' && (
+          <div>
+            <FontSizeSelect />
+            <LanguageSelect />
+          </div>
+        )
+      }
     </footer>
   </body>
 </html>
 
-<style>
+<style define:vars={{ fontSize }}>
+  :root {
+    font-size: var(--fontSize);
+  }
+
   body {
     --header-height: 60px;
     --content-width: 80ch;
