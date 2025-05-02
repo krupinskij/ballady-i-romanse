@@ -1,4 +1,6 @@
 import { defineMiddleware, sequence } from 'astro/middleware';
+import { getSecret } from 'astro:env/server';
+import { compare } from 'bcrypt-ts';
 
 import i18next, { getSupportedLng, type SupportedLng } from './i18n';
 
@@ -57,4 +59,41 @@ const locals = defineMiddleware((context, next) => {
   return next();
 });
 
-export const onRequest = sequence(headers, locals);
+const auth = defineMiddleware(async (context, next) => {
+  const isPagesDev = context.url.hostname.includes('.pages.dev');
+  const isAuth = context.url.pathname.startsWith('/auth');
+
+  if (!isPagesDev) {
+    if (isAuth) {
+      return context.redirect('/');
+    }
+
+    return next();
+  }
+
+  const token = context.cookies.get('access-token');
+  const isMatch = !!token && (await compare(getSecret('AUTH_PASS')!, token.value));
+
+  if (isAuth && isMatch) {
+    return context.redirect('/');
+  }
+
+  if (!isAuth && !isMatch) {
+    return context.redirect('/auth');
+  }
+
+  return next();
+});
+
+const mobile = defineMiddleware(async (context, next) => {
+  const headers = context.request.headers;
+  const userAgent = headers.get('User-Agent');
+
+  const isMobile = userAgent?.includes('mobi') || userAgent?.includes('Mobi') || false;
+
+  context.locals.DEVICE = isMobile ? 'mobile' : 'desktop';
+
+  return next();
+});
+
+export const onRequest = sequence(headers, locals, auth, mobile);

@@ -1,5 +1,5 @@
 import cloudflare from '@astrojs/cloudflare';
-import { defineConfig } from 'astro/config';
+import { defineConfig, envField } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,11 +11,19 @@ export default defineConfig({
     },
     imageService: 'passthrough',
   }),
+  env: {
+    schema: {
+      AUTH_PASS: envField.string({ context: 'server', access: 'secret' }),
+    },
+  },
   i18n: {
     defaultLocale: 'pl',
     locales: ['pl', 'ru'],
     routing: {
       prefixDefaultLocale: false,
     },
+  },
+  security: {
+    checkOrigin: false,
   },
 });

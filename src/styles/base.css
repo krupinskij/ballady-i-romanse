@@ -19,32 +19,39 @@
 }
 
 :root {
-  --text-color-default: #000;
-  --text-color-link: #0000ee;
-  --bg-color-default: #fff;
-  --border-color-default: #808080;
+  --color-icon: #888;
+  --color-bg-primary: #fff;
+  --color-bg-secondary: #f8f8f8;
+  --color-border: #888;
+  --color-shadow: #ddd;
+
+  --color-text-default: #000000;
+  --color-text-secondary: #333;
+  --color-text-link: #0000ee;
 
   --font-default: 'Montserrat', sans-serif;
   --font-cursive: 'Great Vibes', cursive;
 
-  --font-xs: 0.75rem/1rem var(--font-default);
-  --font-sm: 0.875rem/1.25rem var(--font-default);
-  --font-md: 1rem/1.5rem var(--font-default);
-  --font-lg: clamp(0.85rem, 3vw, 1.5rem) / 1 var(--font-default);
-  --font-xl: clamp(1.25rem, 5vw, 2.25rem) / 1 var(--font-default);
-  --font-xxl: clamp(3rem, 10vw, 6rem) / 1 var(--font-default);
+  --font-xs: 0.7rem/1rem var(--font-default);
+  --font-sm: 0.8rem/1rem var(--font-default);
+  --font-md: 1rem/1.25rem var(--font-default);
+  --font-lg: 1rem/1.25rem var(--font-default);
+  --font-xl: 2rem/2.5rem var(--font-default);
+  --font-xxl: 2.5rem/3.25rem var(--font-default);
+  --font-xxxl: 3rem/4rem var(--font-default);
+
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-div,
-p,
-a {
-  font-family: var(--font-default);
+[data-device='desktop']:root {
+  --font-lg: 1.5rem/1.75rem var(--font-default);
+  --font-xxxl: 6rem/8rem var(--font-default);
 }
 
 html {
@@ -54,7 +61,6 @@ html {
 
 body {
   margin: 0;
-  padding-top: 48px;
   position: relative;
 }
 
@@ -67,7 +73,7 @@ ol {
 
 a {
   text-decoration: none;
-  color: var(--text-color-default);
+  color: var(--color-text-default);
 }
 
 h1,
@@ -90,7 +96,7 @@ body {
 }
 
 .\@anno_ref {
-  color: var(--text-color-link);
+  color: var(--color-text-link);
   vertical-align: super;
   font: var(--font-xs);
   user-select: none;
@@ -101,11 +107,21 @@ body {
 }
 
 .\@anno_note {
-  color: var(--text-color-link);
+  color: var(--color-text-link);
   user-select: none;
 }
 .\@anno_note::before {
   counter-increment: annotationNote;
   content: counter(annotationNote);
   text-decoration: underline;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }

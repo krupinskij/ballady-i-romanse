@@ -11,6 +11,8 @@ import AnnotationNote from '@components/AnnotationNote.astro';
 import i18next from 'i18next';
 import i18n from '@i18n';
 
+const device = Astro.locals.DEVICE;
+
 const response = await GET(Astro);
 if (response.status >= 300 && response.status <= 400) {
   return Astro.redirect(response.headers.get('Location', response.status));
@@ -21,105 +23,59 @@ const { title, link, prevBallad, nextBallad, notes, mottos, contents, annotation
 ---
 
 <Layout title={`${formatText(title, (_, __, title) => title)} | ${i18next.t('title')}`}>
-  <Fragment slot="header">
-    <nav>
-      <span>
-        {
-          prevBallad && (
-            <a href={`/ballada/${prevBallad.id}`} style={{ textAlign: 'left' }}>
-              ⬅<span> {formatText(prevBallad.title, (_, __, title) => title)}</span>
-            </a>
-          )
-        }
-      </span>
-      <a href="/" style={{ textAlign: 'center' }}>⌂ <span>{i18n.t('homepage')}</span></a>
-      <span>
-        {
-          nextBallad && (
-            <a href={`/ballada/${nextBallad.id}`} style={{ textAlign: 'right' }}>
-              <span>{formatText(nextBallad.title, (_, __, title) => title)} </span>➡
-            </a>
-          )
-        }
-      </span>
-    </nav>
+  <header data-device={device}>
     <h1><AnnotationMarker body={title} /></h1>
-    {notes && notes.map(({ body }) => <Note body={body} />)}
-  </Fragment>
-  <main>
-    <article>
-      {mottos.map((motto) => <Motto {...motto} />)}
-      {contents.map((content) => <Content {...content} />)}
-    </article>
-    {
-      annotations.length > 0 && (
-        <article>
-          <section class="annotations">
-            {annotations.map((annotation) => (
-              <AnnotationNote {...annotation}>{annotation.body}</AnnotationNote>
-            ))}
-          </section>
-        </article>
-      )
-    }
-  </main>
+  </header>
+  {notes && notes.map(({ body }) => <Note body={body} />)}
+  <article>
+    {mottos.map((motto) => <Motto {...motto} />)}
+    {contents.map((content) => <Content {...content} />)}
+  </article>
+  {
+    annotations.length > 0 && (
+      <article>
+        <section class="annotations">
+          {annotations.map((annotation) => (
+            <AnnotationNote {...annotation}>{annotation.body}</AnnotationNote>
+          ))}
+        </section>
+      </article>
+    )
+  }
+
+  {
+    device === 'desktop' && prevBallad && (
+      <a class="link" href={`/ballada/${prevBallad.id}`} data-order="prev">
+        ⬅ {formatText(prevBallad.title, (_, __, title) => title)}
+      </a>
+    )
+  }
+  {
+    device === 'desktop' && nextBallad && (
+      <a class="link" href={`/ballada/${nextBallad.id}`} data-order="next">
+        {formatText(nextBallad.title, (_, __, title) => title)} ➡
+      </a>
+    )
+  }
   <Fragment slot="footer">
-    <div class="footer">
-      {i18n.t('footer', { ns: 'ballad' })}
-      <a target="_blank" href={link}>{link}</a>
-    </div>
+    {i18n.t('footer', { ns: 'ballad' })}{' '}
+    <a class="source" target="_blank" href={link}>{link}</a>
   </Fragment>
 </Layout>
 
 <style lang="scss">
-  main {
-    margin-bottom: 48px;
-    overflow: hidden;
+  header {
+    padding-top: var(--spacing-4);
   }
 
-  header {
-    margin-bottom: 32px;
+  header[data-device='desktop'] {
+    padding-top: 0;
   }
 
   h1 {
-    font: var(--font-xxl);
+    font: var(--font-xxxl);
     font-family: var(--font-cursive);
     text-align: center;
-    margin-top: 14px;
-  }
-
-  h2 {
-    font-weight: 500;
-  }
-
-  nav {
-    position: fixed;
-    inset: 0 0 auto 0;
-    padding: 8px 16px;
-
-    background-color: var(--bg-color-default);
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
-    & a {
-      display: inline-block;
-      width: 100%;
-
-      font: var(--font-md);
-      text-wrap: nowrap;
-
-      &:hover {
-        text-decoration: underline;
-      }
-
-      & > span {
-        display: none;
-        @media (min-width: 640px) {
-          display: inline;
-        }
-      }
-    }
   }
 
   article {
@@ -133,14 +89,26 @@ const { title, link, prevBallad, nextBallad, notes, mottos, contents, annotation
     counter-reset: annotationNote;
   }
 
-  .footer {
-    text-align: center;
-    font: var(--font-xs);
-    padding: 20px 120px;
+  a.link {
+    margin: var(--spacing-4);
+    font: var(--font-md);
+    position: fixed;
+    top: var(--header-height);
 
-    a {
+    &:hover {
       text-decoration: underline;
-      text-wrap: wrap;
     }
+
+    &[data-order='prev'] {
+      left: 0;
+    }
+    &[data-order='next'] {
+      right: 0;
+    }
+  }
+
+  a.source {
+    text-decoration: underline;
+    text-wrap: wrap;
   }
 </style>

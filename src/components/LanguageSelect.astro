@@ -23,15 +23,12 @@ const currentLng = getSupportedLng(Astro.url);
   div {
     width: max-content;
     display: flex;
-    gap: 8px;
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
+    gap: var(--spacing-2);
   }
 
   span {
     cursor: pointer;
-    border: 1px solid var(--border-color-default);
+    border: 1px solid var(--color-border);
     filter: grayscale(0.8);
   }
 

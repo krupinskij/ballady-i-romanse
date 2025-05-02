@@ -39,6 +39,11 @@ i18next.init({
         footer:
           'Projekt powstał w celach edukacyjnych (programistycznych) oraz ku czci Adama Mickiewicza.',
       },
+      drawer: {
+        settings: {
+          selectLanguage: 'Wybierz wersję językową',
+        },
+      },
     },
     ru: {
       general: {
@@ -56,6 +61,11 @@ i18next.init({
       home: {
         footer:
           'Проект создан в образовательных (программирования) целях и в честь Адама Мицкевича.',
+      },
+      drawer: {
+        settings: {
+          selectLanguage: 'Выберите языковую версию.',
+        },
       },
     },
   },

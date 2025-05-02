@@ -24,5 +24,6 @@ declare namespace App {
   interface Locals extends Runtime {
     DB: D1Database;
     LANG: Lang;
+    DEVICE: 'desktop' | 'mobile';
   }
 }

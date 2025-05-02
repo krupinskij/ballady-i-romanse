@@ -21,7 +21,7 @@ const { body, author, translation } = Astro.props;
 
 <style lang="scss">
   section {
-    margin-bottom: 16px;
+    margin-bottom: var(--spacing-4);
   }
 
   pre {
@@ -29,7 +29,7 @@ const { body, author, translation } = Astro.props;
     text-align: right;
 
     &.author:has(+ *) {
-      margin-bottom: 8px;
+      margin-bottom: var(--spacing-2);
     }
   }
 </style>
