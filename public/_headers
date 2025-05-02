@@ -8,5 +8,8 @@
 /fonts/*
   Cache-Control: max-age=36000, public
 
+/icons/*
+  Cache-Control: max-age=36000, public
+
 /images/*
   Cache-Control: max-age=36000, public
