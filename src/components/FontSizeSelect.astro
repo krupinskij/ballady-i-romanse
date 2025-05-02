@@ -3,7 +3,7 @@ import i18n from '@i18n';
 import fontSVG from '/icons/font.svg?raw';
 import { fonts } from 'src/font';
 
-const currentFontSize = Astro.cookies.get('font-size')?.value;
+const currentFontSize = Astro.cookies.get('font-size')?.value || 'medium';
 ---
 
 <div id="font-btns">
