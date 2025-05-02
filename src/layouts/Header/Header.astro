@@ -1,4 +1,5 @@
 ---
+import i18n from '@i18n';
 import hamburgerSVG from '/icons/hamburger.svg?raw';
 import settingsSVG from '/icons/settings.svg?raw';
 
@@ -6,11 +7,11 @@ const device = Astro.locals.DEVICE;
 ---
 
 <header data-device={device}>
-  <a id="title" href="/">Ballady i Romanse</a>
+  <a id="title" href="/">{i18n.t('title')}</a>
   {
     device === 'desktop' && (
       <a id="skip" href="#main">
-        Pomiń nawigację
+        {i18n.t('skipNavigation')}
       </a>
     )
   }
@@ -23,7 +24,7 @@ const device = Astro.locals.DEVICE;
           aria-controls="navigation"
           aria-expanded="false"
         >
-          <span class="visually-hidden">Settings</span>
+          <span class="visually-hidden">{i18n.t('settings.label', { ns: 'drawer' })}</span>
           <Fragment set:html={settingsSVG} />
         </button>
         <button
@@ -32,7 +33,7 @@ const device = Astro.locals.DEVICE;
           aria-controls="settings"
           aria-expanded="false"
         >
-          <span class="visually-hidden">Navigation</span>
+          <span class="visually-hidden">{i18n.t('navigation.label', { ns: 'drawer' })}</span>
           <Fragment set:html={hamburgerSVG} />
         </button>
       </div>

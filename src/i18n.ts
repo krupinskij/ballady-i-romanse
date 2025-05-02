@@ -31,6 +31,7 @@ i18next.init({
           pl: 'język polski',
           ru: 'język rosyjski',
         },
+        skipNavigation: 'Pomiń nawigację',
       },
       ballad: {
         footer: 'Tekst oraz przypisy pochodzą ze strony:',
@@ -40,7 +41,11 @@ i18next.init({
           'Projekt powstał w celach edukacyjnych (programistycznych) oraz ku czci Adama Mickiewicza.',
       },
       drawer: {
+        navigation: {
+          label: 'Nawigacja',
+        },
         settings: {
+          label: 'Ustawienia',
           selectLanguage: 'Wybierz wersję językową',
         },
       },
@@ -54,6 +59,7 @@ i18next.init({
           pl: 'Польский язык',
           ru: 'Русский язык',
         },
+        skipNavigation: 'Пропустить навигацию',
       },
       ballad: {
         footer: 'Текст и сноски взяты с сайта:',
@@ -63,7 +69,11 @@ i18next.init({
           'Проект создан в образовательных (программирования) целях и в честь Адама Мицкевича.',
       },
       drawer: {
+        navigation: {
+          label: 'Навигация',
+        },
         settings: {
+          label: 'Настройки',
           selectLanguage: 'Выберите языковую версию.',
         },
       },
