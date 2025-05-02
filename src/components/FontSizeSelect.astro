@@ -2,12 +2,20 @@
 import i18n from '@i18n';
 import fontSVG from '/icons/font.svg?raw';
 import { fonts } from 'src/font';
+
+const currentFontSize = Astro.cookies.get('font-size')?.value;
 ---
 
 <div id="font-btns">
   {
     Object.keys(fonts).map((type) => (
-      <button id={`font-${type}-btn`} class="btn" class:list={[type]} data-type={type}>
+      <button
+        id={`font-${type}-btn`}
+        class="btn"
+        class:list={[type]}
+        data-type={type}
+        aria-current={type === currentFontSize}
+      >
         <span class="visually-hidden">{i18n.t(`settings.${type}`)}</span>
         <Fragment set:html={fontSVG} />
       </button>
@@ -27,9 +35,10 @@ import { fonts } from 'src/font';
     height: 32px;
     margin: 0;
     padding: var(--spacing-1);
-    background-color: var(--color-secondary);
+    background-color: var(--color-bg-primary);
     border: 1px solid var(--color-border);
     border-radius: var(--spacing-1);
+    color: var(--color-icon);
     cursor: pointer;
 
     &.small {
@@ -40,6 +49,11 @@ import { fonts } from 'src/font';
     }
     &.big {
       padding: 0;
+    }
+
+    &[aria-current='true'] {
+      color: var(--color-text-default);
+      border-color: var(--color-text-default);
     }
   }
 </style>
@@ -54,7 +68,9 @@ import { fonts } from 'src/font';
 
     btns.forEach((btn) => {
       btn.addEventListener('click', () => {
+        btns.forEach((btn) => (btn.ariaCurrent = 'false'));
         const font = btn.dataset.type || 'medium';
+        btn.ariaCurrent = 'true';
         html.style.setProperty('--fontSize', getFontSize(font));
         cookies.set('font-size', font, { path: '/' });
       });

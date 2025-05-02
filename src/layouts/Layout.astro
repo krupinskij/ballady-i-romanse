@@ -2,11 +2,9 @@
 import '@styles/reset.css';
 import '@styles/base.css';
 import i18n from '@i18n';
-import LanguageSelect from '@components/LanguageSelect.astro';
 import { ClientRouter } from 'astro:transitions';
 import Header from './Header';
 import { NavigationDrawer, SettingsDrawer } from '@components/Drawer';
-import FontSizeSelect from '@components/FontSizeSelect.astro';
 import { getFontSize } from 'src/font';
 
 interface Props {
@@ -42,14 +40,6 @@ const fontSize = getFontSize(Astro.cookies.get('font-size')?.value);
     </main>
     <footer>
       <slot name="footer" />
-      {
-        device === 'desktop' && (
-          <div>
-            <FontSizeSelect />
-            <LanguageSelect />
-          </div>
-        )
-      }
     </footer>
   </body>
 </html>

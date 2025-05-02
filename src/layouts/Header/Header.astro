@@ -7,7 +7,6 @@ const device = Astro.locals.DEVICE;
 ---
 
 <header data-device={device}>
-  <a id="title" href="/">{i18n.t('title')}</a>
   {
     device === 'desktop' && (
       <a id="skip" href="#main">
@@ -15,30 +14,17 @@ const device = Astro.locals.DEVICE;
       </a>
     )
   }
-  {
-    device === 'mobile' && (
-      <div class="controls">
-        <button
-          id="settings-toggle"
-          class="toggle"
-          aria-controls="navigation"
-          aria-expanded="false"
-        >
-          <span class="visually-hidden">{i18n.t('settings.label', { ns: 'drawer' })}</span>
-          <Fragment set:html={settingsSVG} />
-        </button>
-        <button
-          id="navigation-toggle"
-          class="toggle"
-          aria-controls="settings"
-          aria-expanded="false"
-        >
-          <span class="visually-hidden">{i18n.t('navigation.label', { ns: 'drawer' })}</span>
-          <Fragment set:html={hamburgerSVG} />
-        </button>
-      </div>
-    )
-  }
+  <a id="title" href="/">{i18n.t('title')}</a>
+  <div class="controls">
+    <button id="settings-toggle" class="toggle" aria-controls="navigation" aria-expanded="false">
+      <span class="visually-hidden">{i18n.t('settings.label', { ns: 'drawer' })}</span>
+      <Fragment set:html={settingsSVG} />
+    </button>
+    <button id="navigation-toggle" class="toggle" aria-controls="settings" aria-expanded="false">
+      <span class="visually-hidden">{i18n.t('navigation.label', { ns: 'drawer' })}</span>
+      <Fragment set:html={hamburgerSVG} />
+    </button>
+  </div>
 </header>
 
 <style lang="scss">
@@ -60,7 +46,9 @@ const device = Astro.locals.DEVICE;
   }
 
   header[data-device='desktop'] {
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
   }
 
   #title {
@@ -70,9 +58,7 @@ const device = Astro.locals.DEVICE;
   #skip {
     font: var(--font-md);
     font-family: var(--font-default);
-    position: absolute;
-    top: 0;
-    left: 0;
+    justify-self: start;
     transform: translateY(-100px);
   }
 
@@ -83,6 +69,7 @@ const device = Astro.locals.DEVICE;
   .controls {
     display: flex;
     gap: var(--spacing-1);
+    justify-self: end;
   }
 
   .toggle {
@@ -112,6 +99,7 @@ const device = Astro.locals.DEVICE;
     controlsMap.set(settingsToggle, settingsDrawer);
 
     const drawers = [navigationDrawer, settingsDrawer];
+    const toggles = [navigationToggle, settingsToggle];
 
     const handleClick = (event: MouseEvent) => {
       const toggle = event.currentTarget as HTMLElement;
@@ -123,9 +111,12 @@ const device = Astro.locals.DEVICE;
 
       if (state === 'opened') {
         drawer.dataset.state = 'closed';
+        toggle.ariaExpanded = 'false';
       } else {
         drawers.forEach((drawer) => (drawer.dataset.state = 'closed'));
+        toggles.forEach((toggle) => (toggle.ariaExpanded = 'false'));
         drawer.dataset.state = 'opened';
+        toggle.ariaExpanded = 'true';
       }
     };
 
