@@ -1,5 +1,7 @@
 import { defineMiddleware } from 'astro:middleware';
 
+import { supportedLngs } from '@i18n';
+
 const MAX_AGE = 604800; // 60 * 60 * 24 * 7;
 
 export default defineMiddleware(async (context, next) => {
@@ -19,7 +21,11 @@ export default defineMiddleware(async (context, next) => {
     return Response.json({ headers }, { status: 403 });
   }
 
-  if (url.pathname === '/' || url.pathname.startsWith('/ballada/')) {
+  if (
+    url.pathname === '/' ||
+    url.pathname.startsWith('/ballada/') ||
+    supportedLngs.some((lng) => url.pathname.startsWith(`/${lng}/`))
+  ) {
     headers.append('Cache-Control', `max-age=${MAX_AGE}, public`);
     headers.append('Vary', 'Cookie');
   }

@@ -19,9 +19,7 @@ export default defineConfig({
   i18n: {
     defaultLocale: 'pl',
     locales: ['pl', 'ru'],
-    routing: {
-      prefixDefaultLocale: false,
-    },
+    routing: 'manual',
   },
   security: {
     checkOrigin: false,

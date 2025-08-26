@@ -1,6 +1,6 @@
 import { defineMiddleware } from 'astro:middleware';
 
-import i18next, { getSupportedLng, type SupportedLng } from '@i18n';
+import i18next, { isSupportedLng, supportedLngs, type SupportedLng } from '@i18n';
 
 const getDatabase = (lng: SupportedLng, env: Env): D1Database => {
   switch (lng) {
@@ -12,14 +12,27 @@ const getDatabase = (lng: SupportedLng, env: Env): D1Database => {
 };
 
 export default defineMiddleware((context, next) => {
-  const supportedLng = getSupportedLng(new URL(context.request.url));
-  const database = getDatabase(supportedLng, context.locals.runtime.env);
+  const lang = context.currentLocale || context.preferredLocale || 'pl';
+  const isLocalePath = supportedLngs.some((lng) => context.url.pathname.startsWith(`/${lng}/`));
 
-  context.locals.LANG = supportedLng;
-  context.locals.DB = database;
+  if (isLocalePath) {
+    const supportedLng = isSupportedLng(context.currentLocale) ? context.currentLocale : 'pl';
+    const database = getDatabase(supportedLng, context.locals.runtime.env);
 
-  if (i18next.language !== supportedLng) {
-    i18next.changeLanguage(supportedLng);
+    context.locals.DB = database;
+
+    if (i18next.language !== supportedLng) {
+      i18next.changeLanguage(supportedLng);
+    }
+
+    return next();
+  }
+
+  const isClientPath = context.url.pathname === '/' || context.url.pathname.startsWith('/ballada/');
+
+  if (isClientPath) {
+    const localeUrl = `/${lang}${context.url.pathname}`;
+    return context.redirect(localeUrl, 302);
   }
 
   return next();
