@@ -3,10 +3,10 @@ import { defineMiddleware } from 'astro:middleware';
 import { compare } from 'bcrypt-ts';
 
 export default defineMiddleware(async (context, next) => {
-  const isPagesDev = context.url.hostname.includes('.pages.dev');
+  const isDev = context.url.hostname.startsWith('develop.');
   const isAuth = context.url.pathname.startsWith('/auth');
 
-  if (!isPagesDev) {
+  if (!isDev) {
     if (isAuth) {
       return context.redirect('/');
     }
