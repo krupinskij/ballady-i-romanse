@@ -12,7 +12,7 @@ const getDatabase = (lng: SupportedLng, env: Env): D1Database => {
 };
 
 export default defineMiddleware((context, next) => {
-  const lang = context.currentLocale || context.preferredLocale || 'pl';
+  const lang = context.preferredLocale || context.currentLocale || 'pl';
   const isLocalePath = supportedLngs.some((lng) => context.url.pathname.startsWith(`/${lng}/`));
 
   if (isLocalePath) {
