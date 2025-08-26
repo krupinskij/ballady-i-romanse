@@ -8,7 +8,8 @@ import { z } from 'astro/zod';
 import { ListSchema } from '@model';
 
 const device = Astro.locals.DEVICE;
-const lang = Astro.currentLocale;
+const lng = Astro.currentLocale;
+
 const response = await GET(Astro);
 const ballads = z.array(ListSchema).parse(await response.json());
 ---
@@ -30,7 +31,7 @@ const ballads = z.array(ListSchema).parse(await response.json());
       {
         ballads.map((ballad) => (
           <li>
-            <Card title={ballad.title} href={`/ballada/${ballad.id}`} />
+            <Card title={ballad.title} href={`/${lng}/ballada/${ballad.id}`} />
           </li>
         ))
       }

@@ -7,6 +7,8 @@ import Card from '@components/Card.astro';
 
 const response = await GET(Astro);
 const ballads = z.array(ListSchema).parse(await response.json());
+
+const lng = Astro.currentLocale;
 ---
 
 <Drawer id="navigation-drawer">
@@ -15,7 +17,7 @@ const ballads = z.array(ListSchema).parse(await response.json());
       {
         ballads.map((ballad) => (
           <li>
-            <Card title={ballad.title} href={`/ballada/${ballad.id}`} compact />
+            <Card title={ballad.title} href={`/${lng}/ballada/${ballad.id}`} compact />
           </li>
         ))
       }
