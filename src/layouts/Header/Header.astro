@@ -4,6 +4,7 @@ import hamburgerSVG from '/icons/hamburger.svg?raw';
 import settingsSVG from '/icons/settings.svg?raw';
 
 const device = Astro.locals.DEVICE;
+const lng = Astro.currentLocale;
 ---
 
 <header data-device={device}>
@@ -14,7 +15,7 @@ const device = Astro.locals.DEVICE;
       </a>
     )
   }
-  <a id="title" href="/">{i18n.t('title')}</a>
+  <a id="title" href=`/${lng}/`>{i18n.t('title')}</a>
   <div class="controls">
     <button id="settings-toggle" class="toggle" aria-controls="navigation" aria-expanded="false">
       <span class="visually-hidden">{i18n.t('settings.label', { ns: 'drawer' })}</span>

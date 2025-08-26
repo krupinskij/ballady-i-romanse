@@ -1,20 +1,24 @@
 ---
-import i18n, { getSupportedLng, supportedLngs } from '@i18n';
+import i18n, { supportedLngs } from '@i18n';
 
-const currentLng = getSupportedLng(Astro.url);
+const currentLng = Astro.currentLocale;
+const pathname = Astro.url.pathname;
+const pathnameRegexp = /^\/([a-z]*)\/*/;
 ---
 
 <div data-component="language-select">
   {
     supportedLngs.map((lng) => (
-      <span
+      <a
         aria-label={i18n.t(`language.${lng}`)}
         data-value={lng}
         aria-selected={lng === currentLng}
         role="option"
+        href={pathname.replace(pathnameRegexp, `/${lng}/`)}
+        hreflang={lng}
       >
         <img src={`/${lng}.svg`} alt="" height="24" />
-      </span>
+      </a>
     ))
   }
 </div>
@@ -26,13 +30,13 @@ const currentLng = getSupportedLng(Astro.url);
     gap: var(--spacing-2);
   }
 
-  span {
+  a {
     cursor: pointer;
     border: 1px solid var(--color-border);
     filter: grayscale(0.8);
   }
 
-  span[aria-selected='true'] {
+  a[aria-selected='true'] {
     filter: none;
     pointer-events: none;
   }
@@ -41,21 +45,3 @@ const currentLng = getSupportedLng(Astro.url);
     display: block;
   }
 </style>
-
-<script>
-  document.addEventListener('astro:page-load', () => {
-    const options = document.querySelectorAll<HTMLSpanElement>(
-      '[data-component="language-select"] [role="option"]'
-    );
-
-    options.forEach((option) => {
-      option.addEventListener('click', () => {
-        const value = option.dataset.value;
-        window.location.href = window.location.href.replace(
-          /^(https:\/\/)(pl|ru)(.)/,
-          `$1${value}$3`
-        );
-      });
-    });
-  });
-</script>

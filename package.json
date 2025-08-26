@@ -20,8 +20,8 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/cloudflare": "^12.2.3",
-    "astro": "^5.4.2",
+    "@astrojs/cloudflare": "^12.6.5",
+    "astro": "^5.13.3",
     "bcrypt-ts": "^7.0.0",
     "html-escaper": "^3.0.3",
     "i18next": "^23.15.1",

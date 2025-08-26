@@ -19,11 +19,8 @@ interface ImportMeta {
 }
 
 declare namespace App {
-  type Lang = import('@i18n').SupportedLng;
-
   interface Locals extends Runtime {
     DB: D1Database;
-    LANG: Lang;
     DEVICE: 'desktop' | 'mobile';
   }
 }
