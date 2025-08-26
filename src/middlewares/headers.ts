@@ -21,11 +21,7 @@ export default defineMiddleware(async (context, next) => {
     return Response.json({ headers }, { status: 403 });
   }
 
-  if (
-    url.pathname === '/' ||
-    url.pathname.startsWith('/ballada/') ||
-    supportedLngs.some((lng) => url.pathname.startsWith(`/${lng}/`))
-  ) {
+  if (supportedLngs.some((lng) => url.pathname.startsWith(`/${lng}/`))) {
     headers.append('Cache-Control', `max-age=${MAX_AGE}, public`);
     headers.append('Vary', 'Cookie');
   }
